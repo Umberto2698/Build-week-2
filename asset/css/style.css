@@ -1,11 +1,18 @@
 :root {
   --fullWidthHeader: 15%;
   --fullWidthFriends: 15%;
+
   --xstPadd: 10px;
   --smallPadd: 20px;
   --mediumPadd: 30px;
+
   --primaryColor: #1ed760;
+
   --xsFontSize: 13px;
+  --mdFontSize: 24px;
+
+  --smallImg: 80px;
+  --bigImg: 250px;
 }
 
 header,
@@ -36,11 +43,6 @@ main {
   width: var(--fullWidthFriends);
 }
 
-.custom-big-card {
-  display: flex;
-  max-height: 250px;
-}
-
 .custom-btn {
   all: unset;
   width: fit-content;
@@ -61,4 +63,28 @@ main {
 
 .custom-fontSize-xs {
   font-size: var(--xsFontSize);
+}
+.custom-fontSize-md {
+  font-size: var(--mdFontSize);
+}
+
+.small-img {
+  width: var(--smallImg);
+  height: var(--smallImg);
+}
+
+.big-img {
+  width: var(--bigImg);
+  height: var(--bigImg);
+}
+
+@media screen and (max-width: 960px) {
+  .big-img {
+    width: calc(var(--bigImg) - 50px);
+    height: calc(var(--bigImg) - 50px);
+  }
+
+  .p-hide {
+    display: none;
+  }
 }
