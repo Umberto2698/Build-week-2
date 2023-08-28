@@ -1,0 +1,64 @@
+:root {
+  --fullWidthHeader: 15%;
+  --fullWidthFriends: 15%;
+  --xstPadd: 10px;
+  --smallPadd: 20px;
+  --mediumPadd: 30px;
+  --primaryColor: #1ed760;
+  --xsFontSize: 13px;
+}
+
+header,
+main,
+#friends {
+  max-height: 100vh;
+  background-color: #0a0a0a;
+  color: white;
+}
+
+#playlist,
+main {
+  overflow-y: scroll;
+}
+
+header {
+  width: var(--fullWidthHeader);
+  padding-left: var(--smallPadd);
+}
+
+main {
+  width: calc(100% - var(--fullWidthHeader) - var(--fullWidthFriends));
+  padding-top: var(--xstPadd);
+  padding-inline: var(--mediumPadd);
+}
+
+#friends {
+  width: var(--fullWidthFriends);
+}
+
+.custom-big-card {
+  display: flex;
+  max-height: 250px;
+}
+
+.custom-btn {
+  all: unset;
+  width: fit-content;
+  padding: 10px 30px;
+  border-radius: 30px;
+}
+
+.custom-big-card .custom-btn:first-of-type {
+  background-color: var(--primaryColor);
+}
+
+.custom-big-card .custom-btn:last-of-type {
+  padding: 0;
+  border-radius: unset;
+  margin-left: 5px;
+  font-size: 25px;
+}
+
+.custom-fontSize-xs {
+  font-size: var(--xsFontSize);
+}
