@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Artist page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="./asset/css/artist-page-style.css" />
+    <link rel="stylesheet" href="./asset/css/circular-font.css" />
+  </head>
+  <body>
+    <div class="d-flex">
+      <header>
+        <div class="d-flex flex-column">
+          <nav class="d-flex flex-column gap-2">
+            <i class="bi bi-three-dots"></i>
+            <div class="d-flex gap-2">
+              <i class="bi bi-house-door-fill"></i>
+              <p class="m-0">Home</p>
+            </div>
+            <div class="d-flex gap-2">
+              <i class="bi bi-search"></i>
+              <p class="m-0">Search</p>
+            </div>
+            <div class="d-flex gap-2">
+              <i class="bi bi-collection"></i>
+              <p class="m-0">La tua libreria</p>
+            </div>
+          </nav>
+          <section class="d-flex flex-column gap-2 mt-4">
+            <div class="d-flex gap-2">
+              <i class="bi bi-plus-square-fill"></i>
+              <p class="m-0">Crea playlist</p>
+            </div>
+            <div class="d-flex gap-2">
+              <i class="bi bi-heart-fill"></i>
+              <p class="m-0">Brani che ti piacciono</p>
+            </div>
+            <div class="d-flex gap-2 pb-2 border-bottom border-bottom-secondary">
+              <i class="bi bi-bookmark-fill"></i>
+              <p class="m-0">I tuoi episodi</p>
+            </div>
+          </section>
+          <section id="playlist" class="mt-4">
+            <ul class="d-flex flex-column text-secondary m-0">
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+            </ul>
+          </section>
+        </div>
+      </header>
+      <main class="d-flex flex-column">
+        <div
+          class="px-4"
+          style="
+            background-image: url(https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);
+          "
+        >
+          <div id="upbar" class="d-flex justify-content-between align-items-center mb-5">
+            <div class="d-flex gap-3">
+              <i class="bi bi-arrow-left-circle custom-fontSize-lg"></i>
+              <i class="bi bi-arrow-right-circle custom-fontSize-lg"></i>
+            </div>
+            <div class="btn-group">
+              <button
+                type="button"
+                class="btn dropdown-toggle text-light"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-person-circle"></i>
+                <span>Nome User</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
+                <li>
+                  <button class="dropdown-item" type="button">Action</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button">Another action</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button">Something else here</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div id="custom-big-card" class="d-flex pt-5 mb-3 gap-4">
+            <div class="d-flex flex-column flex-grow-1 justify-content-between">
+              <div class="d-flex flex-column">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-patch-check-fill text-primary me-1"></i>
+                  <p class="custom-fontSize-xs m-0">Artista verificato</p>
+                </div>
+                <h1>Yellowcard</h1>
+              </div>
+              <div class="d-flex flex-column pt-3">
+                <p id="listener">3.456.456 ascoltatori mensili</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="px-4 py-3">
+          <div class="d-flex align-items-center gap-4">
+            <button
+              id="play"
+              class="d-flex align-items-center btn btn-success rounded-circle text-black"
+              style="padding: 0 0 0 8px"
+            >
+              <i class="bi bi-play-fill fs-4"></i>
+            </button>
+            <button
+              class="btn border border-white bg-transparent text-white"
+              style="
+                --bs-btn-padding-y: 0;
+                --bs-btn-padding-x: 0.5rem;
+                height: 25px;
+                font-size: 10px;
+                border-radius: 5px;
+                letter-spacing: normal;
+              "
+            >
+              FOLLOWING
+            </button>
+            <i class="bi bi-three-dots"></i>
+          </div>
+        </div>
+        <div class="d-flex">
+          <div class="px-4 w-50">
+            <h4 class="mb-4" style="font-size: 18px">Popolari</h4>
+            <ul class="list-unstyled">
+              <li class="row d-flex align-items-center justify-content-between ps-3 mb-3">
+                <div class="col-5 d-flex align-items-center justify-content-between">
+                  <span style="font-size: 12px">1</span>
+                  <img src="./asset/imgs/main/image-1.jpg" style="width: 30px; height: 30px" alt="" />
+                  <span style="font-size: 12px">Ocean Avenue</span>
+                </div>
+                <div class="col-3 text-end">
+                  <span id="songId" style="font-size: 12px">276.616.912</span>
+                </div>
+                <div class="col-2 text-end">
+                  <span id="songDuration" style="font-size: 12px">3:18</span>
+                </div>
+              </li>
+              <li class="row d-flex align-items-center justify-content-between ps-3 mb-3">
+                <div class="col-5 d-flex align-items-center justify-content-between">
+                  <span style="font-size: 12px">1</span>
+                  <img src="./asset/imgs/main/image-1.jpg" style="width: 30px; height: 30px" alt="" />
+                  <span style="font-size: 12px">Ocean Avenue</span>
+                </div>
+                <div class="col-3 text-end">
+                  <span id="songId" style="font-size: 12px">276.616.912</span>
+                </div>
+                <div class="col-2 text-end">
+                  <span id="songDuration" style="font-size: 12px">3:18</span>
+                </div>
+              </li>
+              <li class="row d-flex align-items-center justify-content-between ps-3 mb-3">
+                <div class="col-5 d-flex align-items-center justify-content-between">
+                  <span style="font-size: 12px">1</span>
+                  <img src="./asset/imgs/main/image-1.jpg" style="width: 30px; height: 30px" alt="" />
+                  <span style="font-size: 12px">Ocean Avenue</span>
+                </div>
+                <div class="col-3 text-end">
+                  <span id="songId" style="font-size: 12px">276.616.912</span>
+                </div>
+                <div class="col-2 text-end">
+                  <span id="songDuration" style="font-size: 12px">3:18</span>
+                </div>
+              </li>
+              <li class="row d-flex align-items-center justify-content-between ps-3 mb-3">
+                <div class="col-5 d-flex align-items-center justify-content-between">
+                  <span style="font-size: 12px">1</span>
+                  <img src="./asset/imgs/main/image-1.jpg" style="width: 30px; height: 30px" alt="" />
+                  <span style="font-size: 12px">Ocean Avenue</span>
+                </div>
+                <div class="col-3 text-end">
+                  <span id="songId" style="font-size: 12px">276.616.912</span>
+                </div>
+                <div class="col-2 text-end">
+                  <span id="songDuration" style="font-size: 12px">3:18</span>
+                </div>
+              </li>
+              <li class="row d-flex align-items-center justify-content-between ps-3 mb-3">
+                <div class="col-5 d-flex align-items-center justify-content-between">
+                  <span style="font-size: 12px">1</span>
+                  <img src="./asset/imgs/main/image-1.jpg" style="width: 30px; height: 30px" alt="" />
+                  <span style="font-size: 12px">Ocean Avenue</span>
+                </div>
+                <div class="col-3 text-end">
+                  <span id="songId" style="font-size: 12px">276.616.912</span>
+                </div>
+                <div class="col-2 text-end">
+                  <span id="songDuration" style="font-size: 12px">3:18</span>
+                </div>
+              </li>
+            </ul>
+            <p class="m-0" style="font-size: 10px; cursor: pointer; letter-spacing: normal">VISUALIZZA ALTRO</p>
+          </div>
+          <div class="px-5">
+            <h4 class="mb-4" style="font-size: 18px">Brani che ti piacciono</h4>
+            <div class="d-flex align-items-center">
+              <div class="position-relative">
+                <img
+                  class="rounded-circle"
+                  src="./asset/imgs/main/image-15.jpg"
+                  alt=""
+                  style="width: 60px; height: 60px"
+                />
+                <span
+                  class="position-absolute border border-light rounded-circle bg-success z-1"
+                  style="bottom: 0; right: 2px; width: 15px; height: 15px"
+                  ><i class="bi bi-suit-heart-fill" style="font-size: 8px; position: absolute; top: 5%; left: 18%"></i
+                  ><span class="visually-hidden">unread messages</span></span
+                >
+              </div>
+              <div class="ps-2">
+                <h6 style="font-size: 12px">Hai messo mi piace a 11 brani</h6>
+                <p class="m-0" style="font-size: 12px">Di Yellowcard</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- Sezione amici -->
+      <aside class="bg-black text-white">
+        <div class="d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-center mb-4 mt-3" style="font-size: 15px">
+            <h5 class="d-inline-block m-0" style="font-size: 12px">Attività amici</h5>
+            <div><i class="bi bi-person-add me-2"></i> <i class="bi bi-x-lg"></i></div>
+          </div>
+          <div class="mb-4 d-flex justify-content-between align-items-start">
+            <div class="d-flex">
+              <div>
+                <div id="friendImg" class="rounded-circle text-center">
+                  <img
+                    src="https://images.unsplash.com/photo-1619895862022-09114b41f16f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                    style="object-fit: cover"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="d-flex flex-column ms-2">
+                <div id="friendInfo" class="d-flex flex-column">
+                  <h6 class="m-0" style="font-size: 10px">Charlie Hookman</h6>
+                  <div class="d-flex align-items-center">
+                    <span style="font-size: 8px">In camera</span><i class="bi bi-dot"></i
+                    ><span style="font-size: 8px">Youmi Zouma</span>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div
+                      id="circle"
+                      class="rounded-circle border d-flex justify-content-center align-items-center me-1"
+                    >
+                      <div class="rounded-circle border"></div>
+                    </div>
+                    <span style="font-size: 10px">EP III</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span style="font-size: 10px">4 ore</span>
+          </div>
+          <div class="mb-4 d-flex justify-content-between align-items-start">
+            <div class="d-flex">
+              <div>
+                <div id="friendImg" class="rounded-circle text-center">
+                  <img
+                    src="https://images.unsplash.com/photo-1619895862022-09114b41f16f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                    style="object-fit: cover"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="d-flex flex-column ms-2">
+                <div id="friendInfo" class="d-flex flex-column">
+                  <h6 class="m-0" style="font-size: 10px">Charlie Hookman</h6>
+                  <div class="d-flex align-items-center">
+                    <span style="font-size: 8px">In camera</span><i class="bi bi-dot"></i
+                    ><span style="font-size: 8px">Youmi Zouma</span>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div
+                      id="circle"
+                      class="rounded-circle border d-flex justify-content-center align-items-center me-1"
+                    >
+                      <div class="rounded-circle border"></div>
+                    </div>
+                    <span style="font-size: 10px">EP III</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span style="font-size: 10px">4 ore</span>
+          </div>
+          <div class="mb-4 d-flex justify-content-between align-items-start">
+            <div class="d-flex">
+              <div>
+                <div id="friendImg" class="rounded-circle text-center">
+                  <img
+                    src="https://images.unsplash.com/photo-1619895862022-09114b41f16f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                    style="object-fit: cover"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="d-flex flex-column ms-2">
+                <div id="friendInfo" class="d-flex flex-column">
+                  <h6 class="m-0" style="font-size: 10px">Charlie Hookman</h6>
+                  <div class="d-flex align-items-center">
+                    <span style="font-size: 8px">In camera</span><i class="bi bi-dot"></i
+                    ><span style="font-size: 8px">Youmi Zouma</span>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div
+                      id="circle"
+                      class="rounded-circle border d-flex justify-content-center align-items-center me-1"
+                    >
+                      <div class="rounded-circle border"></div>
+                    </div>
+                    <span style="font-size: 10px">EP III</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span style="font-size: 10px">4 ore</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <footer class="position-fixed bottom-0 soundbar-rules">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center p-1">
+          <img class="rounded" src="./asset/imgs/main/image-11.jpg" alt="#" width="50" height="50" />
+          <div class="ms-3 text-white">
+            <p class="m-0 fw-bold" style="font-size: 15px">Titolo</p>
+            <p class="m-0" style="font-size: 12px">Artista</p>
+          </div>
+          <button class="btn ms-3">
+            <i class="btn-toggle-custom bi bi-suit-heart text-white" style="font-size: 12px"></i>
+          </button>
+        </div>
+        <div class="d-flex flex-column position-relative pt-1 pb-4">
+          <div class="d-flex align-items-center">
+            <button class="btn">
+              <i class="btn-toggle-custom bi bi-shuffle text-white" style="font-size: 12px"></i>
+            </button>
+            <button class="btn">
+              <i class="btn-toggle-custom bi bi-skip-start-fill text-white" style="font-size: 12px"></i>
+            </button>
+            <button
+              class="d-flex align-items-center btn-sm btn-light rounded-circle p-0"
+              style="width: 20px; height: 20px"
+            >
+              <i class="btn-toggle-custom bi bi-play-fill text-black" style="font-size: 18px"></i>
+            </button>
+            <button class="btn">
+              <i class="btn-toggle-custom bi bi-skip-end-fill text-white" style="font-size: 12px"></i>
+            </button>
+            <button class="btn">
+              <i class="btn-toggle-custom bi bi-repeat text-white" style="font-size: 12px"></i>
+            </button>
+          </div>
+          <div class="d-flex align-items-center mt-1">
+            <span class="position-absolute text-white currenttime-position" style="font-size: 15px">0:00</span>
+            <div class="progress-bar-base position-absolute">
+              <div class="progress-bar-fill position-absolute"></div>
+            </div>
+            <span class="position-absolute text-white fulltime-position" style="font-size: 15px">0:00</span>
+          </div>
+        </div>
+        <div class="d-flex align-items-center p-1">
+          <button class="btn">
+            <i class="btn-toggle-custom bi bi-mic text-white" style="font-size: 12px"></i>
+          </button>
+          <button class="btn">
+            <i class="btn-toggle-custom bi bi-menu-button-wide text-white" style="font-size: 12px"></i>
+          </button>
+          <button class="btn">
+            <i class="btn-toggle-custom bi bi-speaker text-white" style="font-size: 12px"></i>
+          </button>
+          <button id="var-icon" class="btn">
+            <i class="bi bi-volume-off text-white" style="font-size: 12px"></i>
+          </button>
+          <input type="range" min="1" max="100" value="1" class="slider" id="audio-slider" />
+          <button class="btn"><i class="bi bi-arrows-angle-expand text-white" style="font-size: 12px"></i></button>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./playerControls.js"></script>
+  </body>
+</html>
