@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link rel="stylesheet" href="./CSS/reset.css" />
+    <link rel="stylesheet" href="./CSS/font-awesome.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="./asset/css/album-page-custom-style.css" />
+  </head>
+  <body class="bg-black">
+    <main class="d-flex">
+      <section class="left-column-rules d-flex flex-column">
+        <div class="dropdown">
+          <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-three-dots fs-2 grey ps-3"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="album-detail-rules bg-gradient-custom">
+        <!-- bg-gradient-custom vorra un average color dinamico preso dalla fetch presumo-->
+        <!-- da linea 33 a linea 54 - bottoni in cima alla pagina-->
+        <div class="d-flex justify-content-between">
+          <div class="pt-4 ps-4">
+            <button class="btn btn-dark rounded-circle me-4"><i class="bi bi-chevron-left fs-5"></i></button>
+            <button class="btn btn-dark rounded-circle"><i class="bi bi-chevron-right fs-5"></i></button>
+          </div>
+          <div class="dropdown pt-4 pe-4">
+            <button
+              class="dropdown-toggle btn btn-dark rounded-pill fs-5 text-truncate"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img src="" alt="#" /> user
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="d-flex flex-column">
+          <!--da linea 56 a 99 contenuto e struttura centrale della pagina-->
+          <div class="d-flex ps-4 pt-5 pb-4">
+            <img class="custom-shadow" src="" alt="#" height="250" width="250" />
+
+            <div class="d-flex flex-column justify-content-end ps-4 pb-2">
+              <p class="text-white fw-bold">ALBUM</p>
+              <h1 class="display-1 text-white fw-bold pb-3">Gioventu' brucata</h1>
+              <p class="text-white">
+                <img src="" alt="#" /> <span class="fw-bold">artista - anno - numero di brani</span> - durata dell
+                intero album
+              </p>
+            </div>
+          </div>
+          <div class="d-flex flex-column pt-4 pe-5 ps-5 bg-black-semi">
+            <div>
+              <button class="btn btn-success rounded-circle text-dark"><i class="bi bi-play-fill fs-2"></i></button>
+              <button class="btn ms-3"><i class="bi bi-suit-heart fs-2 text-white"></i></button>
+              <button class="btn"><i class="bi bi-arrow-down-circle fs-2 text-white"></i></button>
+              <button class="btn"><i class="bi bi-three-dots fs-2 text-white"></i></button>
+            </div>
+
+            <div class="d-flex flex-column">
+              <div class="d-flex justify-content-evenly border-bottom">
+                <p>#</p>
+                <p>TITOLO</p>
+                <p>RIPRODUZIONI</p>
+                <p><i class="bi bi-clock fs-5"></i></p>
+              </div>
+              <div class="d-flex justify-content-evenly">
+                <p></p>
+                <p>questa parte andra' probabilmente creata in javascript</p>
+                <p>perche non sappiamo il numero di elementi da creare</p>
+                <p></p>
+              </div>
+              <div class="d-flex justify-content-evenly">
+                <p>#</p>
+                <p>TITOLO</p>
+                <p>RIPRODUZIONI</p>
+                <p><i class="bi bi-clock fs-5"></i></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="right-column-rules"></section>
+      <footer class="position-fixed bottom-0 soundbar-rules d-flex justify-content-between align-items-center p-3">
+        <div class="d-flex align-items-center">
+          <img class="rounded" src="" alt="#" width="50" height="50" />
+          <div class="ms-3">
+            <p class="fs-5 fw-bold text-white">Titolo</p>
+            <p class="text-white">Artista</p>
+          </div>
+          <button class="btn ms-3"><i class="btn-toggle-custom bi bi-suit-heart fs-4 text-white"></i></button>
+        </div>
+        <div class="d-flex flex-column position-relative pb-4">
+          <div>
+            <button class="btn"><i class="btn-toggle-custom bi bi-shuffle text-white fs-4"></i></button>
+            <button class="btn"><i class="btn-toggle-custom bi bi-skip-start-fill text-white fs-4"></i></button>
+            <button class="btn btn-sm btn-light rounded-circle">
+              <i class="btn-toggle-custom bi bi-play-fill text-black fs-4"></i>
+            </button>
+            <button class="btn"><i class="btn-toggle-custom bi bi-skip-end-fill text-white fs-4"></i></button>
+            <button class="btn"><i class="btn-toggle-custom bi bi-repeat text-white fs-4"></i></button>
+          </div>
+          <div class="d-flex">
+            <span class="position-absolute text-white currenttime-position">0:00</span>
+            <div class="progress-bar-base position-absolute">
+              <div class="progress-bar-fill position-absolute"></div>
+            </div>
+            <span class="position-absolute text-white fulltime-position">0:00</span>
+          </div>
+        </div>
+        <div class="d-flex align-items-center">
+          <button class="btn"><i class="btn-toggle-custom bi bi-mic text-white fs-4"></i></button>
+          <button class="btn"><i class="btn-toggle-custom bi bi-menu-button-wide text-white fs-4"></i></button>
+          <button class="btn"><i class="btn-toggle-custom bi bi-speaker text-white fs-4"></i></button>
+          <button id="var-icon" class="btn"><i class="bi bi-volume-off text-white fs-4"></i></button>
+          <input type="range" min="1" max="100" value="1" class="slider" id="audio-slider" />
+          <button class="btn"><i class="bi bi-arrows-angle-expand text-white fs-4"></i></button>
+        </div>
+      </footer>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./albumpage.js"></script>
+  </body>
+</html>
