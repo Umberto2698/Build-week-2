@@ -16,7 +16,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="./asset/css/style.css" />
+    <link rel="stylesheet" href="./asset/css/homePage.css" />
   </head>
   <body>
     <div class="d-flex">
@@ -130,17 +130,19 @@
             </button>
             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
               <li>
-                <button class="dropdown-item" type="button">Action</button>
-              </li>
-              <li>
-                <button class="dropdown-item" type="button">
-                  Another action
+                <button
+                  class="dropdown-item d-flex justify-content-between"
+                  type="button"
+                >
+                  Account
+                  <i class="bi bi-box-arrow-in-up-right"></i>
                 </button>
               </li>
               <li>
-                <button class="dropdown-item" type="button">
-                  Something else here
-                </button>
+                <button class="dropdown-item" type="button">Profile</button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button">Settings</button>
               </li>
             </ul>
           </div>
@@ -476,7 +478,86 @@
         </div>
       </main>
       <section id="friends">
-        <h6>Attività amici</h6>
+        <div class="d-flex flex-column px-3 custom-paddingTop-xs">
+          <div class="d-flex justify-content-between custom-paddingBottom-xs">
+            <h5>Attività amici</h5>
+            <div class="d-flex gap-3">
+              <i class="bi bi-person-plus"></i>
+              <i class="bi bi-x-lg"></i>
+            </div>
+          </div>
+          <div class="d-flex flex-column gap-4">
+            <div class="d-flex flex-grow-1">
+              <img
+                src="./asset/imgs/main/image-6.jpg"
+                alt="imagine dragons"
+                class="xs-img"
+                style="border-radius: 50%"
+              />
+              <div
+                class="d-flex flex-column custom-paddingLeft-cards flex-grow-1"
+              >
+                <div class="d-flex justify-content-between">
+                  <h6 class="custom-fontSize-normal m-0">Charlie Hookham</h6>
+                  <p class="m-0 custom-fontSize-xs">4 ore</p>
+                </div>
+                <p class="m-0 custom-fontSize-xs">
+                  In Camera <strong>·</strong> Yumi Zouma
+                </p>
+                <div class="d-flex gap-2">
+                  <i class="bi bi-disc"></i>
+                  <p class="m-0 custom-fontSize-xs">EP III</p>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-grow-1">
+              <img
+                src="./asset/imgs/main/image-6.jpg"
+                alt="imagine dragons"
+                class="xs-img"
+                style="border-radius: 50%"
+              />
+              <div
+                class="d-flex flex-column custom-paddingLeft-cards flex-grow-1"
+              >
+                <div class="d-flex justify-content-between">
+                  <h6 class="custom-fontSize-normal m-0">Charlie Hookham</h6>
+                  <p class="m-0 custom-fontSize-xs">4 ore</p>
+                </div>
+                <p class="m-0 custom-fontSize-xs">
+                  In Camera <strong>·</strong> Yumi Zouma
+                </p>
+                <div class="d-flex gap-2">
+                  <i class="bi bi-disc"></i>
+                  <p class="m-0 custom-fontSize-xs">EP III</p>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-grow-1">
+              <img
+                src="./asset/imgs/main/image-6.jpg"
+                alt="imagine dragons"
+                class="xs-img"
+                style="border-radius: 50%"
+              />
+              <div
+                class="d-flex flex-column custom-paddingLeft-cards flex-grow-1"
+              >
+                <div class="d-flex justify-content-between">
+                  <h6 class="custom-fontSize-normal m-0">Charlie Hookham</h6>
+                  <p class="m-0 custom-fontSize-xs">4 ore</p>
+                </div>
+                <p class="m-0 custom-fontSize-xs">
+                  In Camera <strong>·</strong> Yumi Zouma
+                </p>
+                <div class="d-flex gap-2">
+                  <i class="bi bi-disc"></i>
+                  <p class="m-0 custom-fontSize-xs">EP III</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
     <script

@@ -1,5 +1,6 @@
 :root {
   --fullWidth: 270px;
+  --fullWidthFriends: 285px;
 
   --none: 0;
 
@@ -18,6 +19,7 @@
 
   --bold: bold;
 
+  --xsImg: 50px;
   --smallImg: 80px;
   --bigImg: 220px;
 }
@@ -214,7 +216,7 @@ header > div {
 }
 
 main {
-  width: calc(100% - var(--fullWidth) - var(--fullWidth));
+  width: calc(100% - var(--fullWidth) - var(--fullWidthFriends));
   padding-top: var(--xsPadd);
 }
 
@@ -223,7 +225,7 @@ main {
 }
 
 #friends {
-  width: var(--fullWidth);
+  min-width: var(--fullWidthFriends);
 }
 
 .custom-btn {
@@ -242,6 +244,11 @@ main {
   border-radius: unset;
   margin-left: 5px;
   font-size: 25px;
+}
+
+.xs-img {
+  width: var(--xsImg);
+  height: var(--xsImg);
 }
 
 .small-img {
@@ -338,6 +345,12 @@ main {
 
   .custom-fontSize-main-small {
     font-size: var(--xsFontSize);
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  #friends {
+    min-width: calc(var(--fullWidthFriends) + 50px);
   }
 }
 
