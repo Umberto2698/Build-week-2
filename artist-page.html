@@ -16,7 +16,7 @@
   </head>
   <body>
     <div class="d-flex">
-      <header>
+      <header class="bg-black">
         <div class="d-flex flex-column">
           <nav class="d-flex flex-column gap-2">
             <i class="bi bi-three-dots"></i>
@@ -133,8 +133,8 @@
               </ul>
             </div>
           </div>
-          <div id="custom-big-card" class="d-flex pt-5 mb-3 gap-4">
-            <div class="d-flex flex-column flex-grow-1 justify-content-between">
+          <div id="custom-big-card" class="d-flex pt-5 gap-4">
+            <div class="d-flex flex-column flex-grow-1">
               <div class="d-flex flex-column">
                 <div class="d-flex align-items-center">
                   <i class="bi bi-patch-check-fill text-primary me-1"></i>
@@ -142,17 +142,20 @@
                 </div>
                 <h1>Yellowcard</h1>
               </div>
-              <div class="d-flex flex-column pt-3">
+              <div class="pt-3">
                 <p id="listener">3.456.456 ascoltatori mensili</p>
               </div>
             </div>
           </div>
         </div>
         <div class="px-4 py-3">
+          <p id="listener-xs">3.456.456 ascoltatori mensili</p>
           <div class="d-flex align-items-center gap-4">
-            <button id="play" class="d-flex align-items-center btn btn-success rounded-circle text-black">
+            <button id="play" class="d-flex align-items-center btn btn-success rounded-circle">
               <i class="bi bi-play-fill fs-4"></i>
             </button>
+            <i class="bi bi-shuffle icon-xs ms-auto"></i>
+            <i class="bi bi-three-dots-vertical icon-xs"></i>
             <button
               id="following"
               class="btn border border-white bg-transparent text-white"
@@ -163,69 +166,141 @@
             <i class="bi bi-three-dots"></i>
           </div>
         </div>
-        <div class="d-flex">
+        <!-- artist-page-mobile -->
+        <div id="artistSongs" class="d-flex">
+          <div class="px-4">
+            <h4 class="mb-4">Popolari</h4>
+            <ul id="popularSongs" class="list-unstyled">
+              <li class="d-flex align-items-center mb-3">
+                <div class="d-flex align-items-center">
+                  <span>1</span>
+                  <img src="./asset/imgs/main/image-1.jpg" alt="" />
+                  <div class="d-flex flex-column align-items-center ms-1">
+                    <span>Ocean Avenue</span>
+                    <span id="songId">276.616.912</span>
+                  </div>
+                </div>
+                <div class="text-end">
+                  <i class="bi bi-three-dots-vertical xsIcon"></i>
+                </div>
+              </li>
+              <li class="d-flex align-items-center mb-3">
+                <div class="d-flex align-items-center">
+                  <span>1</span>
+                  <img src="./asset/imgs/main/image-1.jpg" alt="" />
+                  <div class="d-flex flex-column align-items-center ms-1">
+                    <span>Ocean Avenue</span>
+                    <span id="songId">276.616.912</span>
+                  </div>
+                </div>
+                <div class="text-end">
+                  <i class="bi bi-three-dots-vertical xsIcon"></i>
+                </div>
+              </li>
+              <li class="d-flex align-items-center mb-3">
+                <div class="d-flex align-items-center">
+                  <span>1</span>
+                  <img src="./asset/imgs/main/image-1.jpg" alt="" />
+                  <div class="d-flex flex-column align-items-center ms-1">
+                    <span>Ocean Avenue</span>
+                    <span id="songId">276.616.912</span>
+                  </div>
+                </div>
+                <div class="text-end">
+                  <i class="bi bi-three-dots-vertical xsIcon"></i>
+                </div>
+              </li>
+              <li class="d-flex align-items-center mb-3">
+                <div class="d-flex align-items-center">
+                  <span>1</span>
+                  <img src="./asset/imgs/main/image-1.jpg" alt="" />
+                  <div class="d-flex flex-column align-items-center ms-1">
+                    <span>Ocean Avenue</span>
+                    <span id="songId">276.616.912</span>
+                  </div>
+                </div>
+                <div class="text-end">
+                  <i class="bi bi-three-dots-vertical xsIcon"></i>
+                </div>
+              </li>
+              <li class="d-flex align-items-center mb-3">
+                <div class="d-flex align-items-center">
+                  <span>1</span>
+                  <img src="./asset/imgs/main/image-1.jpg" alt="" />
+                  <div class="d-flex flex-column align-items-center ms-1">
+                    <span>Ocean Avenue</span>
+                    <span id="songId">276.616.912</span>
+                  </div>
+                </div>
+                <div class="text-end">
+                  <i class="bi bi-three-dots-vertical xsIcon"></i>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- artist-page -->
           <div class="px-4 w-50">
             <h4 class="mb-4">Popolari</h4>
             <ul id="popularSongs" class="list-unstyled">
-              <li class="row d-flex align-items-center justify-content-between ps-3 mb-3">
-                <div class="col-5 d-flex align-items-center justify-content-between">
+              <li class="row d-flex align-items-center ps-3 mb-3">
+                <div class="col-6 d-flex align-items-center">
                   <span>1</span>
                   <img src="./asset/imgs/main/image-1.jpg" alt="" />
                   <span>Ocean Avenue</span>
                 </div>
-                <div class="col-3 text-end">
+                <div class="col-2 text-end">
                   <span id="songId">276.616.912</span>
                 </div>
                 <div class="col-2 text-end">
                   <span id="songDuration">3:18</span>
                 </div>
               </li>
-              <li class="row d-flex align-items-center justify-content-between ps-3 mb-3">
-                <div class="col-5 d-flex align-items-center justify-content-between">
+              <li class="row d-flex align-items-center ps-3 mb-3">
+                <div class="col-6 d-flex align-items-center">
                   <span>1</span>
                   <img src="./asset/imgs/main/image-1.jpg" alt="" />
                   <span>Ocean Avenue</span>
                 </div>
-                <div class="col-3 text-end">
+                <div class="col-2 text-end">
                   <span id="songId">276.616.912</span>
                 </div>
                 <div class="col-2 text-end">
                   <span id="songDuration">3:18</span>
                 </div>
               </li>
-              <li class="row d-flex align-items-center justify-content-between ps-3 mb-3">
-                <div class="col-5 d-flex align-items-center justify-content-between">
+              <li class="row d-flex align-items-center ps-3 mb-3">
+                <div class="col-6 d-flex align-items-center">
                   <span>1</span>
                   <img src="./asset/imgs/main/image-1.jpg" alt="" />
                   <span>Ocean Avenue</span>
                 </div>
-                <div class="col-3 text-end">
+                <div class="col-2 text-end">
                   <span id="songId">276.616.912</span>
                 </div>
                 <div class="col-2 text-end">
                   <span id="songDuration">3:18</span>
                 </div>
               </li>
-              <li class="row d-flex align-items-center justify-content-between ps-3 mb-3">
-                <div class="col-5 d-flex align-items-center justify-content-between">
+              <li class="row d-flex align-items-center ps-3 mb-3">
+                <div class="col-6 d-flex align-items-center">
                   <span>1</span>
                   <img src="./asset/imgs/main/image-1.jpg" alt="" />
                   <span>Ocean Avenue</span>
                 </div>
-                <div class="col-3 text-end">
+                <div class="col-2 text-end">
                   <span id="songId">276.616.912</span>
                 </div>
                 <div class="col-2 text-end">
                   <span id="songDuration">3:18</span>
                 </div>
               </li>
-              <li class="row d-flex align-items-center justify-content-between ps-3 mb-3">
-                <div class="col-5 d-flex align-items-center justify-content-between">
+              <li class="row d-flex align-items-center ps-3 mb-3">
+                <div class="col-6 d-flex align-items-center">
                   <span>1</span>
                   <img src="./asset/imgs/main/image-1.jpg" alt="" />
                   <span>Ocean Avenue</span>
                 </div>
-                <div class="col-3 text-end">
+                <div class="col-2 text-end">
                   <span id="songId">276.616.912</span>
                 </div>
                 <div class="col-2 text-end">
@@ -235,7 +310,7 @@
             </ul>
             <p class="m-0">VISUALIZZA ALTRO</p>
           </div>
-          <div id="lovedSongs" class="px-5">
+          <div id="lovedSongs">
             <h4 class="mb-4">Brani che ti piacciono</h4>
             <div class="d-flex align-items-center">
               <div class="position-relative">
@@ -352,19 +427,35 @@
         </div>
       </aside>
     </div>
+    <!-- sound-player-mobile -->
+    <div id="footer-xs" class="bg-dark text-white px-2 py-1 position-fixed">
+      <p>Titolo by Artista</p>
+      <div>
+        <button class="btn">
+          <i class="btn-toggle-custom bi bi-music-player text-white xsIcon"></i>
+        </button>
+        <button class="btn">
+          <i class="btn-toggle-custom bi bi-suit-heart text-white xsIcon"></i>
+        </button>
+        <button class="btn">
+          <i class="btn-toggle-custom bi bi-play-fill text-white xsIcon"></i>
+        </button>
+      </div>
+    </div>
+    <!-- sound-player -->
     <footer class="position-fixed bottom-0 soundbar-rules">
       <div class="d-flex justify-content-center align-items-center">
         <div class="d-flex align-items-center p-1">
-          <img class="rounded" src="./asset/imgs/main/image-11.jpg" alt="#" width="50" height="50" />
-          <div class="ms-2 text-white">
+          <img class="rounded" src="./asset/imgs/main/image-11.jpg" alt="#" />
+          <div class="ms-2 me-1 text-white">
             <h6 class="m-0 fw-bold">Titolo</h6>
             <p class="m-0">Artista</p>
           </div>
-          <button class="btn ms-2">
+          <button class="btn">
             <i class="btn-toggle-custom bi bi-suit-heart text-white xsIcon"></i>
           </button>
         </div>
-        <div class="d-flex flex-column position-relative pt-1 pb-4 mx-auto">
+        <div class="d-flex flex-column position-relative pt-1 pb-4">
           <div class="d-flex align-items-center">
             <button class="btn p-0 mx-2 my-2">
               <i class="btn-toggle-custom bi bi-shuffle text-white mdIcon"></i>
@@ -391,23 +482,52 @@
           </div>
         </div>
         <div class="d-flex align-items-center p-1 pe-2">
-          <button class="btn p-0 mx-1">
-            <i class="btn-toggle-custom bi bi-mic text-white xsIcon"></i>
-          </button>
-          <button class="btn p-0 mx-1">
-            <i class="btn-toggle-custom bi bi-menu-button-wide text-white xsIcon"></i>
-          </button>
-          <button class="btn p-0 mx-1">
-            <i class="btn-toggle-custom bi bi-speaker text-white xsIcon"></i>
-          </button>
-          <button id="var-icon" class="btn p-0 mx-1">
-            <i class="bi bi-volume-off text-white xsIcon"></i>
-          </button>
-          <input type="range" min="1" max="100" value="1" class="slider" id="audio-slider" />
-          <button class="btn p-0 mx-2">
-            <i class="bi bi-arrows-angle-expand text-white xsIcon"></i>
-          </button>
+          <!-- dropdown tool -->
+          <div class="dropup-center dropup">
+            <button
+              id="collapseBtn"
+              class="btn dropdown-toggle bg-transparent text-white"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            ></button>
+            <div class="dropdown-menu bg-dark">
+              <div class="d-flex align-items-center">
+                <button class="btn p-0">
+                  <i class="btn-toggle-custom bi bi-mic text-white xsIcon"></i>
+                </button>
+                <button class="btn p-0">
+                  <i class="btn-toggle-custom bi bi-menu-button-wide text-white xsIcon"></i>
+                </button>
+                <button class="btn p-0">
+                  <i class="btn-toggle-custom bi bi-speaker text-white xsIcon"></i>
+                </button>
+              </div>
+              <div class="d-flex align-items-center justify-content-center">
+                <button id="volIcon" class="btn p-0">
+                  <i class="bi bi-volume-off text-white xsIcon"></i>
+                </button>
+                <input type="range" min="1" max="100" value="1" class="slider" id="audio-slider" />
+              </div>
+            </div>
+          </div>
         </div>
+        <button class="btn p-0 mx-1 tool">
+          <i class="btn-toggle-custom bi bi-mic text-white xsIcon"></i>
+        </button>
+        <button class="btn p-0 mx-1 tool">
+          <i class="btn-toggle-custom bi bi-menu-button-wide text-white xsIcon"></i>
+        </button>
+        <button class="btn p-0 mx-1 tool">
+          <i class="btn-toggle-custom bi bi-speaker text-white xsIcon"></i>
+        </button>
+        <button id="volIcon" class="btn p-0 mx-1 tool">
+          <i class="bi bi-volume-off text-white xsIcon"></i>
+        </button>
+        <input type="range" min="1" max="100" value="1" class="slider tool" id="audio-slider" />
+        <button class="btn p-0 mx-2">
+          <i class="bi bi-arrows-angle-expand text-white xsIcon"></i>
+        </button>
       </div>
     </footer>
     <script

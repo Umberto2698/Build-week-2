@@ -1,4 +1,4 @@
-const volumeIcon = document.getElementById("var-icon");
+const volumeIcon = document.getElementById("volIcon");
 const audioSlider = document.getElementById("audio-slider");
 const buttonsToToggle = document.getElementsByClassName("btn-toggle-custom");
 console.log(buttonsToToggle);
