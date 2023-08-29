@@ -632,7 +632,8 @@ footer > div > div:nth-child(2) {
     flex-direction: column-reverse;
   }
 
-  #artistSongs > div:first-child {
+  #artistSongs > div:first-child,
+  #songId {
     display: block;
   }
 
@@ -642,6 +643,10 @@ footer > div > div:nth-child(2) {
 
   #popularSongs > li > div:first-child {
     justify-content: flex-start;
+  }
+
+  #popularSongs span {
+    font-size: 10px;
   }
 
   li > div > span {
