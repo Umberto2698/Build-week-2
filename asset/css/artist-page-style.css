@@ -129,18 +129,38 @@ main,
 }
 
 /* p {
-      margin: 0;
-    } */
+  margin: 0;
+} */
 
+#playlist,
 main {
   overflow-y: scroll;
 }
 
 header {
-  overflow-y: scroll;
   width: var(--fullWidthHeader);
-  padding-left: var(--mdPadd);
+  padding-left: var(--xsPadd);
   padding-top: var(--xsPadd);
+}
+
+nav,
+nav + section {
+  padding-right: 15px;
+}
+
+#playlist::-webkit-scrollbar,
+main::-webkit-scrollbar {
+  width: 10px;
+}
+
+#playlist::-webkit-scrollbar-track,
+main::-webkit-scrollbar-track {
+  background-color: trasparent;
+}
+
+#playlist::-webkit-scrollbar-thumb,
+main::-webkit-scrollbar-thumb {
+  background: #515151;
 }
 
 header > div {
@@ -150,11 +170,68 @@ header > div {
 #playlist ul {
   list-style: none;
   padding: 0;
-  padding-bottom: 70px;
 }
 
 main {
   width: calc(100% - var(--fullWidthHeader) - var(--fullWidthFriends));
+}
+
+main > div:first-child {
+  background-image: url(https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);
+}
+
+#play {
+  padding: 0 0 0 8px;
+}
+
+#following {
+  height: 25px;
+  font-size: 10px;
+  border-radius: 5px;
+  letter-spacing: normal;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+#popularSongs span,
+h5,
+h6,
+#lovedSongs p,
+.xsIcon {
+  font-size: 12px;
+}
+
+#popularSongs img {
+  width: 30px;
+  height: 30px;
+}
+
+#popularSongs + p {
+  font-size: 10px;
+  cursor: pointer;
+  letter-spacing: normal;
+}
+
+#lovedSongs img {
+  width: 60px;
+  height: 60px;
+}
+
+#lovedSongs span:first-of-type {
+  position: absolute;
+  bottom: 0;
+  right: 2px;
+  width: 15px;
+  height: 15px;
+}
+
+#lovedSongs i:first-of-type {
+  font-size: 8px;
+  position: absolute;
+  top: 5%;
+  left: 18%;
 }
 
 #hi-custom {
@@ -212,24 +289,43 @@ h1 {
   margin-top: 20px;
 }
 
+/* friend section */
+
 aside {
   width: var(--fullWidthAside);
   padding-inline: var(--xsPadd);
 }
 
-#friendImg {
-  width: 30px;
-  height: 30px;
+h5 + div {
+  font-size: 15px;
+}
+
+.friendImg {
   overflow: hidden;
 }
 
+.friendStatus img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  text-align: center;
+}
+
+.friendStatus h6 {
+  font-size: 10px;
+}
+
+.friendStatus span {
+  font-size: 8px;
+}
+
 #circle {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
 }
 
 /* @media screen and (min-width: px) {
-      
+
     } */
 
 @media screen and (max-width: 450px) {
@@ -307,6 +403,27 @@ aside {
 }
 
 /* footer */
+footer p {
+  font-size: 8px;
+}
+
+.mdIcon {
+  font-size: 15px;
+}
+
+.lgIcon {
+  width: 25px;
+  height: 25px;
+}
+
+.lgIcon i {
+  font-size: 20px;
+}
+
+footer span {
+  font-size: 10px;
+}
+
 .soundbar-rules {
   background-color: #181818;
   width: 100vw;
