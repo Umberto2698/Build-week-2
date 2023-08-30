@@ -1,5 +1,5 @@
 :root {
-  --fullWidthAside: 205px;
+  /* --fullWidthAside: 250px; */
   --fullWidthHeader: 250px;
   --fullWidthFriends: 15%;
 
@@ -176,8 +176,11 @@ main {
   width: calc(100% - var(--fullWidthHeader) - var(--fullWidthFriends));
 }
 
-main > div:first-child {
-  background-image: url(https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);
+#background-big-card {
+  min-height: 400px;
+  background-repeat: no-repeat;
+  background-position-y: -90px;
+  background-size: cover;
 }
 
 #play {
@@ -199,46 +202,52 @@ h4 {
 }
 
 #popularSongs span,
+#popularSongs-xs span,
 h5,
 h6,
 #lovedSongs p,
+#lovedSongs-xs p,
 .xsIcon {
   font-size: 12px;
 }
 
-#artistSongs > div:first-child {
+#artistSongs > div:first-child,
+#artistSongs-xs > div:first-child {
   display: none;
 }
 
-#popularSongs li {
+#popularSongs li,
+#popularSongs-xs li {
   justify-content: space-between;
 }
 
-#popularSongs li > div {
-  justify-content: space-around;
+#popularSongs img,
+#popularSongs-xs img {
+  width: 40px;
+  height: 40px;
+  margin-inline: 10px;
 }
 
-#popularSongs img {
-  width: 30px;
-  height: 30px;
-}
-
-#popularSongs + p {
+#popularSongs + p,
+#popularSongs-xs + p {
   font-size: 10px;
   cursor: pointer;
   letter-spacing: normal;
 }
 
-#lovedSongs {
+#lovedSongs,
+#lovedSongs-xs {
   padding-inline: 50px;
 }
 
-#lovedSongs img {
+#lovedSongs img,
+#lovedSongs-xs img {
   width: 60px;
   height: 60px;
 }
 
-#lovedSongs span:first-of-type {
+#lovedSongs span:first-of-type,
+#lovedSongs-xs span:first-of-type {
   position: absolute;
   bottom: 0;
   right: 2px;
@@ -246,7 +255,8 @@ h6,
   height: 15px;
 }
 
-#lovedSongs i:first-of-type {
+#lovedSongs i:first-of-type,
+#lovedSongs-xs i:first-of-type {
   font-size: 8px;
   position: absolute;
   top: 5%;
@@ -258,7 +268,7 @@ h6,
 }
 
 aside {
-  width: var(--fullWidthFriends);
+  min-width: var(--fullWidthFriend);
 }
 
 .custom-btn {
@@ -272,6 +282,8 @@ h1 {
   font-size: var(--lgPadd);
   font-weight: bold;
 }
+
+/* mobile */
 #listener-xs,
 .icon-xs,
 #menu-xs {
@@ -329,7 +341,7 @@ div > :has(#listener) {
 /* friend section */
 
 aside {
-  width: var(--fullWidthAside);
+  min-width: var(--fullWidthFriends);
   padding-inline: var(--xsPadd);
 }
 
@@ -510,11 +522,9 @@ footer > div > div:nth-child(2) {
   #popularSongs li {
     justify-content: space-around;
   }
-  #popularSongs li > div {
-    justify-content: space-around;
-  }
 
-  #lovedSongs {
+  #lovedSongs,
+  #lovedSongs-xs {
     padding-inline: 10px;
   }
 
@@ -604,6 +614,11 @@ footer > div > div:nth-child(2) {
     display: none;
   }
 
+  #background-big-card {
+    min-height: 400px;
+    background-position-y: -40px;
+  }
+
   #custom-big-card {
     margin-bottom: 0;
     height: 200px;
@@ -644,12 +659,24 @@ footer > div > div:nth-child(2) {
   #artistSongs > div:nth-child(2) {
     display: none;
   }
+  #artistSongs-xs {
+    flex-direction: column-reverse;
+  }
 
-  #popularSongs > li > div:first-child {
+  #artistSongs-xs > div:first-child,
+  #songId {
+    display: block;
+  }
+
+  #artistSongs-xs > div:nth-child(2) {
+    display: none;
+  }
+
+  #popularSongs > li > div:first-child #popularSongs-xs > li > div:first-child {
     justify-content: flex-start;
   }
 
-  #popularSongs span {
+  #popularSongs span #popularSongs-xs span {
     font-size: 10px;
   }
 
@@ -661,20 +688,24 @@ footer > div > div:nth-child(2) {
     margin-inline: 10px;
   }
 
-  #lovedSongs {
+  #lovedSongs,
+  #lovedSongs-xs {
     padding-inline: 1.5rem;
     margin-bottom: 30px;
   }
 
-  #lovedSongs h4 {
+  #lovedSongs h4,
+  #lovedSongs-xs h4 {
     display: none;
   }
 
-  #lovedSongs h6 {
+  #lovedSongs h6,
+  #lovedSongs-xs h6 {
     margin: 0;
   }
 
-  #lovedSongs img {
+  #lovedSongs img,
+  #lovedSongs-xs img {
     width: 45px;
     height: 45px;
   }
@@ -742,6 +773,11 @@ footer > div > div:nth-child(2) {
 }
 
 @media screen and (max-width: 450px) {
+  #background-big-card {
+    min-height: 400px;
+    background-position-y: 0px;
+  }
+
   .custom-fontSize-normal {
     font-size: calc(var(--xsFontSize) - 2px);
   }

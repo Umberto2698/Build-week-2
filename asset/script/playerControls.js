@@ -1,7 +1,6 @@
 const volumeIcon = document.getElementById("volIcon");
 const audioSlider = document.getElementById("audio-slider");
 const buttonsToToggle = document.getElementsByClassName("btn-toggle-custom");
-console.log(buttonsToToggle);
 
 const iconchange1 = function () {
   if (
@@ -38,7 +37,6 @@ const toggleColor = function (ev) {
     ev.currentTarget.classList.remove("text-success");
     ev.currentTarget.classList.add("text-white");
   }
-  console.log("test");
 };
 
 for (i = 0; i < buttonsToToggle.length; i++) {

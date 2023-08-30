@@ -104,7 +104,7 @@
         </div>
       </header>
       <main class="d-flex flex-column">
-        <div class="px-4">
+        <div id="background-big-card" class="px-4">
           <div id="upbar" class="d-flex justify-content-between align-items-center mb-5">
             <div class="d-flex gap-3">
               <i class="bi bi-arrow-left-circle custom-fontSize-lg"></i>
@@ -161,17 +161,17 @@
           </div>
         </div>
         <!-- artist-page-mobile -->
-        <div id="artistSongs" class="d-flex">
+        <div id="artistSongs-xs" class="d-flex">
           <div class="px-4">
             <h4 class="mb-4">Popolari</h4>
-            <ul id="popularSongs" class="list-unstyled">
+            <ul id="popularSongs-xs" class="list-unstyled">
               <li class="d-flex align-items-center mb-3">
                 <div class="d-flex align-items-center">
                   <span>1</span>
                   <img src="./asset/imgs/main/image-1.jpg" alt="" />
                   <div class="d-flex flex-column ms-1">
                     <span>Ocean Avenue</span>
-                    <span id="songId">276.616.912</span>
+                    <span id="songId-xs">276.616.912</span>
                   </div>
                 </div>
                 <div class="text-end">
@@ -236,7 +236,7 @@
           <div class="px-4 w-50">
             <h4 class="mb-4">Popolari</h4>
             <ul id="popularSongs" class="list-unstyled">
-              <li class="row d-flex align-items-center ps-3 mb-3">
+              <!-- <li class="row d-flex align-items-center ps-3 mb-3">
                 <div class="col-6 d-flex align-items-center">
                   <span>1</span>
                   <img src="./asset/imgs/main/image-1.jpg" alt="" />
@@ -248,59 +248,7 @@
                 <div class="col-2 text-end">
                   <span id="songDuration">3:18</span>
                 </div>
-              </li>
-              <li class="row d-flex align-items-center ps-3 mb-3">
-                <div class="col-6 d-flex align-items-center">
-                  <span>1</span>
-                  <img src="./asset/imgs/main/image-1.jpg" alt="" />
-                  <span>Ocean Avenue</span>
-                </div>
-                <div class="col-2 text-end">
-                  <span id="songId">276.616.912</span>
-                </div>
-                <div class="col-2 text-end">
-                  <span id="songDuration">3:18</span>
-                </div>
-              </li>
-              <li class="row d-flex align-items-center ps-3 mb-3">
-                <div class="col-6 d-flex align-items-center">
-                  <span>1</span>
-                  <img src="./asset/imgs/main/image-1.jpg" alt="" />
-                  <span>Ocean Avenue</span>
-                </div>
-                <div class="col-2 text-end">
-                  <span id="songId">276.616.912</span>
-                </div>
-                <div class="col-2 text-end">
-                  <span id="songDuration">3:18</span>
-                </div>
-              </li>
-              <li class="row d-flex align-items-center ps-3 mb-3">
-                <div class="col-6 d-flex align-items-center">
-                  <span>1</span>
-                  <img src="./asset/imgs/main/image-1.jpg" alt="" />
-                  <span>Ocean Avenue</span>
-                </div>
-                <div class="col-2 text-end">
-                  <span id="songId">276.616.912</span>
-                </div>
-                <div class="col-2 text-end">
-                  <span id="songDuration">3:18</span>
-                </div>
-              </li>
-              <li class="row d-flex align-items-center ps-3 mb-3">
-                <div class="col-6 d-flex align-items-center">
-                  <span>1</span>
-                  <img src="./asset/imgs/main/image-1.jpg" alt="" />
-                  <span>Ocean Avenue</span>
-                </div>
-                <div class="col-2 text-end">
-                  <span id="songId">276.616.912</span>
-                </div>
-                <div class="col-2 text-end">
-                  <span id="songDuration">3:18</span>
-                </div>
-              </li>
+              </li> -->
             </ul>
             <p class="m-0">VISUALIZZA ALTRO</p>
           </div>
@@ -468,11 +416,11 @@
             </button>
           </div>
           <div class="d-flex align-items-center mt-1">
-            <span class="position-absolute text-white currenttime-position">0:00</span>
-            <div class="progress-bar-base position-absolute">
+            <span id="song-current-time" class="position-absolute text-white currenttime-position">0:00</span>
+            <div id="fill-container" class="progress-bar-base position-absolute">
               <div class="progress-bar-fill position-absolute"></div>
             </div>
-            <span class="position-absolute text-white fulltime-position">0:00</span>
+            <span id="song-length" class="position-absolute text-white fulltime-position">0:00</span>
           </div>
         </div>
         <div class="d-flex align-items-center p-1 pe-2">
@@ -545,5 +493,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./asset/script/playerControls.js"></script>
+    <script src="./asset/script/artist-page-script.js"></script>
   </body>
 </html>
