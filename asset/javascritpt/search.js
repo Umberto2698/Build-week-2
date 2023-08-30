@@ -13,9 +13,16 @@ const div48Cards = document.getElementById("cards-48");
 
 const getData = async (event) => {
   event.preventDefault();
+  const fromJS = document.querySelector("#fromJS");
   div48Cards.style.display = "none";
   fromJS.style.display = "flex";
-
+  fromJS.innerHTML = `
+    <div class="d-flex justify-content-center">
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    </div>
+    `;
   try {
     const inputSearch = document.querySelector("#search");
     const URL =
@@ -78,8 +85,6 @@ const getData = async (event) => {
 
       console.log(parseBody.data);
       console.log(parseBody.data[0].title);
-      const fromJS = document.querySelector("#fromJS");
-      fromJS.innerText = "";
       if (nameArtist0.toLowerCase() === inputSearch.value.toLowerCase()) {
         fromJS.innerHTML = `
               <div class="row row-cols-xl-2 row-cols-lg-1 row-cols-md-2 row-cols-1 flex-grow-1">
@@ -445,3 +450,8 @@ const getData = async (event) => {
     console.log(error);
   }
 };
+
+/**
+ *TODO: migliorare il responsive;
+ *TODO: mettere un timer che passati 10sec e non ha trovato nulla mi mostra una scritta con errore
+ */
