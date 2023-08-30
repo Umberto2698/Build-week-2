@@ -4,8 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title></title>
-    <link rel="stylesheet" href="./asset/css/reset.css" />
-    <link rel="stylesheet" href="./asset/css/font-awesome.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,25 +12,104 @@
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="./asset/css/album-page-custom-style.css" />
+    <link rel="stylesheet" href="./asset/css/artist-page-style.css" />
+    <link rel="stylesheet" href="./asset/css/homePage.css" />
   </head>
   <body class="bg-black">
-    <main class="d-flex">
-      <section class="left-column-rules d-flex flex-column">
-        <div class="dropdown">
-          <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-three-dots fs-2 grey ps-3"></i>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+    <div class="d-flex">
+      <header>
+        <div class="d-flex flex-column">
+          <nav class="d-flex flex-column gap-2">
+            <i class="bi bi-three-dots custom-fontSize-icon"></i>
+            <div class="d-flex gap-3 align-items-center">
+              <i class="bi bi-house-door custom-fontSize-icon"></i>
+              <!-- <i class="bi bi-house-door-fill custom-fontSize-icon"></i> -->
+              <p class="m-0 custom-fontSize-nav">Home</p>
+            </div>
+            <div class="d-flex gap-3 align-items-center">
+              <i class="bi bi-search custom-fontSize-icon"></i>
+              <p class="m-0 custom-fontSize-nav">Search</p>
+            </div>
+            <div class="d-flex gap-3 align-items-center">
+              <i class="bi bi-collection custom-fontSize-icon"></i>
+              <p class="m-0 custom-fontSize-nav">La tua libreria</p>
+            </div>
+          </nav>
+          <section class="d-flex flex-column gap-2 mt-4">
+            <div class="d-flex gap-3 align-items-center">
+              <i class="bi bi-plus-square-fill custom-fontSize-icon"></i>
+              <p class="m-0 custom-fontSize-nav">Crea playlist</p>
+            </div>
+            <div class="d-flex gap-3 align-items-center">
+              <i class="bi bi-heart-fill custom-fontSize-icon"></i>
+              <p class="m-0 custom-fontSize-nav">Brani che ti piacciono</p>
+            </div>
+            <div class="d-flex gap-3 align-items-center">
+              <i class="bi bi-bookmark-fill custom-fontSize-icon"></i>
+              <p class="m-0 custom-fontSize-nav">I tuoi episodi</p>
+            </div>
+          </section>
+          <section id="playlist" class="mt-4">
+            <ul class="d-flex flex-column text-secondary custom-fontSize-header">
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+            </ul>
+          </section>
         </div>
-      </section>
-      <section class="album-detail-rules bg-gradient-custom">
+      </header>
+
+      <main class="album-detail-rules bg-gradient-custom">
         <!-- bg-gradient-custom vorra un average color dinamico preso dalla fetch presumo-->
         <!-- da linea 33 a linea 54 - bottoni in cima alla pagina-->
-        <div class="d-flex justify-content-between">
+        <div class="d-none d-lg-flex d-xl-flex d-xxl-flex justify-content-between">
           <div class="pt-4 ps-4">
             <button id="previous-album" class="btn btn-dark rounded-circle me-4">
               <i class="bi bi-chevron-left fs-5"></i>
@@ -41,51 +118,77 @@
               <i class="bi bi-chevron-right fs-5"></i>
             </button>
           </div>
-          <div class="dropdown pt-4 pe-4">
+          <div class="btn-group mt-4 me-4 bg-dark rounded-pill">
             <button
-              class="dropdown-toggle btn btn-dark rounded-pill fs-5 text-truncate"
               type="button"
+              class="btn dropdown-toggle text-light"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <img src="" alt="#" /> user
+              <i class="bi bi-person-circle"></i>
+              <span>Nome User</span>
             </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
+              <li>
+                <button class="dropdown-item d-flex justify-content-between" type="button">
+                  Account
+                  <i class="bi bi-box-arrow-in-up-right"></i>
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button">Profile</button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button">Settings</button>
+              </li>
             </ul>
           </div>
         </div>
-        <div class="d-flex flex-column">
-          <!--da linea 56 a 99 contenuto e struttura centrale della pagina-->
-          <div class="d-flex align-items-center ps-4 pt-5 pb-4">
-            <img id="album-cover" class="custom-shadow" alt="#" height="300" width="300" />
 
+        <div class="d-flex flex-column">
+          <!-- contenuto e struttura centrale della pagina-->
+          <div class="d-flex flex-column flex-xxl-row align-items-center ps-2 ps-md-4 pt-5 pb-md-4 position-relative">
+            <button class="btn d-lg-none d-xl-none d-xxl-none position-absolute top-10 start-0">
+              <i class="bi bi-arrow-left text-white fs-1"></i>
+            </button>
+            <img id="album-cover" class="custom-shadow" alt="#" height="300" width="300" />
             <div class="d-flex flex-column justify-content-end ps-4 pb-2">
-              <p class="text-white fw-bold">ALBUM</p>
+              <p class="d-none d-md-inline text-white fw-bold">ALBUM</p>
               <h1 id="album-title" class="display-1 text-white fw-bold pb-3">Gioventu' brucata</h1>
               <p id="album-details" class="text-white">
                 <img class="rounded-circle" id="artist-logo" src="" alt="#" height="30" width="30" />
 
                 <span class="fw-bold"
-                  ><span id="album-artist"> artista</span> - <span id="album-year">anno</span> -
-                  <span id="album-tracks">numero di brani</span></span
+                  ><span id="album-artist"> artista -</span>
+                  <span id="album-year" class="d-none d-md-inline">anno -</span>
+                  <span id="album-tracks" class="d-none d-md-inline">numero di brani -</span></span
                 >
-                -
-                <span id="album-fulltime">durata dell intero album</span>
+
+                <span id="album-fulltime" class="d-none d-md-inline">durata dell intero album</span>
               </p>
             </div>
+            <p class="align-self-start ps-4 d-inline d-md-none">
+              Album <i class="bi bi-dot"></i> <span id="album-year-2">anno -</span>
+            </p>
           </div>
-          <div class="d-flex flex-column pt-4 pe-5 ps-5 bg-black-semi">
-            <div>
-              <button class="btn btn-success rounded-circle text-dark"><i class="bi bi-play-fill fs-2"></i></button>
-              <button class="btn ms-3"><i class="bi bi-suit-heart fs-2 text-white"></i></button>
-              <button class="btn"><i class="bi bi-arrow-down-circle fs-2 text-white"></i></button>
-              <button class="btn"><i class="bi bi-three-dots fs-2 text-white"></i></button>
+          <div class="d-flex flex-column pt-md-4 pe-2 pe-md-5 ps-2 ps-md-5 bg-black-semi">
+            <div class="d-flex justify-content-between">
+              <div class="order-1 order-md-0">
+                <button class="btn d-md-none">
+                  <i class="btn-toggle-custom bi bi-shuffle text-white mdIcon fs-2"></i>
+                </button>
+                <button class="btn btn-success rounded-circle text-dark">
+                  <i class="bi bi-play-fill text-white fs-2"></i>
+                </button>
+              </div>
+              <div>
+                <button class="btn ms-3"><i class="bi bi-suit-heart fs-2 text-white"></i></button>
+                <button class="btn"><i class="bi bi-arrow-down-circle fs-2 text-white"></i></button>
+                <button class="btn"><i class="bi bi-three-dots fs-2 text-white"></i></button>
+              </div>
             </div>
-            <div id="track-list-rep" class="container">
-              <div class="row border-bottom">
+            <div id="track-list-rep" class="container pt-2 pt-md-0">
+              <div class="row border-bottom d-none d-md-flex mb-md-2">
                 <div class="col-1 text-center grey">#</div>
                 <div class="col-6 grey">TITOLO</div>
                 <div class="col-4 grey">RIPRODUZIONI</div>
@@ -94,43 +197,196 @@
             </div>
           </div>
         </div>
-      </section>
-      <section class="right-column-rules"></section>
-      <footer class="position-fixed bottom-0 soundbar-rules d-flex justify-content-between align-items-center p-3">
-        <div class="d-flex align-items-center">
-          <img id="playbar-img" class="rounded" src="" alt="#" width="80" height="80" />
-          <div class="ms-3">
-            <p id="playbar-title" class="fs-5 fw-bold text-white">Titolo</p>
-            <p id="playbar-artist" class="text-white">Artista</p>
+      </main>
+      <section id="friends">
+        <div class="d-flex flex-column px-3 custom-paddingTop-xs">
+          <div class="d-flex justify-content-between custom-paddingBottom-xs">
+            <h5>Attività amici</h5>
+            <div class="d-flex gap-3">
+              <i class="bi bi-person-plus"></i>
+              <i class="bi bi-x-lg"></i>
+            </div>
           </div>
-          <button class="btn ms-3"><i class="btn-toggle-custom bi bi-suit-heart fs-4 text-white"></i></button>
+          <div class="d-flex flex-column gap-4">
+            <div class="d-flex flex-grow-1">
+              <img
+                src="./asset/imgs/main/image-6.jpg"
+                alt="imagine dragons"
+                class="xs-img"
+                style="border-radius: 50%"
+              />
+              <div class="d-flex flex-column custom-paddingLeft-cards flex-grow-1">
+                <div class="d-flex justify-content-between">
+                  <h6 class="custom-fontSize-normal m-0">Charlie Hookham</h6>
+                  <p class="m-0 custom-fontSize-xs">4 ore</p>
+                </div>
+                <p class="m-0 custom-fontSize-xs">In Camera <strong>·</strong> Yumi Zouma</p>
+                <div class="d-flex gap-2">
+                  <i class="bi bi-disc"></i>
+                  <p class="m-0 custom-fontSize-xs">EP III</p>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-grow-1">
+              <img
+                src="./asset/imgs/main/image-6.jpg"
+                alt="imagine dragons"
+                class="xs-img"
+                style="border-radius: 50%"
+              />
+              <div class="d-flex flex-column custom-paddingLeft-cards flex-grow-1">
+                <div class="d-flex justify-content-between">
+                  <h6 class="custom-fontSize-normal m-0">Charlie Hookham</h6>
+                  <p class="m-0 custom-fontSize-xs">4 ore</p>
+                </div>
+                <p class="m-0 custom-fontSize-xs">In Camera <strong>·</strong> Yumi Zouma</p>
+                <div class="d-flex gap-2">
+                  <i class="bi bi-disc"></i>
+                  <p class="m-0 custom-fontSize-xs">EP III</p>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-grow-1">
+              <img
+                src="./asset/imgs/main/image-6.jpg"
+                alt="imagine dragons"
+                class="xs-img"
+                style="border-radius: 50%"
+              />
+              <div class="d-flex flex-column custom-paddingLeft-cards flex-grow-1">
+                <div class="d-flex justify-content-between">
+                  <h6 class="custom-fontSize-normal m-0">Charlie Hookham</h6>
+                  <p class="m-0 custom-fontSize-xs">4 ore</p>
+                </div>
+                <p class="m-0 custom-fontSize-xs">In Camera <strong>·</strong> Yumi Zouma</p>
+                <div class="d-flex gap-2">
+                  <i class="bi bi-disc"></i>
+                  <p class="m-0 custom-fontSize-xs">EP III</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="d-flex flex-column position-relative pb-4">
-          <div>
-            <button class="btn"><i class="btn-toggle-custom bi bi-shuffle text-white fs-4"></i></button>
-            <button class="btn"><i class="btn-toggle-custom bi bi-skip-start-fill text-white fs-4"></i></button>
-            <button class="btn btn-sm btn-light rounded-circle">
-              <i class="btn-toggle-custom bi bi-play-fill text-black fs-4"></i>
-            </button>
-            <button class="btn"><i class="btn-toggle-custom bi bi-skip-end-fill text-white fs-4"></i></button>
-            <button class="btn"><i class="btn-toggle-custom bi bi-repeat text-white fs-4"></i></button>
+      </section>
+    </div>
+    <!-- sound-player-mobile -->
+    <div id="footer-xs" class="bg-dark text-white px-2 py-1 position-fixed">
+      <p>Titolo by Artista</p>
+      <div>
+        <button class="btn">
+          <i class="btn-toggle-custom bi bi-music-player text-white xsIcon"></i>
+        </button>
+        <button class="btn">
+          <i class="btn-toggle-custom bi bi-suit-heart text-white xsIcon"></i>
+        </button>
+        <button class="btn">
+          <i class="btn-toggle-custom bi bi-play-fill text-white xsIcon"></i>
+        </button>
+      </div>
+    </div>
+    <!-- sound-player -->
+    <footer class="position-fixed bottom-0 soundbar-rules">
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="d-flex align-items-center p-1">
+          <img id="playbar-img" class="rounded" src="./asset/imgs/main/image-11.jpg" alt="#" />
+          <div class="ms-2 me-1 text-white">
+            <h6 id="playbar-title" class="m-0 fw-bold">Titolo</h6>
+            <p id="playbar-artist" class="m-0">Artista</p>
           </div>
-          <div class="d-flex">
+          <button class="btn">
+            <i class="btn-toggle-custom bi bi-suit-heart text-white xsIcon"></i>
+          </button>
+        </div>
+        <div class="d-flex flex-column position-relative pt-1 pb-4">
+          <div class="d-flex align-items-center">
+            <button class="btn p-0 mx-2 my-2">
+              <i class="btn-toggle-custom bi bi-shuffle text-white mdIcon"></i>
+            </button>
+            <button class="btn p-0 mx-2 my-2">
+              <i class="btn-toggle-custom bi bi-skip-start-fill text-white mdIcon"></i>
+            </button>
+            <button class="d-flex align-items-center btn-sm btn-light rounded-circle p-0 lgIcon">
+              <i class="btn-toggle-custom bi bi-play-fill text-black"></i>
+            </button>
+            <button class="btn p-0 mx-2 my-2">
+              <i class="btn-toggle-custom bi bi-skip-end-fill text-white mdIcon"></i>
+            </button>
+            <button class="btn p-0 mx-2 my-2">
+              <i class="btn-toggle-custom bi bi-repeat text-white mdIcon"></i>
+            </button>
+          </div>
+          <div class="d-flex align-items-center mt-1">
             <span id="song-current-time" class="position-absolute text-white currenttime-position">0:00</span>
-            <div id="fill-container" class="progress-bar-base position-absolute"><div></div></div>
+            <div id="fill-container" class="progress-bar-base position-absolute">
+              <div class="progress-bar-fill position-absolute"></div>
+            </div>
             <span id="song-length" class="position-absolute text-white fulltime-position">0:00</span>
           </div>
         </div>
-        <div class="d-flex align-items-center">
-          <button class="btn"><i class="btn-toggle-custom bi bi-mic text-white fs-4"></i></button>
-          <button class="btn"><i class="btn-toggle-custom bi bi-menu-button-wide text-white fs-4"></i></button>
-          <button class="btn"><i class="btn-toggle-custom bi bi-speaker text-white fs-4"></i></button>
-          <button id="var-icon" class="btn"><i class="bi bi-volume-off text-white fs-4"></i></button>
-          <input type="range" min="1" max="100" value="1" class="slider" id="audio-slider" />
-          <button class="btn"><i class="bi bi-arrows-angle-expand text-white fs-4"></i></button>
+        <div class="d-flex align-items-center p-1 pe-2">
+          <!-- dropdown tool -->
+          <div class="dropup-center dropup">
+            <button
+              id="collapseBtn"
+              class="btn dropdown-toggle bg-transparent text-white"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            ></button>
+            <div class="dropdown-menu bg-dark">
+              <div class="d-flex align-items-center">
+                <button class="btn p-0">
+                  <i class="btn-toggle-custom bi bi-mic text-white xsIcon"></i>
+                </button>
+                <button class="btn p-0">
+                  <i class="btn-toggle-custom bi bi-menu-button-wide text-white xsIcon"></i>
+                </button>
+                <button class="btn p-0">
+                  <i class="btn-toggle-custom bi bi-speaker text-white xsIcon"></i>
+                </button>
+              </div>
+              <div class="d-flex align-items-center justify-content-center">
+                <button id="volIcon" class="btn p-0">
+                  <i class="bi bi-volume-off text-white xsIcon"></i>
+                </button>
+                <input type="range" min="1" max="100" value="1" class="slider" id="audio-slider" />
+              </div>
+            </div>
+          </div>
         </div>
-      </footer>
-    </main>
+        <button class="btn p-0 mx-1 tool">
+          <i class="btn-toggle-custom bi bi-mic text-white xsIcon"></i>
+        </button>
+        <button class="btn p-0 mx-1 tool">
+          <i class="btn-toggle-custom bi bi-menu-button-wide text-white xsIcon"></i>
+        </button>
+        <button class="btn p-0 mx-1 tool">
+          <i class="btn-toggle-custom bi bi-speaker text-white xsIcon"></i>
+        </button>
+        <button id="volIcon" class="btn p-0 mx-1 tool">
+          <i class="bi bi-volume-off text-white xsIcon"></i>
+        </button>
+        <input type="range" min="1" max="100" value="1" class="slider tool" id="audio-slider" />
+        <button class="btn p-0 mx-2">
+          <i class="bi bi-arrows-angle-expand text-white xsIcon"></i>
+        </button>
+      </div>
+    </footer>
+    <!-- Menù mobile -->
+    <div id="menu-xs" class="position-fixed bottom-0">
+      <div class="d-flex flex-column align-items-center">
+        <i class="bi bi-house-door-fill"></i>
+        <p class="m-0">Home</p>
+      </div>
+      <div class="d-flex flex-column align-items-center">
+        <i class="bi bi-search"></i>
+        <p class="m-0">Search</p>
+      </div>
+      <div class="d-flex flex-column align-items-center">
+        <i class="bi bi-collection"></i>
+        <p class="m-0">La tua libreria</p>
+      </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"

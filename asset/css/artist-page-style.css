@@ -176,7 +176,7 @@ main {
   width: calc(100% - var(--fullWidthHeader) - var(--fullWidthFriends));
 }
 
-main > div:first-child {
+#background-big-card {
   background-image: url(https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);
 }
 
