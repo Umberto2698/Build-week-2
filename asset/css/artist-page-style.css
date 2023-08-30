@@ -190,6 +190,8 @@ main > div:first-child {
   font-size: 10px;
   border-radius: 5px;
   letter-spacing: normal;
+  --bs-btn-padding-y: 0;
+  --bs-btn-padding-x: 0.5rem;
 }
 
 h4 {
@@ -271,7 +273,8 @@ h1 {
   font-weight: bold;
 }
 #listener-xs,
-.icon-xs {
+.icon-xs,
+#menu-xs {
   display: none;
 }
 
@@ -592,6 +595,7 @@ footer > div > div:nth-child(2) {
 }
 
 @media screen and (max-width: 576px) {
+  main::-webkit-scrollbar,
   .bi-arrow-right-circle,
   .btn-group,
   .bi-patch-check-fill,
@@ -699,7 +703,7 @@ footer > div > div:nth-child(2) {
   #footer-xs {
     display: flex;
     justify-content: space-between;
-    bottom: 50px;
+    bottom: 40px;
     right: 10px;
     left: 10px;
     border-radius: 5px;
@@ -709,6 +713,26 @@ footer > div > div:nth-child(2) {
   #footer-xs p {
     margin: 0;
     margin-left: 30px;
+  }
+
+  #menu-xs {
+    background: linear-gradient(to top, black, transparent);
+    display: flex;
+    justify-content: space-evenly;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  #menu-xs div {
+    margin-inline: 5px;
+    color: white;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  #menu-xs p {
+    font-size: 10px;
   }
 }
 
@@ -720,5 +744,8 @@ footer > div > div:nth-child(2) {
 @media screen and (max-width: 450px) {
   .custom-fontSize-normal {
     font-size: calc(var(--xsFontSize) - 2px);
+  }
+  #footer-xs button {
+    --bs-btn-padding-x: 0.25rem;
   }
 }
