@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link rel="stylesheet" href="./asset/css/reset.css" />
+    <link rel="stylesheet" href="./asset/css/font-awesome.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./asset/css/searchPage.css" />
+  </head>
+  <body>
+    <div class="d-flex">
+      <header>
+        <div class="d-flex flex-column">
+          <nav class="d-flex flex-column gap-2">
+            <i class="bi bi-three-dots custom-fontSize-icon"></i>
+            <div class="d-flex gap-3 align-items-center">
+              <i class="bi bi-house-door custom-fontSize-icon"></i>
+              <!-- <i class="bi bi-house-door-fill custom-fontSize-icon"></i> -->
+              <p class="m-0 custom-fontSize-nav">Home</p>
+            </div>
+            <div class="d-flex gap-3 align-items-center">
+              <i class="bi bi-search custom-fontSize-icon"></i>
+              <p class="m-0 custom-fontSize-nav">Search</p>
+            </div>
+            <div class="d-flex gap-3 align-items-center">
+              <i class="bi bi-collection custom-fontSize-icon"></i>
+              <p class="m-0 custom-fontSize-nav">La tua libreria</p>
+            </div>
+          </nav>
+          <section class="d-flex flex-column gap-2 mt-4">
+            <div class="d-flex gap-3 align-items-center">
+              <i class="bi bi-plus-square-fill custom-fontSize-icon"></i>
+              <p class="m-0 custom-fontSize-nav">Crea playlist</p>
+            </div>
+            <div class="d-flex gap-3 align-items-center">
+              <i class="bi bi-heart-fill custom-fontSize-icon"></i>
+              <p class="m-0 custom-fontSize-nav">Brani che ti piacciono</p>
+            </div>
+            <div class="d-flex gap-3 align-items-center">
+              <i class="bi bi-bookmark-fill custom-fontSize-icon"></i>
+              <p class="m-0 custom-fontSize-nav">I tuoi episodi</p>
+            </div>
+          </section>
+          <section id="playlist" class="mt-4">
+            <ul
+              class="d-flex flex-column text-secondary custom-fontSize-header"
+            >
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+              <li>An item</li>
+              <li>A second item</li>
+              <li>A third item</li>
+              <li>A fourth item</li>
+              <li>And a fifth one</li>
+            </ul>
+          </section>
+        </div>
+      </header>
+      <main class="d-flex flex-column px-4 gap-4">
+        <div
+          id="upbar-hide"
+          class="d-flex flex-column justify-content-between align-items-center gap-4"
+        >
+          <div
+            class="d-flex gap-4 align-items-center justify-content-between"
+            style="width: 100%"
+          >
+            <h4 class="m-0">Cerca</h4>
+            <i class="bi bi-camera custom-fontSize-icon"></i>
+          </div>
+
+          <form
+            class="d-flex align-items-center flex-grow-1 gap-4"
+            role="search"
+            style="width: 100%"
+          >
+            <div
+              class="d-flex align-items-center custom-border-search flex-grow-1"
+            >
+              <i class="bi bi-search ps-3 text-dark custom-fontSize-md"></i>
+              <input
+                id="search"
+                class="form-control me-2 bg-transparent text-dark border-0 sm-bold"
+                type="search"
+                placeholder="Cosa vuoi ascoltare?"
+                aria-label="Search"
+                autocomplete="off"
+              />
+            </div>
+            <!-- <button
+                id="btn-search"
+                class="btn btn-outline-dark text-secondary"
+                type="submit"
+              >
+                Search
+              </button> -->
+          </form>
+        </div>
+        <div
+          id="upbar"
+          class="d-flex justify-content-between align-items-center gap-4"
+        >
+          <div class="d-flex gap-4 align-items-center flex-grow-1">
+            <i class="bi bi-chevron-left custom-fontSize-icon"></i>
+            <i class="bi bi-chevron-right custom-fontSize-icon"></i>
+            <form
+              class="d-flex align-items-center flex-grow-1 gap-4"
+              role="search"
+            >
+              <div
+                class="d-flex align-items-center custom-border-search flex-grow-1"
+              >
+                <i class="bi bi-search ps-3 custom-fontSize-md"></i>
+                <input
+                  id="search"
+                  class="form-control me-2 bg-transparent text-light border-0"
+                  type="search"
+                  placeholder="Cosa vuoi ascoltare?"
+                  aria-label="Search"
+                  autocomplete="off"
+                />
+              </div>
+              <!-- <button
+                id="btn-search"
+                class="btn btn-outline-dark text-secondary"
+                type="submit"
+              >
+                Search
+              </button> -->
+            </form>
+          </div>
+          <div class="btn-group">
+            <button
+              type="button"
+              class="btn dropdown-toggle text-light"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="bi bi-person-circle"></i>
+              <span>Nome User</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
+              <li>
+                <button
+                  class="dropdown-item d-flex justify-content-between"
+                  type="button"
+                >
+                  Account
+                  <i class="bi bi-box-arrow-in-up-right"></i>
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button">Profile</button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button">Settings</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column gap-2">
+          <h3 class="m-0">Sfoglia tutto</h3>
+          <div class="container-fuild custom-margin-none">
+            <div
+              class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6"
+            >
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466 77%
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Discover
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #f7fe24,
+                      #ff4b00
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-2.jpg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #beb0d1,
+                      #a0ab7e
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Pollen
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-3.jpg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #dfdfdf,
+                      #fae62d
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Mint
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-4.jpg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #ef39a6,
+                      #75134e
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Latino
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-5.jpg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #8862c5,
+                      #3b1e52
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    R&B
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-6.jpg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #ec1e32,
+                      #bb1929
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Rock
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-7.jpg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col custom-height">
+                <div
+                  class="custom-grid-card"
+                  style="
+                    background-image: linear-gradient(
+                      to top left,
+                      #94bbcc,
+                      #1e3466
+                    );
+                  "
+                >
+                  <h3
+                    class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
+                  >
+                    Podcast
+                  </h3>
+                  <img
+                    class="img-grid-card"
+                    src="./asset/imgs/search/image-1.jpeg"
+                    alt="..."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
