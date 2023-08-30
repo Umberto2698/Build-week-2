@@ -12,6 +12,7 @@
   --primaryColor: #1ed760;
 
   --xsFontSize: 13px;
+  --smFontSize: 14px;
   --FonstSize: 16px;
   --mdFontSize: 18px;
   --lgFontSize: 20px;
@@ -54,6 +55,9 @@
 }
 .custom-fontSize-xl {
   font-size: var(--xlFontSize);
+}
+.custom-fontSize-sm {
+  font-size: var(--smFontSize);
 }
 /* --------------------------------------- */
 .custom-margin-none {
@@ -183,10 +187,6 @@ main,
   color: white;
 }
 
-/* p {
-  margin: 0;
-} */
-
 #playlist,
 main {
   overflow-y: scroll;
@@ -262,7 +262,7 @@ main {
   overflow: hidden;
 }
 
-.discover-more {
+#discover-more {
   flex-wrap: nowrap;
   overflow: hidden;
 }
@@ -279,6 +279,10 @@ main {
   background-color: var(--primaryColor);
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 576px) {
   #custom-big-card {
     display: none !important;
@@ -291,6 +295,10 @@ main {
   h3.h3-hide {
     display: none;
   }
+  /* 
+  #wrapper-discover-more {
+    display: block;
+  } */
 
   .custom-margin {
     margin-top: 10px;

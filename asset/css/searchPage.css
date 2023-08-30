@@ -259,7 +259,6 @@ input[type="search"]::-webkit-search-cancel-button {
 .custom-grid-card {
   height: 100%;
   width: 100%;
-  background-color: blue;
   border-radius: 15px;
   margin: 0;
   position: relative;
