@@ -390,21 +390,26 @@ header section:first-of-type div:hover {
   display: flex;
 }
 
+#fromJS a {
+  color: white;
+  text-decoration: none;
+}
+
 #fromJS-max-width1235px {
   display: none;
   flex-direction: column;
 }
 
 #fromJS .div-img-artist-grande {
-  height: 92px;
-  width: 92px;
-  background-color: red;
+  height: 200px;
+  width: 200px;
+  aspect-ratio: 1 / 1;
 }
 
 #fromJS .div-img-artist-piccola {
-  height: 50px;
-  width: 50px;
-  background-color: red;
+  height: 70px;
+  width: 70px;
+  aspect-ratio: 1 / 1;
 }
 
 #fromJS .img-artist {
@@ -414,7 +419,7 @@ header section:first-of-type div:hover {
 
 #fromJS .kinda-btn {
   padding: 7px 15px;
-  background-color: var(--primaryColor);
+  background-color: var(--darkColor);
   border-radius: 20px;
 }
 
