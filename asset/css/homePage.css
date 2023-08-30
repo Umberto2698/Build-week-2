@@ -237,7 +237,7 @@ main {
 
 header {
   width: var(--fullWidth);
-  padding-left: var(--mdPadd);
+  padding-left: var(--xsPadd);
   padding-top: var(--xsPadd);
 }
 
@@ -312,6 +312,7 @@ main {
 
 .custom-fontSize-icon {
   font-size: var(--lgFontSize);
+  padding: 5px 0 5px 10px;
 }
 
 .custom-fontSize-nav {
@@ -379,6 +380,18 @@ main::-webkit-scrollbar-thumb {
   /* border: 3px solid blue; */
 }
 /* End Custom Scroll*/
+
+header nav div:hover {
+  width: 90%;
+  background-color: var(--lightgrayColor);
+  border-radius: 20px;
+}
+
+header section:first-of-type div:hover {
+  width: 90%;
+  background-color: var(--lightgrayColor);
+  border-radius: 20px;
+}
 
 @media screen and (max-width: 426px) {
   .custom-paddingBottom-md {
