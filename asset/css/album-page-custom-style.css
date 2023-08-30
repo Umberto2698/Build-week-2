@@ -1,4 +1,28 @@
 :root {
+  --fullWidth: 270px;
+  --fullWidthFriends: 285px;
+
+  --none: 0;
+
+  --xsPadd: 15px;
+  --mdPadd: 25px;
+  --lgPadd: 40px;
+  --xlPadd: 50px;
+
+  --primaryColor: #1ed760;
+
+  --xsFontSize: 13px;
+  --smFontSize: 14px;
+  --FonstSize: 16px;
+  --mdFontSize: 18px;
+  --lgFontSize: 20px;
+  --xlFontSize: 24px;
+
+  --bold: bold;
+
+  --xsImg: 50px;
+  --smallImg: 80px;
+  --bigImg: 220px;
   --playbar-start: 0s;
   --playbar-time: 1s;
 }
@@ -8,7 +32,6 @@
 }
 
 .album-detail-rules {
-  width: 65vw;
   min-height: 100vh;
 }
 
@@ -35,6 +58,7 @@
 
 .custom-shadow {
   box-shadow: 0 0 10em;
+  color: #181818;
 }
 
 .soundbar-rules {
@@ -42,11 +66,22 @@
   width: 100vw;
 }
 
+.track-title-rules {
+  line-height: 20px;
+  margin-bottom: 0;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.track-artist-rules {
+  line-height: 20px;
+}
+
 .progress-bar-base {
   width: 300%;
   height: 5px;
   background-color: lightslategray;
-  bottom: 8px;
+  bottom: 20px;
   left: -100%;
 }
 
@@ -98,4 +133,17 @@
   cursor: pointer;
   background: white;
   box-shadow: -80px 0 0 80px white;
+}
+
+@media screen and (max-width: 576px) {
+}
+
+@media screen and (max-width: 768px) {
+  #album-title {
+    font-size: 25px;
+    padding-top: 1em;
+  }
+  .bg-black-semi {
+    background-color: transparent;
+  }
 }
