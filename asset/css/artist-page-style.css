@@ -16,6 +16,8 @@
 
   --smallImg: 80px;
   --bigImg: 220px;
+  --playbar-start: 0s;
+  --playbar-time: 1s;
 }
 
 .custom-fontSize-xs {
@@ -226,6 +228,7 @@ h6,
   width: 40px;
   height: 40px;
   margin-inline: 10px;
+  cursor: pointer;
 }
 
 #popularSongs + p,
@@ -235,13 +238,18 @@ h6,
   letter-spacing: normal;
 }
 
+#title {
+  cursor: pointer;
+}
+
 #lovedSongs,
 #lovedSongs-xs {
   padding-inline: 50px;
 }
 
-#lovedSongs img,
+#lovedSongs .rounded-circle,
 #lovedSongs-xs img {
+  background-size: cover;
   width: 60px;
   height: 60px;
 }
@@ -249,8 +257,8 @@ h6,
 #lovedSongs span:first-of-type,
 #lovedSongs-xs span:first-of-type {
   position: absolute;
-  bottom: 0;
-  right: 2px;
+  bottom: 3px;
+  right: 6px;
   width: 15px;
   height: 15px;
 }
@@ -259,8 +267,8 @@ h6,
 #lovedSongs-xs i:first-of-type {
   font-size: 8px;
   position: absolute;
-  top: 5%;
-  left: 18%;
+  top: 8%;
+  left: 17%;
 }
 
 #hi-custom {
@@ -291,7 +299,7 @@ h1 {
 }
 
 #listener {
-  font-size: var(--xsFontSize);
+  font-size: var(--FontSize);
   margin-bottom: 0;
 }
 

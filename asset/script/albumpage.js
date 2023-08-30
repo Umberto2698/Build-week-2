@@ -1,4 +1,5 @@
 // funzioni soundbar
+const albumId = new URLSearchParams(window.location.search).get("albumId");
 
 const volumeIcon = document.getElementById("volIcon");
 const audioSlider = document.getElementById("audio-slider");
@@ -184,7 +185,9 @@ const playButton = function (data) {
 
 // array di ID di album per i tasti precedente e successivo
 
-const albumURL = "https://striveschool-api.herokuapp.com/api/deezer/album/";
+const albumURL = albumId
+  ? "https://striveschool-api.herokuapp.com/api/deezer/album/" + albumId
+  : "https://striveschool-api.herokuapp.com/api/deezer/album/";
 
 const albumIdArray = [
   "75621062",
@@ -205,10 +208,10 @@ const albumIdArray = [
 
 window.onload = async () => {
   try {
-    const resp = await fetch("https://striveschool-api.herokuapp.com/api/deezer/album/75621062");
+    const resp = await fetch(albumURL);
     const data = await resp.json();
     console.log(data);
-    data.tracks.data.forEach(element => {
+    data.tracks.data.forEach((element) => {
       createTrackList(element);
     });
     albumTitle.innerText = data.title;
