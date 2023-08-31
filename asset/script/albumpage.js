@@ -1,11 +1,78 @@
-// const albumId = new URLSearchParams(window.location.search).get("albumId");
+// fetch values
 
-// funzioni soundbar
 const albumId = new URLSearchParams(window.location.search).get("albumId");
 
+const albumURL = albumId
+  ? "https://striveschool-api.herokuapp.com/api/deezer/album/" + albumId
+  : "https://striveschool-api.herokuapp.com/api/deezer/album/";
+
+// soundbar buttons
+
+// lista dei target da modificare nella pagina
+
+// target corpo centrale della pagina
+
+const albumTitle = document.getElementById("album-title");
+const albumCover = document.getElementById("album-cover");
+const albumArtist = document.getElementById("album-artist");
+const albumYear = document.getElementById("album-year");
+const albumYear2 = document.getElementById("album-year-2");
+const albumTracks = document.getElementById("album-tracks");
+const albumFullTime = document.getElementById("album-fulltime");
+const trackListRep = document.getElementById("track-list-rep");
+
+// target footer del main con dettagli
+
+const artistLogo = document.getElementById("artist-logo");
+const albumDetails = document.getElementById("album-details");
+
+// target playbar
+
+const playbarImg = document.getElementById("playbar-img");
+const playbarTitle = document.getElementById("playbar-title");
+const playbarArtist = document.getElementById("playbar-artist");
+const fillContainer = document.getElementById("fill-container");
+const songFullTime = document.getElementById("song-length");
+const songCurrentTime = document.getElementById("song-current-time");
+
+// bottoni playbar
+
+const previousButton = document.getElementById("previous-album");
+const nextButton = document.getElementById("next-album");
+const playPauseButton = document.getElementsByClassName("play-pause-button");
 const volumeIcon = document.getElementById("volIcon");
 const audioSlider = document.getElementById("audio-slider");
 const buttonsToToggle = document.getElementsByClassName("btn-toggle-custom");
+const currentSong = document.createElement("audio");
+
+// array di ID di album per i tasti precedente e successivo
+
+const albumIdArray = [
+  "75621062",
+  "164408822",
+  "423059517",
+  "15467484",
+  "417821207",
+  "51001312",
+  "7821476",
+  "1398967",
+  "85363",
+  "422933777",
+  "61283802",
+  "101841",
+];
+
+// variabili
+
+let arrayIdCounter = 5;
+let counter = 1;
+let songlength = 0;
+let timeCounter = 0;
+let songInterval = null;
+let isPlaying = false;
+let trackIndex = 0;
+
+// funzioni playbar
 
 const iconchange1 = function () {
   if (volumeIcon.classList.contains("bi-volume-off") || volumeIcon.classList.contains("bi-volume-up")) {
@@ -48,34 +115,6 @@ audioSlider.addEventListener("input", iconchange2);
 
 volumeIcon.addEventListener("click", iconchange1);
 
-// fetch
-
-// lista dei target da modificare nella pagina
-
-// target corpo centrale della pagina
-const albumTitle = document.getElementById("album-title");
-const albumCover = document.getElementById("album-cover");
-const albumArtist = document.getElementById("album-artist");
-const albumYear = document.getElementById("album-year");
-const albumYear2 = document.getElementById("album-year-2");
-const albumTracks = document.getElementById("album-tracks");
-const albumFullTime = document.getElementById("album-fulltime");
-const trackListRep = document.getElementById("track-list-rep");
-// target footer del main con dettagli
-const artistLogo = document.getElementById("artist-logo");
-const albumDetails = document.getElementById("album-details");
-// target playbar
-const playbarImg = document.getElementById("playbar-img");
-const playbarTitle = document.getElementById("playbar-title");
-const playbarArtist = document.getElementById("playbar-artist");
-const fillContainer = document.getElementById("fill-container");
-const songFullTime = document.getElementById("song-length");
-const songCurrentTime = document.getElementById("song-current-time");
-// bottoni album successivo e precedente
-const previousButton = document.getElementById("previous-album");
-const nextButton = document.getElementById("next-album");
-const playPauseButton = document.getElementsByClassName("play-pause-button");
-
 // funzione per dividere correttamente il tempo, ritorna una stringa
 
 const handletime = function (time) {
@@ -106,15 +145,15 @@ const handletime = function (time) {
 //funzione di reset della tracklist
 
 const resetTrackList = function () {
-  const fc = trackListRep.firstChild;
-  let sib = fc && fc.nextSibling;
-  while (trackListRep.lastChild && trackListRep.lastChild !== sib) {
+  const child = trackListRep.firstChild;
+  let sibling = child && child.nextSibling;
+  while (trackListRep.lastChild && trackListRep.lastChild !== sibling) {
     trackListRep.removeChild(trackListRep.lastChild);
   }
 };
 
 // funzione che crea la row con la track che ci viene data
-let counter = 1;
+
 const createTrackList = function (data) {
   const trackContainer = document.createElement("div");
   trackContainer.classList.add("row");
@@ -174,12 +213,6 @@ const createTrackList = function (data) {
 
 // funzione che applica i dati alla playbar quando si preme una canzone qualsiasi
 
-let songlength = 0;
-let timeCounter = 0;
-let songInterval = null;
-const currentSong = document.createElement("audio");
-let isplaying = false;
-
 const playPauseSong = function () {
   if (isplaying === false) {
     playSong();
@@ -190,11 +223,26 @@ const playPauseSong = function () {
 
 const playSong = function () {
   currentSong.play();
-  isplaying = true;
+  isPlaying = true;
   for (i = 0; i < playPauseButton.length; i++) {
     playPauseButton[i].innerHTML = `<i class="btn-toggle-custom bi bi-pause-fill text-black"></i>`;
   }
 };
+
+const pauseSong = function () {
+  currentSong.pause();
+  isPlaying = false;
+  for (i = 0; i < playPauseButton.length; i++) {
+    playPauseButton[i].innerHTML = `<i class="btn-toggle-custom bi bi-play-fill text-black"></i>`;
+  }
+};
+
+const nextSong = function () {
+  const data = fetchTrackList(albumURL);
+  console.log(data);
+};
+
+nextSong();
 
 const setTime = function () {
   timeCounter++;
@@ -237,49 +285,24 @@ const playButton = function (data) {
   }
 };
 
-playButton(JSON.parse(localStorage.getItem("savedData")));
-
-let context = undefined;
-window.addEventListener("load", init, false);
-function init() {
-  try {
-    context = new AudioContext();
-  } catch (e) {
-    alert("Web Audio API is not supported in this browser");
-  }
+if (localStorage.getItem("savedData")) {
+  playButton(JSON.parse(localStorage.getItem("savedData")));
 }
 
-// array di ID di album per i tasti precedente e successivo
+// fetch al caricamento della pagina
 
-const albumURL = albumId
-  ? "https://striveschool-api.herokuapp.com/api/deezer/album/" + albumId
-  : "https://striveschool-api.herokuapp.com/api/deezer/album/";
+const goToArtistPage = (event, id) => {
+  location.href = `/artist-page.html?artistId=${id}`;
+};
 
-const albumIdArray = [
-  "75621062",
-  "164408822",
-  "423059517",
-  "15467484",
-  "417821207",
-  "51001312",
-  "7821476",
-  "1398967",
-  "85363",
-  "422933777",
-  "61283802",
-  "101841",
-];
-
-// fetch al caricamento della pagina - da modificare con l ID di ogni album in fondo all url per renderlo dinamico
-
-const createAlbumPage = async (albumUrl) => {
+const createAlbumPage = async albumUrl => {
   try {
     const resp = await fetch(albumUrl);
     const data = await resp.json();
     console.log(data);
     resetTrackList();
     counter = 1;
-    data.tracks.data.forEach((element) => {
+    data.tracks.data.forEach(element => {
       createTrackList(element);
     });
     albumTitle.innerText = data.title;
@@ -291,25 +314,20 @@ const createAlbumPage = async (albumUrl) => {
     albumFullTime.innerText = handletime(data.duration);
     artistLogo.src = data.artist.picture;
     albumDetails.addEventListener("click", () => goToArtistPage(Event, data.artist.id));
-    // colorthief test
-
-    // const colorThief = new ColorThief();
-    //const img = albumCover;
-
-    // Make sure image is finished loading
-    //if (img.complete) {
-    //  //console.log(colorThief.getColor(albumCover));
-    //} else {
-    //  img.addEventListener("load", function () {
-    //    console.log(colorThief.getColor(albumCover));
-    //  });
-    //}
   } catch (error) {
     console.log(error);
   }
 };
 
-let arrayIdCounter = 5;
+const fetchTrackList = async albumUrl => {
+  try {
+    const resp = await fetch(albumUrl);
+    const data = await resp.json();
+    return data.tracks.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 if (albumId) {
   window.onload = createAlbumPage(albumURL);

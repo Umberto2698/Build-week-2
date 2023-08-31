@@ -1,7 +1,7 @@
 const artistId = new URLSearchParams(window.location.search).get("artistId");
 
 const URL = artistId
-  ? "https://striveschool-api.herokuapp.com/api/deezer/artist/412" + artistId
+  ? "https://striveschool-api.herokuapp.com/api/deezer/artist/" + artistId
   : "https://striveschool-api.herokuapp.com/api/deezer/artist/412";
 
 const body = document.body;
@@ -136,7 +136,7 @@ const playButtonMobile = function (song) {
   // fillContainer.appendChild(fillingBar);
 };
 
-window.addEventListener("DOMContentLoaded", (event) => {
+window.addEventListener("DOMContentLoaded", event => {
   getElement();
 });
 
@@ -176,7 +176,7 @@ const getElement = async () => {
             playButtonMobile(previussìSongsObj);
           }
         } catch (err) {
-          (err) => {
+          err => {
             const body = document.body;
             body.innerHTML = `<div class="container">
               <div>
@@ -224,7 +224,7 @@ const getElement = async () => {
                         </div>
                         <div class="col-11 d-flex align-items-center p-0">
                             <img src=${song.album.cover_small} alt="" 
-                            onclick="goToAlbumPage((event,${song.album.id}))" >
+                            onclick="goToAlbumPage(event,'${song.album.id}')" >
                             <span id="title">${song.title_short}</span>
                             </div>
                           </div>
@@ -242,7 +242,7 @@ const getElement = async () => {
                           <span>${i + 1}</span>
                           </div>
                         <div class="col-9 d-flex align-items-center text-end" style="width: auto";>
-                          <img src=${song.album.cover_small} alt="" onclick="goToAlbumPage((event,${song.album.id}))" />
+                          <img src=${song.album.cover_small} alt="" onclick="goToAlbumPage(event,'${song.album.id}')" />
                           <div class="d-flex flex-column ms-1">
                           <span>${song.title_short}</span>
                           <span id="songId-xs">${songId}</span>
@@ -257,7 +257,7 @@ const getElement = async () => {
       }
     }
   } catch (err) {
-    (err) => {
+    err => {
       const body = document.body;
       body.innerHTML = `<div class="container">
         <div>
