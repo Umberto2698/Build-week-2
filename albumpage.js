@@ -1,3 +1,5 @@
+const albumId = new URLSearchParams(window.location.search).get("albumId");
+
 // funzioni soundbar
 
 const volumeIcon = document.getElementById("volIcon");
@@ -5,23 +7,25 @@ const audioSlider = document.getElementById("audio-slider");
 const buttonsToToggle = document.getElementsByClassName("btn-toggle-custom");
 
 const iconchange1 = function () {
-  if (
-    volumeIcon.innerHTML === `<i class="bi bi-volume-off text-white fs-4"></i>` ||
-    volumeIcon.innerHTML === `<i class="bi bi-volume-up text-white fs-4"></i>`
-  ) {
-    volumeIcon.innerHTML = `<i class="bi bi-volume-mute text-white fs-4"></i>`;
-  } else if (volumeIcon.innerHTML === `<i class="bi bi-volume-mute text-white fs-4"></i>` && audioSlider.value < 50) {
-    volumeicon.innerHTML = `<i class="bi bi-volume-off text-white fs-4"></i>`;
-  } else if (volumeIcon.innerHTML === `<i class="bi bi-volume-mute text-white fs-4"></i>` && audioSlider.value > 50) {
-    volumeIcon.innerHTML = `<i class="bi bi-volume-up text-white fs-4"></i>`;
+  if (volumeIcon.classList.contains("bi-volume-off") || volumeIcon.classList.contains("bi-volume-up")) {
+    console.log("test");
+    volumeIcon.classList.replace("bi-volume-off", "bi-volume-mute");
+    volumeIcon.classList.replace("bi-volume-up", "bi-volume-mute");
+  } else if (volumeIcon.classList.contains("bi-volume-mute") && audioSlider.value < 50) {
+    volumeIcon.classList.replace("bi-volume-mute", "bi-volume-off");
+  } else if (volumeIcon.classList.contains("bi-volume-mute") && audioSlider.value > 50) {
+    volumeIcon.classList.replace("bi-volume-mute", "bi-volume-up");
   }
 };
 
 const iconchange2 = function () {
   if (audioSlider.value > 50) {
-    volumeIcon.innerHTML = `<i class="bi bi-volume-up text-white fs-4"></i>`;
+    volumeIcon.classList.replace("bi-volume-mute", "bi-volume-up");
+    volumeIcon.classList.replace("bi-volume-off", "bi-volume-up");
+    console.log("test");
   } else {
-    volumeIcon.innerHTML = `<i class="bi bi-volume-off text-white fs-4"></i>`;
+    volumeIcon.classList.replace("bi-volume-mute", "bi-volume-off");
+    volumeIcon.classList.replace("bi-volume-up", "bi-volume-off");
   }
 };
 
@@ -66,6 +70,10 @@ const playbarArtist = document.getElementById("playbar-artist");
 const fillContainer = document.getElementById("fill-container");
 const songFullTime = document.getElementById("song-length");
 const songCurrentTime = document.getElementById("song-current-time");
+// bottoni album successivo e precedente
+const previousButton = document.getElementById("previous-album");
+const nextButton = document.getElementById("next-album");
+const playPauseButton = document.getElementsByClassName("play-pause-button");
 
 // funzione per dividere correttamente il tempo, ritorna una stringa
 
@@ -94,8 +102,17 @@ const handletime = function (time) {
   return result;
 };
 
-// funzione che crea la row con la track che ci viene data
+//funzione di reset della tracklist
 
+const resetTrackList = function () {
+  const fc = trackListRep.firstChild;
+  let sib = fc && fc.nextSibling;
+  while (trackListRep.lastChild && trackListRep.lastChild !== sib) {
+    trackListRep.removeChild(trackListRep.lastChild);
+  }
+};
+
+// funzione che crea la row con la track che ci viene data
 let counter = 1;
 const createTrackList = function (data) {
   const trackContainer = document.createElement("div");
@@ -106,6 +123,7 @@ const createTrackList = function (data) {
   trackNumber.classList.add("grey");
   trackNumber.classList.add("d-none");
   trackNumber.classList.add("d-md-inline");
+  trackNumber.classList.add("align-self-center");
   trackNumber.innerText = counter;
   counter++;
   const trackTitleBox = document.createElement("div");
@@ -126,6 +144,7 @@ const createTrackList = function (data) {
   trackRepeats.classList.add("grey");
   trackRepeats.classList.add("d-none");
   trackRepeats.classList.add("d-lg-inline");
+  trackRepeats.classList.add("align-self-center");
   trackRepeats.innerText = data.rank;
   const trackTime = document.createElement("div");
   trackTime.classList.add("col-1");
@@ -133,6 +152,7 @@ const createTrackList = function (data) {
   trackTime.classList.add("grey");
   trackTime.classList.add("d-none");
   trackTime.classList.add("d-lg-inline");
+  trackTime.classList.add("align-self-center");
   const optionsButton = document.createElement("button");
   optionsButton.classList.add("col-1");
   optionsButton.classList.add("btn");
@@ -154,9 +174,43 @@ const createTrackList = function (data) {
 // funzione che applica i dati alla playbar quando si preme una canzone qualsiasi
 
 let songlength = 0;
+let timeCounter = 0;
+let songInterval = null;
+const currentSong = document.createElement("audio");
+let isplaying = false;
+
+const playPauseSong = function () {
+  if (isplaying === false) {
+    playSong();
+  } else {
+    PauseSong();
+  }
+};
+
+const playSong = function () {
+  currentSong.play();
+  isplaying = true;
+  for (i = 0; i < playPauseButton.length; i++) {
+    playPauseButton[i].innerHTML = `<i class="btn-toggle-custom bi bi-pause-fill text-black"></i>`;
+  }
+};
+
+const setTime = function () {
+  timeCounter++;
+  songCurrentTime.innerText = handletime(timeCounter);
+  if (songCurrentTime.innerText === songFullTime.innerText) {
+    clearInterval(songInterval);
+    songInterval = null;
+    timeCounter = 0;
+    console.log("ended");
+  }
+};
 
 const playButton = function (data) {
-  fillContainer.removeChild(fillContainer.firstChild);
+  localStorage.setItem("savedData", JSON.stringify(data));
+  while (fillContainer.firstChild) {
+    fillContainer.removeChild(fillContainer.lastChild);
+  }
   playbarImg.src = data.album.cover;
   playbarTitle.innerText = data.title;
   playbarArtist.innerText = data.artist.name;
@@ -168,23 +222,37 @@ const playButton = function (data) {
   fillingBar.classList.add("position-absolute");
   fillingBar.classList.add("progress-bar-fill");
   fillContainer.appendChild(fillingBar);
+  currentSong.src = data.preview;
+  currentSong.load();
+  currentSong.play();
+  if (songInterval === null) {
+    songInterval = setInterval(setTime, 1000);
+  } else {
+    songCurrentTime.innerText = "0:00";
+    timeCounter = 0;
+    clearInterval(songInterval);
+    songInterval = null;
+    songInterval = setInterval(setTime, 1000);
+  }
 };
 
-//const setTime = function () {
-//  songCurrentTime.innerText = handletime(timeCounter);
-//  console.log(handletime(songlength));
-//  console.log(songCurrentTime.innerText);
-//  timeCounter++;
-//};
-//
-//let timeCounter = 0;
-//do {
-//  setInterval(setTime, 1000);
-//} while (handletime(songlength) !== songCurrentTime.innerText);
+playButton(JSON.parse(localStorage.getItem("savedData")));
+
+let context = undefined;
+window.addEventListener("load", init, false);
+function init() {
+  try {
+    context = new AudioContext();
+  } catch (e) {
+    alert("Web Audio API is not supported in this browser");
+  }
+}
 
 // array di ID di album per i tasti precedente e successivo
 
-const albumURL = "https://striveschool-api.herokuapp.com/api/deezer/album/";
+const albumURL = albumId
+  ? "https://striveschool-api.herokuapp.com/api/deezer/album/" + albumId
+  : "https://striveschool-api.herokuapp.com/api/deezer/album/";
 
 const albumIdArray = [
   "75621062",
@@ -203,23 +271,25 @@ const albumIdArray = [
 
 // fetch al caricamento della pagina - da modificare con l ID di ogni album in fondo all url per renderlo dinamico
 
-window.onload = async () => {
+const createAlbumPage = async albumUrl => {
   try {
-    const resp = await fetch("https://striveschool-api.herokuapp.com/api/deezer/album/75621062");
+    const resp = await fetch(albumUrl);
     const data = await resp.json();
     console.log(data);
+    resetTrackList();
+    counter = 1;
     data.tracks.data.forEach(element => {
       createTrackList(element);
     });
     albumTitle.innerText = data.title;
-    albumCover.src = data.cover;
+    albumCover.src = data.cover_xl;
     albumArtist.innerText = data.artist.name;
     albumYear.innerText = data.release_date.slice(0, 4);
     albumYear2.innerText = data.release_date.slice(0, 4);
-    albumTracks.innerText = `${counter} Tracks`;
+    albumTracks.innerText = `${data.tracks.data.length} Tracks`;
     albumFullTime.innerText = handletime(data.duration);
     artistLogo.src = data.artist.picture;
-    albumDetails.addEventListener("click", () => console.log("qui dovrebbe portare alla pagina dell' artista"));
+    albumDetails.addEventListener("click", () => goToArtistPage(Event, data.artist.id));
     // colorthief test
 
     // const colorThief = new ColorThief();
@@ -237,3 +307,29 @@ window.onload = async () => {
     console.log(error);
   }
 };
+
+let arrayIdCounter = 5;
+
+if (albumId) {
+  window.onload = createAlbumPage(albumURL);
+} else {
+  window.onload = createAlbumPage(albumURL + albumIdArray[arrayIdCounter]);
+}
+const previousAlbumPage = function () {
+  arrayIdCounter--;
+  if (arrayIdCounter < 0) {
+    arrayIdCounter = 11;
+  }
+  createAlbumPage(albumURL + albumIdArray[arrayIdCounter]);
+};
+
+const nextAlbumPage = function () {
+  arrayIdCounter++;
+  if (arrayIdCounter > 11) {
+    arrayIdCounter = 0;
+  }
+  createAlbumPage(albumURL + albumIdArray[arrayIdCounter]);
+};
+
+previousButton.addEventListener("click", previousAlbumPage);
+nextButton.addEventListener("click", nextAlbumPage);

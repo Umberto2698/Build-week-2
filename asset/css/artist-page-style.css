@@ -734,7 +734,7 @@ footer > div > div:nth-child(2) {
   #footer-xs {
     display: flex;
     justify-content: space-between;
-    bottom: 40px;
+    bottom: 80px;
     right: 10px;
     left: 10px;
     border-radius: 5px;

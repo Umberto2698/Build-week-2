@@ -329,21 +329,11 @@ main {
 #discover-more-hide > div {
   border: 1px solid #413e3e;
   border-radius: 15px;
-  background-image: linear-gradient(
-    134deg,
-    #f48100 5%,
-    var(--darkgrayColor) 30%
-  );
+  background-image: linear-gradient(134deg, #f48100 5%, var(--darkgrayColor) 30%);
 }
 
 i.bi.bi-play-fill.icon-play {
   position: relative;
-}
-
-i.icon-play::before {
-  padding: 10px;
-  border-radius: 50%;
-  border: 1px solid #413e3e;
 }
 
 p.bg-darkgray-color {
