@@ -214,10 +214,10 @@ const createTrackList = function (data) {
 // funzione che applica i dati alla playbar quando si preme una canzone qualsiasi
 
 const playPauseSong = function () {
-  if (isplaying === false) {
+  if (isPlaying === false) {
     playSong();
   } else {
-    PauseSong();
+    pauseSong();
   }
 };
 
@@ -238,8 +238,8 @@ const pauseSong = function () {
 };
 
 const nextSong = function () {
-  const data = fetchTrackList(albumURL);
-  console.log(data);
+  //const data = fetchTrackList(albumURL);
+  //console.log(data);
 };
 
 nextSong();
@@ -273,7 +273,6 @@ const playButton = function (data) {
   fillContainer.appendChild(fillingBar);
   currentSong.src = data.preview;
   currentSong.load();
-  currentSong.play();
   if (songInterval === null) {
     songInterval = setInterval(setTime, 1000);
   } else {
