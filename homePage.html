@@ -158,7 +158,7 @@
             </div>
           </div>
           <div id="custom-big-card" class="d-flex mt-4 gap-4">
-            <img
+            <!-- <img
               src="./asset/imgs/main/image-11.jpg"
               alt="imagine dragons"
               class="big-img"
@@ -196,37 +196,38 @@
                   </button>
                 </div>
               </div>
+            </div> -->
+          </div>
+          <div id="h3-hide">
+            <h3
+              class="h3-hide custom-paddingTop-lg custom-paddingBottom-md custom-margin-none"
+            >
+              Artisti del momento
+            </h3>
+          </div>
+          <div id="saluto-hide" class="d-none">
+            <div class="d-flex align-items-center justify-content-between pt-4">
+              <h3 class="m-0">Buonasera</h3>
+              <div id="tre-icone" class="gap-3">
+                <i class="bi bi-bell custom-fontSize-lg"></i>
+                <i class="bi bi-clock-history custom-fontSize-lg"></i>
+                <i class="bi bi-gear custom-fontSize-lg"></i>
+              </div>
             </div>
-          </div>
-          <h3
-            class="h3-hide custom-paddingTop-lg custom-paddingBottom-md custom-margin-none"
-          >
-            Buonasera
-          </h3>
-          <div
-            id="hi-custom"
-            class="d-none align-items-center justify-content-between pt-4"
-          >
-            <h3 class="m-0">Buonasera</h3>
-            <div class="d-flex gap-3">
-              <i class="bi bi-bell custom-fontSize-lg"></i>
-              <i class="bi bi-clock-history custom-fontSize-lg"></i>
-              <i class="bi bi-gear custom-fontSize-lg"></i>
-            </div>
-          </div>
-          <div
-            id="suggestion"
-            class="d-none gap-4 custom-marginBottom-sm custom-marginTop-sm"
-          >
-            <p class="m-0 px-3 py-2 custom-fontSize-sm bg-darkgray-color">
-              Musica
-            </p>
-            <p class="m-0 px-3 py-2 custom-fontSize-sm bg-darkgray-color">
-              Podcast e show
-            </p>
-          </div>
-          <div class="container-fuild custom-margin-none">
             <div
+              class="d-flex gap-4 custom-marginBottom-sm custom-marginTop-sm"
+            >
+              <p class="m-0 px-3 py-2 custom-fontSize-sm bg-darkgray-color">
+                Musica
+              </p>
+              <p class="m-0 px-3 py-2 custom-fontSize-sm bg-darkgray-color">
+                Podcast e show
+              </p>
+            </div>
+            <h3 class="custom-marginBottom-sm">Artisti del momento</h3>
+          </div>
+          <div id="cards-artists" class="container-fuild custom-margin-none">
+            <!-- <div
               class="row row-cols-2 row-cols-lg-3 row-cols-xl-2 row-cols-xxl-3 gy-3"
             >
               <div class="col card-col">
@@ -325,11 +326,11 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
 
           <div id="wrapper-discover-more" class="container-fuild">
-            <h3 class="custom-paddingTop-lg custom-paddingBottom-lg m-0">
+            <!-- <h3 class="custom-paddingTop-lg custom-paddingBottom-lg m-0">
               Altro di ciò che ti piace
             </h3>
 
@@ -493,10 +494,10 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
           <div id="discover-more-hide" class="d-none">
-            <div class="card-mobile p-4 pb-3 mt-4">
+            <!-- <div class="card-mobile p-4 pb-3 mt-4">
               <div class="d-flex flex-column gap-4">
                 <div class="d-flex gap-4">
                   <img
@@ -585,7 +586,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </main>
         <section id="friends">
@@ -672,11 +673,19 @@
         </section>
       </div>
       <div id="menu-xs" class="d-none">
-        <div class="d-flex flex-column align-items-center">
+        <div
+          id="menu-home"
+          type="button"
+          class="d-flex flex-column align-items-center"
+        >
           <i class="bi bi-house-door-fill"></i>
           <p class="m-0">Home</p>
         </div>
-        <div class="d-flex flex-column align-items-center">
+        <div
+          id="menu-cerca"
+          type="button"
+          class="d-flex flex-column align-items-center"
+        >
           <i class="bi bi-search"></i>
           <p class="m-0">Search</p>
         </div>

@@ -255,10 +255,6 @@ main {
   padding-top: var(--xsPadd);
 }
 
-#hi-custom {
-  display: none;
-}
-
 #friends {
   min-width: var(--fullWidthFriends);
 }
@@ -393,6 +389,25 @@ header section:first-of-type div:hover {
   border-radius: 20px;
 }
 
+#custom-big-card a,
+#cards-artists a,
+#wrapper-discover-more a {
+  color: white;
+  text-decoration: none;
+}
+
+#custom-big-card a {
+  font-weight: 500;
+}
+
+#tre-icone {
+  display: none;
+}
+
+.fit-content {
+  width: fit-content;
+}
+
 @media screen and (max-width: 426px) {
   .custom-paddingBottom-md {
     padding-bottom: 50px;
@@ -447,10 +462,6 @@ header section:first-of-type div:hover {
     display: none !important;
   }
 
-  h3.h3-hide {
-    display: none;
-  }
-
   #wrapper-discover-more {
     display: none;
   }
@@ -459,9 +470,6 @@ header section:first-of-type div:hover {
     margin-top: 10px;
   }
 
-  #hi-custom {
-    display: flex !important;
-  }
   #discover-more-hide {
     display: block !important;
   }
@@ -485,6 +493,9 @@ header section:first-of-type div:hover {
 
   .custom-fontSize-cards-normal {
     font-size: calc(var(--xsFontSize) - 3px);
+  }
+  #tre-icone {
+    display: flex;
   }
 }
 
@@ -519,9 +530,12 @@ header section:first-of-type div:hover {
   #btn-hide-ad {
     font-size: var(--xsFontSize);
   }
+  #h3-hide {
+    display: none;
+  }
 
-  #suggestion {
-    display: flex !important;
+  #saluto-hide {
+    display: block !important;
   }
   #menu-xs {
     background: linear-gradient(to top, black, transparent);

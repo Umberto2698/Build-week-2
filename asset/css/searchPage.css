@@ -286,7 +286,8 @@ main {
   border-radius: 20px;
 }
 
-#search:focus {
+#search:focus,
+#search-hide:focus {
   box-shadow: none;
 }
 
@@ -401,8 +402,8 @@ header section:first-of-type div:hover {
 }
 
 #fromJS .div-img-artist-grande {
-  height: 200px;
-  width: 200px;
+  height: 280px;
+  width: 300px;
   aspect-ratio: 1 / 1;
 }
 
@@ -425,6 +426,10 @@ header section:first-of-type div:hover {
 
 #fromJS .fit-content {
   width: fit-content;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 100px) {
