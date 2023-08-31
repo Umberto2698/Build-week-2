@@ -237,7 +237,7 @@ const playButton = function (data) {
   }
 };
 
-playButton(JSON.parse(localStorage.getItem("savedData")));
+// playButton(JSON.parse(localStorage.getItem("savedData")));
 
 let context = undefined;
 window.addEventListener("load", init, false);
@@ -273,6 +273,7 @@ const albumIdArray = [
 // fetch al caricamento della pagina - da modificare con l ID di ogni album in fondo all url per renderlo dinamico
 
 const createAlbumPage = async (albumUrl) => {
+  console.log(albumURL);
   try {
     const resp = await fetch(albumUrl);
     const data = await resp.json();
