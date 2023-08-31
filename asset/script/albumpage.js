@@ -1,6 +1,7 @@
-const albumId = new URLSearchParams(window.location.search).get("albumId");
+// const albumId = new URLSearchParams(window.location.search).get("albumId");
 
 // funzioni soundbar
+const albumId = new URLSearchParams(window.location.search).get("albumId");
 
 const volumeIcon = document.getElementById("volIcon");
 const audioSlider = document.getElementById("audio-slider");
@@ -271,14 +272,14 @@ const albumIdArray = [
 
 // fetch al caricamento della pagina - da modificare con l ID di ogni album in fondo all url per renderlo dinamico
 
-const createAlbumPage = async albumUrl => {
+const createAlbumPage = async (albumUrl) => {
   try {
     const resp = await fetch(albumUrl);
     const data = await resp.json();
     console.log(data);
     resetTrackList();
     counter = 1;
-    data.tracks.data.forEach(element => {
+    data.tracks.data.forEach((element) => {
       createTrackList(element);
     });
     albumTitle.innerText = data.title;

@@ -15,40 +15,46 @@
     <link rel="stylesheet" href="./asset/css/circular-font.css" />
   </head>
   <body>
+    <div id="blackScreen" class="d-none">
+      <div class="spinner-border text-success d-none" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
     <div class="d-flex">
-      <header class="bg-black">
+      <header class="custom-paddingBottom-md">
         <div class="d-flex flex-column">
           <nav class="d-flex flex-column gap-2">
-            <i class="bi bi-three-dots"></i>
-            <div class="d-flex gap-2">
-              <i class="bi bi-house-door-fill"></i>
-              <p class="m-0">Home</p>
+            <i class="bi bi-three-dots custom-fontSize-icon"></i>
+            <div class="d-flex gap-3 align-items-center" onclick="goToHomePage(event)">
+              <i class="bi bi-house-door custom-fontSize-icon"></i>
+              <!-- <i class="bi bi-house-door-fill custom-fontSize-icon"></i> -->
+              <p class="m-0 custom-fontSize-nav">Home</p>
             </div>
-            <div class="d-flex gap-2">
-              <i class="bi bi-search"></i>
-              <p class="m-0">Search</p>
+            <div class="d-flex gap-3 align-items-center" onclick="goToSearchPage(event)">
+              <i class="bi bi-search custom-fontSize-icon"></i>
+              <p class="m-0 custom-fontSize-nav">Search</p>
             </div>
-            <div class="d-flex gap-2">
-              <i class="bi bi-collection"></i>
-              <p class="m-0">La tua libreria</p>
+            <div class="d-flex gap-3 align-items-center">
+              <i class="bi bi-collection custom-fontSize-icon"></i>
+              <p class="m-0 custom-fontSize-nav">La tua libreria</p>
             </div>
           </nav>
           <section class="d-flex flex-column gap-2 mt-4">
-            <div class="d-flex gap-2">
-              <i class="bi bi-plus-square-fill"></i>
-              <p class="m-0">Crea playlist</p>
+            <div class="d-flex gap-3 align-items-center">
+              <i class="bi bi-plus-square-fill custom-fontSize-icon"></i>
+              <p class="m-0 custom-fontSize-nav">Crea playlist</p>
             </div>
-            <div class="d-flex gap-2">
-              <i class="bi bi-heart-fill"></i>
-              <p class="m-0">Brani che ti piacciono</p>
+            <div class="d-flex gap-3 align-items-center">
+              <i class="bi bi-heart-fill custom-fontSize-icon"></i>
+              <p class="m-0 custom-fontSize-nav">Brani che ti piacciono</p>
             </div>
-            <div class="d-flex gap-2 pb-2 border-bottom border-bottom-secondary">
-              <i class="bi bi-bookmark-fill"></i>
-              <p class="m-0">I tuoi episodi</p>
+            <div class="d-flex gap-3 align-items-center">
+              <i class="bi bi-bookmark-fill custom-fontSize-icon"></i>
+              <p class="m-0 custom-fontSize-nav">I tuoi episodi</p>
             </div>
           </section>
-          <section id="playlist">
-            <ul class="d-flex flex-column text-secondary m-0 pt-1">
+          <section id="playlist" class="mt-4">
+            <ul class="d-flex flex-column text-secondary custom-fontSize-header">
               <li>An item</li>
               <li>A second item</li>
               <li>A third item</li>
@@ -104,8 +110,8 @@
         </div>
       </header>
       <main class="d-flex flex-column">
-        <div id="background-big-card" class="px-4">
-          <div id="upbar" class="d-flex justify-content-between align-items-center mb-5">
+        <div id="background-big-card" class="px-4 d-flex flex-column justify-content-between">
+          <div id="upbar" class="d-flex justify-content-between align-items-center mb-5 mt-2">
             <div class="d-flex gap-3">
               <i class="bi bi-arrow-left-circle custom-fontSize-lg"></i>
               <i class="bi bi-arrow-right-circle custom-fontSize-lg"></i>
@@ -140,16 +146,16 @@
                   <i class="bi bi-patch-check-fill text-primary me-1"></i>
                   <p class="custom-fontSize-xs m-0">Artista verificato</p>
                 </div>
-                <h1>Yellowcard</h1>
+                <h1></h1>
               </div>
               <div class="pt-3">
-                <p id="listener">3.456.456 ascoltatori mensili</p>
+                <p id="listener"></p>
               </div>
             </div>
           </div>
         </div>
         <div class="px-4 py-3">
-          <p id="listener-xs">3.456.456 ascoltatori mensili</p>
+          <p id="listener-xs"></p>
           <div class="d-flex align-items-center gap-4">
             <button id="play" class="d-flex align-items-center btn btn-success rounded-circle">
               <i class="bi bi-play-fill fs-4"></i>
@@ -165,20 +171,7 @@
           <div class="px-4">
             <h4 class="mb-4">Popolari</h4>
             <ul id="popularSongs-xs" class="list-unstyled">
-              <li class="d-flex align-items-center mb-3">
-                <div class="d-flex align-items-center">
-                  <span>1</span>
-                  <img src="./asset/imgs/main/image-1.jpg" alt="" />
-                  <div class="d-flex flex-column ms-1">
-                    <span>Ocean Avenue</span>
-                    <span id="songId-xs">276.616.912</span>
-                  </div>
-                </div>
-                <div class="text-end">
-                  <i class="bi bi-three-dots-vertical xsIcon"></i>
-                </div>
-              </li>
-              <li class="d-flex align-items-center mb-3">
+              <!-- <li class="d-flex align-items-center mb-3">
                 <div class="d-flex align-items-center">
                   <span>1</span>
                   <img src="./asset/imgs/main/image-1.jpg" alt="" />
@@ -190,46 +183,7 @@
                 <div class="text-end">
                   <i class="bi bi-three-dots-vertical xsIcon"></i>
                 </div>
-              </li>
-              <li class="d-flex align-items-center mb-3">
-                <div class="d-flex align-items-center">
-                  <span>1</span>
-                  <img src="./asset/imgs/main/image-1.jpg" alt="" />
-                  <div class="d-flex flex-column ms-1">
-                    <span>Ocean Avenue</span>
-                    <span id="songId">276.616.912</span>
-                  </div>
-                </div>
-                <div class="text-end">
-                  <i class="bi bi-three-dots-vertical xsIcon"></i>
-                </div>
-              </li>
-              <li class="d-flex align-items-center mb-3">
-                <div class="d-flex align-items-center">
-                  <span>1</span>
-                  <img src="./asset/imgs/main/image-1.jpg" alt="" />
-                  <div class="d-flex flex-column ms-1">
-                    <span>Ocean Avenue</span>
-                    <span id="songId">276.616.912</span>
-                  </div>
-                </div>
-                <div class="text-end">
-                  <i class="bi bi-three-dots-vertical xsIcon"></i>
-                </div>
-              </li>
-              <li class="d-flex align-items-center mb-3">
-                <div class="d-flex align-items-center">
-                  <span>1</span>
-                  <img src="./asset/imgs/main/image-1.jpg" alt="" />
-                  <div class="d-flex flex-column ms-1">
-                    <span>Ocean Avenue</span>
-                    <span id="songId">276.616.912</span>
-                  </div>
-                </div>
-                <div class="text-end">
-                  <i class="bi bi-three-dots-vertical xsIcon"></i>
-                </div>
-              </li>
+               </li> -->
             </ul>
           </div>
           <!-- artist-page -->
@@ -256,14 +210,14 @@
             <h4 class="mb-4">Brani che ti piacciono</h4>
             <div class="d-flex align-items-center">
               <div class="position-relative">
-                <img class="rounded-circle" src="./asset/imgs/main/image-15.jpg" alt="" />
+                <div class="rounded-circle d-inline-block"></div>
                 <span class="border border-light rounded-circle bg-success z-1"
                   ><i class="bi bi-suit-heart-fill"></i><span class="visually-hidden">unread messages</span></span
                 >
               </div>
               <div class="ps-2">
                 <h6>Hai messo mi piace a 11 brani</h6>
-                <p class="m-0">Di Yellowcard</p>
+                <p class="m-0"></p>
               </div>
             </div>
           </div>
@@ -371,7 +325,7 @@
     </div>
     <!-- sound-player-mobile -->
     <div id="footer-xs" class="bg-dark text-white px-2 py-1 position-fixed">
-      <p>Titolo by Artista</p>
+      <p></p>
       <div>
         <button class="btn">
           <i class="btn-toggle-custom bi bi-music-player text-white xsIcon"></i>
@@ -388,10 +342,10 @@
     <footer class="position-fixed bottom-0 soundbar-rules">
       <div class="d-flex justify-content-center align-items-center">
         <div class="d-flex align-items-center p-1">
-          <img id="playbar-img" class="rounded" src="./asset/imgs/main/image-11.jpg" alt="#" />
+          <img id="playbar-img" class="rounded" alt="#" />
           <div class="ms-2 me-1 text-white">
-            <h6 id="playbar-title" class="m-0 fw-bold">Titolo</h6>
-            <p id="playbar-artist" class="m-0">Artista</p>
+            <h6 id="playbar-title" class="m-0 fw-bold"></h6>
+            <p id="playbar-artist" class="m-0"></p>
           </div>
           <button class="btn">
             <i class="btn-toggle-custom bi bi-suit-heart text-white xsIcon"></i>
@@ -474,11 +428,11 @@
     </footer>
     <!-- Menù mobile -->
     <div id="menu-xs" class="position-fixed bottom-0">
-      <div class="d-flex flex-column align-items-center">
+      <div class="d-flex flex-column align-items-center" onclick="goToHomePage(event)">
         <i class="bi bi-house-door-fill"></i>
         <p class="m-0">Home</p>
       </div>
-      <div class="d-flex flex-column align-items-center">
+      <div class="d-flex flex-column align-items-center" onclick="goToSearchPage(event)">
         <i class="bi bi-search"></i>
         <p class="m-0">Search</p>
       </div>
@@ -492,7 +446,7 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
-    <script src="./asset/script/playerControls.js"></script>
+    <!-- <script src="./asset/script/playerControls.js"></script> -->
     <script src="./asset/script/artist-page-script.js"></script>
   </body>
 </html>
