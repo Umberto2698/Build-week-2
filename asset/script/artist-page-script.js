@@ -1,7 +1,7 @@
 const artistId = new URLSearchParams(window.location.search).get("artistId");
 
 const URL = artistId
-  ? "https://striveschool-api.herokuapp.com/api/deezer/artist/412" + artistId
+  ? "https://striveschool-api.herokuapp.com/api/deezer/artist/" + artistId
   : "https://striveschool-api.herokuapp.com/api/deezer/artist/412";
 
 const body = document.body;
@@ -205,6 +205,7 @@ const getElement = async () => {
         let li = document.createElement("div");
         let liXs = document.createElement("div");
         let song = songsObj.data[i];
+        console.log(song.album.id);
         li.addEventListener("click", () => playButton(song));
         liXs.addEventListener("click", () => playButtonMobile(song));
         let songId = `${song.id}`.split("");

@@ -31,9 +31,7 @@ const getData = async (event) => {
     let inputSearchHide = document.querySelector("#search-hide");
 
     if (inputSearch.value !== "" && inputSearchHide.value === "") {
-      const URL =
-        "https://striveschool-api.herokuapp.com/api/deezer/search?q=" +
-        inputSearch.value;
+      const URL = "https://striveschool-api.herokuapp.com/api/deezer/search?q=" + inputSearch.value;
 
       // console.log(URL);
       const response = await fetch(URL);
@@ -128,13 +126,13 @@ const getData = async (event) => {
                         </div>
                         <div class="d-flex flex-column gap-4">
                             <h3 class="m-0">
-                            <a href="#" target="_blank">${nameArtist0}</a>
+                            <a href="./artist-page.html?artistId=${idArtist0}" target="_blank">${nameArtist0}</a>
                             </h3>
                             <div
                             class="d-flex gap-3 align-items-center justify-content-between"
                             >
                             <p class="m-0 text-secondary">
-                                <a href="#" target="_blank">${nameArtist0}</a>
+                                <a href="./artist-page.html?artistId=${idArtist0}" target="_blank">${nameArtist0}</a>
                             </p>
                             <p class="m-0 kinda-btn bold">${typeArtist0}</p>
                             </div>
@@ -157,7 +155,7 @@ const getData = async (event) => {
                                     <a href="#" target="_blank">${title0}</a>
                                 </h6>
                                 <p class="m-0 custom-fontSize-xs text-secondary">
-                                    <a href="#" target="_blank">${nameArtist0}</a>
+                                    <a href="./artist-page.html?artistId=${idArtist0}" target="_blank">${nameArtist0}</a>
                                 </p>
                                 </div>
                             </div>
@@ -179,7 +177,7 @@ const getData = async (event) => {
                                     <a href="#" target="_blank">${title1}</a>
                                 </h6>
                                 <p class="m-0 custom-fontSize-xs text-secondary">
-                                    <a href="#" target="_blank">${nameArtist1}</a>
+                                    <a href="./artist-page.html?artistId=${idArtist1}" target="_blank">${nameArtist1}</a>
                                 </p>
                                 </div>
                             </div>
@@ -201,7 +199,7 @@ const getData = async (event) => {
                                     <a href="#" target="_blank">${title2}</a>
                                 </h6>
                                 <p class="m-0 custom-fontSize-xs text-secondary">
-                                    <a href="#" target="_blank">${nameArtist2}</a>
+                                    <a href="./artist-page.html?artistId=${idArtist2}" target="_blank">${nameArtist2}</a>
                                 </p>
                                 </div>
                             </div>
@@ -223,7 +221,7 @@ const getData = async (event) => {
                                     <a href="#" target="_blank">${title3}</a>
                                 </h6>
                                 <p class="m-0 custom-fontSize-xs text-secondary">
-                                    <a href="#" target="_blank">${nameArtist3}</a>
+                                    <a href="./artist-page.html?artistId=${idArtist3}" target="_blank">${nameArtist3}</a>
                                 </p>
                                 </div>
                             </div>
@@ -236,9 +234,7 @@ const getData = async (event) => {
                     </div>
                 </div>
                 `;
-        } else if (
-          titleAlbum0.toLowerCase() === inputSearch.value.toLowerCase()
-        ) {
+        } else if (titleAlbum0.toLowerCase() === inputSearch.value.toLowerCase()) {
           fromJS.innerHTML = `
                 <div class="row row-cols-xl-2 row-cols-lg-1 row-cols-md-2 row-cols-1 flex-grow-1">
                     <div class="col pt-4 pb-3">
@@ -249,13 +245,13 @@ const getData = async (event) => {
                         </div>
                         <div class="d-flex flex-column gap-4">
                             <h3 class="m-0">
-                            <a href="#" target="_blank">${titleAlbum0}</a>
+                            <a href="./artist-page.html?artistId=${idArtist0}" target="_blank">${titleAlbum0}</a>
                             </h3>
                             <div
                             class="d-flex gap-3 align-items-center justify-content-between"
                             >
                             <p class="m-0 text-secondary">
-                                <a href="#" target="_blank">${nameArtist0}</a>
+                                <a href="./artist-page.html?artistId=${idArtist0}" target="_blank">${nameArtist0}</a>
                             </p>
                             <p class="m-0 kinda-btn bold">${typeAlbum0}</p>
                             </div>
@@ -278,7 +274,7 @@ const getData = async (event) => {
                                     <a href="#" target="_blank">${title0}</a>
                                 </h6>
                                 <p class="m-0 custom-fontSize-xs text-secondary">
-                                    <a href="#" target="_blank">${nameArtist0}</a>
+                                    <a href="./artist-page.html?artistId=${idArtist0}" target="_blank">${nameArtist0}</a>
                                 </p>
                                 </div>
                             </div>
@@ -300,7 +296,7 @@ const getData = async (event) => {
                                     <a href="#" target="_blank">${title1}</a>
                                 </h6>
                                 <p class="m-0 custom-fontSize-xs text-secondary">
-                                    <a href="#" target="_blank">${nameArtist1}</a>
+                                    <a href="./artist-page.html?artistId=${idArtist1}" target="_blank">${nameArtist1}</a>
                                 </p>
                                 </div>
                             </div>
@@ -322,7 +318,7 @@ const getData = async (event) => {
                                     <a href="#" target="_blank">${title2}</a>
                                 </h6>
                                 <p class="m-0 custom-fontSize-xs text-secondary">
-                                    <a href="#" target="_blank">${nameArtist2}</a>
+                                    <a href="./artist-page.html?artistId=${idArtist2}" target="_blank">${nameArtist2}</a>
                                 </p>
                                 </div>
                             </div>
@@ -344,7 +340,7 @@ const getData = async (event) => {
                                     <a href="#" target="_blank">${title3}</a>
                                 </h6>
                                 <p class="m-0 custom-fontSize-xs text-secondary">
-                                    <a href="#" target="_blank">${nameArtist3}</a>
+                                    <a href="./artist-page.html?artistId=${idArtist2}" target="_blank">${nameArtist3}</a>
                                 </p>
                                 </div>
                             </div>
@@ -368,13 +364,13 @@ const getData = async (event) => {
                         </div>
                         <div class="d-flex flex-column gap-4">
                             <h3 class="m-0">
-                            <a href="#" target="_blank">${title0}</a>
+                            <a href="./artist-page.html?artistId=${idArtist0}" target="_blank">${title0}</a>
                             </h3>
                             <div
                             class="d-flex gap-3 align-items-center justify-content-between"
                             >
                             <p class="m-0 text-secondary">
-                                <a href="#" target="_blank">${nameArtist0}</a>
+                                <a href="./artist-page.html?artistId=${idArtist0}" target="_blank">${nameArtist0}</a>
                             </p>
                             <p class="m-0 kinda-btn bold">${type0}</p>
                             </div>
@@ -397,7 +393,7 @@ const getData = async (event) => {
                                     <a href="#" target="_blank">${title0}</a>
                                 </h6>
                                 <p class="m-0 custom-fontSize-xs text-secondary">
-                                    <a href="#" target="_blank">${nameArtist0}</a>
+                                    <a href="./artist-page.html?artistId=${idArtist0}" target="_blank">${nameArtist0}</a>
                                 </p>
                                 </div>
                             </div>
@@ -419,7 +415,7 @@ const getData = async (event) => {
                                     <a href="#" target="_blank">${title1}</a>
                                 </h6>
                                 <p class="m-0 custom-fontSize-xs text-secondary">
-                                    <a href="#" target="_blank">${nameArtist1}</a>
+                                    <a href="./artist-page.html?artistId=${idArtist1}" target="_blank">${nameArtist1}</a>
                                 </p>
                                 </div>
                             </div>
@@ -441,7 +437,7 @@ const getData = async (event) => {
                                     <a href="#" target="_blank">${title2}</a>
                                 </h6>
                                 <p class="m-0 custom-fontSize-xs text-secondary">
-                                    <a href="#" target="_blank">${nameArtist2}</a>
+                                    <a href="./artist-page.html?artistId=${idArtist2}" target="_blank">${nameArtist2}</a>
                                 </p>
                                 </div>
                             </div>
@@ -463,7 +459,7 @@ const getData = async (event) => {
                                     <a href="#" target="_blank">${title3}</a>
                                 </h6>
                                 <p class="m-0 custom-fontSize-xs text-secondary">
-                                    <a href="#" target="_blank">${nameArtist3}</a>
+                                    <a href="./artist-page.html?artistId=${idArtist3}" target="_blank">${nameArtist3}</a>
                                 </p>
                                 </div>
                             </div>
@@ -481,9 +477,7 @@ const getData = async (event) => {
         inputSearch.value = "";
       }
     } else if (inputSearchHide.value !== "" && inputSearch.value === "") {
-      const URL =
-        "https://striveschool-api.herokuapp.com/api/deezer/search?q=" +
-        inputSearchHide.value;
+      const URL = "https://striveschool-api.herokuapp.com/api/deezer/search?q=" + inputSearchHide.value;
 
       // console.log(URL);
       const response = await fetch(URL);
@@ -578,13 +572,13 @@ const getData = async (event) => {
                         </div>
                         <div class="d-flex flex-column gap-4">
                             <h3 class="m-0">
-                            <a href="#" target="_blank">${nameArtist0}</a>
+                            <a href="./artist-page.html?artistId=${idArtist0}" target="_blank">${nameArtist0}</a>
                             </h3>
                             <div
                             class="d-flex gap-3 align-items-center justify-content-between"
                             >
                             <p class="m-0 text-secondary">
-                                <a href="#" target="_blank">${nameArtist0}</a>
+                                <a href="./artist-page.html?artistId=${idArtist0}" target="_blank">${nameArtist0}</a>
                             </p>
                             <p class="m-0 kinda-btn bold">${typeArtist0}</p>
                             </div>
@@ -607,7 +601,7 @@ const getData = async (event) => {
                                     <a href="#" target="_blank">${title0}</a>
                                 </h6>
                                 <p class="m-0 custom-fontSize-xs text-secondary">
-                                    <a href="#" target="_blank">${nameArtist0}</a>
+                                    <a href="./artist-page.html?artistId=${idArtist0}" target="_blank">${nameArtist0}</a>
                                 </p>
                                 </div>
                             </div>
@@ -629,7 +623,7 @@ const getData = async (event) => {
                                     <a href="#" target="_blank">${title1}</a>
                                 </h6>
                                 <p class="m-0 custom-fontSize-xs text-secondary">
-                                    <a href="#" target="_blank">${nameArtist1}</a>
+                                    <a href="./artist-page.html?artistId=${idArtist1}" target="_blank">${nameArtist1}</a>
                                 </p>
                                 </div>
                             </div>
@@ -651,7 +645,7 @@ const getData = async (event) => {
                                     <a href="#" target="_blank">${title2}</a>
                                 </h6>
                                 <p class="m-0 custom-fontSize-xs text-secondary">
-                                    <a href="#" target="_blank">${nameArtist2}</a>
+                                    <a href="./artist-page.html?artistId=${idArtist2}" target="_blank">${nameArtist2}</a>
                                 </p>
                                 </div>
                             </div>
@@ -673,7 +667,7 @@ const getData = async (event) => {
                                     <a href="#" target="_blank">${title3}</a>
                                 </h6>
                                 <p class="m-0 custom-fontSize-xs text-secondary">
-                                    <a href="#" target="_blank">${nameArtist3}</a>
+                                    <a href="./artist-page.html?artistId=${idArtist3}" target="_blank">${nameArtist3}</a>
                                 </p>
                                 </div>
                             </div>
@@ -686,9 +680,7 @@ const getData = async (event) => {
                     </div>
                 </div>
                 `;
-        } else if (
-          titleAlbum0.toLowerCase() === inputSearch.value.toLowerCase()
-        ) {
+        } else if (titleAlbum0.toLowerCase() === inputSearch.value.toLowerCase()) {
           fromJS.innerHTML = `
                 <div class="row row-cols-xl-2 row-cols-lg-1 row-cols-md-2 row-cols-1 flex-grow-1">
                     <div class="col pt-4 pb-3">
@@ -705,7 +697,7 @@ const getData = async (event) => {
                             class="d-flex gap-3 align-items-center justify-content-between"
                             >
                             <p class="m-0 text-secondary">
-                                <a href="#" target="_blank">${nameArtist0}</a>
+                                <a href="./artist-page.html?artistId=${idArtist0}" target="_blank">${nameArtist0}</a>
                             </p>
                             <p class="m-0 kinda-btn bold">${typeAlbum0}</p>
                             </div>
@@ -728,7 +720,7 @@ const getData = async (event) => {
                                     <a href="#" target="_blank">${title0}</a>
                                 </h6>
                                 <p class="m-0 custom-fontSize-xs text-secondary">
-                                    <a href="#" target="_blank">${nameArtist0}</a>
+                                    <a href="./artist-page.html?artistId=${idArtist0}" target="_blank">${nameArtist0}</a>
                                 </p>
                                 </div>
                             </div>
@@ -750,7 +742,7 @@ const getData = async (event) => {
                                     <a href="#" target="_blank">${title1}</a>
                                 </h6>
                                 <p class="m-0 custom-fontSize-xs text-secondary">
-                                    <a href="#" target="_blank">${nameArtist1}</a>
+                                    <a href="./artist-page.html?artistId=${idArtist1}" target="_blank">${nameArtist1}</a>
                                 </p>
                                 </div>
                             </div>
@@ -772,7 +764,7 @@ const getData = async (event) => {
                                     <a href="#" target="_blank">${title2}</a>
                                 </h6>
                                 <p class="m-0 custom-fontSize-xs text-secondary">
-                                    <a href="#" target="_blank">${nameArtist2}</a>
+                                    <a href="./artist-page.html?artistId=${idArtist2}" target="_blank">${nameArtist2}</a>
                                 </p>
                                 </div>
                             </div>
@@ -794,7 +786,7 @@ const getData = async (event) => {
                                     <a href="#" target="_blank">${title3}</a>
                                 </h6>
                                 <p class="m-0 custom-fontSize-xs text-secondary">
-                                    <a href="#" target="_blank">${nameArtist3}</a>
+                                    <a href="./artist-page.html?artistId=${idArtist3}" target="_blank">${nameArtist3}</a>
                                 </p>
                                 </div>
                             </div>
@@ -824,7 +816,7 @@ const getData = async (event) => {
                             class="d-flex gap-3 align-items-center justify-content-between"
                             >
                             <p class="m-0 text-secondary">
-                                <a href="#" target="_blank">${nameArtist0}</a>
+                                <a href="./artist-page.html?artistId=${idArtist0}" target="_blank">${nameArtist0}</a>
                             </p>
                             <p class="m-0 kinda-btn bold">${type0}</p>
                             </div>
@@ -847,7 +839,7 @@ const getData = async (event) => {
                                     <a href="#" target="_blank">${title0}</a>
                                 </h6>
                                 <p class="m-0 custom-fontSize-xs text-secondary">
-                                    <a href="#" target="_blank">${nameArtist0}</a>
+                                    <a href="./artist-page.html?artistId=${idArtist0}" target="_blank">${nameArtist0}</a>
                                 </p>
                                 </div>
                             </div>
@@ -869,7 +861,7 @@ const getData = async (event) => {
                                     <a href="#" target="_blank">${title1}</a>
                                 </h6>
                                 <p class="m-0 custom-fontSize-xs text-secondary">
-                                    <a href="#" target="_blank">${nameArtist1}</a>
+                                    <a href="./artist-page.html?artistId=${idArtist1}" target="_blank">${nameArtist1}</a>
                                 </p>
                                 </div>
                             </div>
@@ -891,7 +883,7 @@ const getData = async (event) => {
                                     <a href="#" target="_blank">${title2}</a>
                                 </h6>
                                 <p class="m-0 custom-fontSize-xs text-secondary">
-                                    <a href="#" target="_blank">${nameArtist2}</a>
+                                    <a href="./artist-page.html?artistId=${idArtist2}" target="_blank">${nameArtist2}</a>
                                 </p>
                                 </div>
                             </div>
@@ -913,7 +905,7 @@ const getData = async (event) => {
                                     <a href="#" target="_blank">${title3}</a>
                                 </h6>
                                 <p class="m-0 custom-fontSize-xs text-secondary">
-                                    <a href="#" target="_blank">${nameArtist3}</a>
+                                    <a href="./artist-page.html?artistId=${idArtist3}" target="_blank">${nameArtist3}</a>
                                 </p>
                                 </div>
                             </div>
