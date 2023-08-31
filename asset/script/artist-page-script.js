@@ -140,6 +140,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
   getElement();
 });
 
+const goToArtistPage = (event, id) => {
+  location.href = `./artist-page.html?artisId=${id}`;
+};
+
 const goToAlbumPage = (event, id) => {
   location.href = `./albumpage.html?albumId=${id}`;
 };
