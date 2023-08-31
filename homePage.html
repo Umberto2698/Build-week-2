@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title></title>
-    <link rel="stylesheet" href="./asset/css/reset.css" />
-    <link rel="stylesheet" href="./asset/css/font-awesome.css" />
+    <!-- <link rel="stylesheet" href="./asset/css/reset.css" /> -->
+    <!-- <link rel="stylesheet" href="./asset/css/font-awesome.css" /> -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -20,14 +20,14 @@
       <div class="d-flex">
         <header class="custom-paddingBottom-md">
           <div class="d-flex flex-column">
-            <nav class="d-flex flex-column gap-2">
+            <nav class="d-flex flex-column gap-1">
               <i class="bi bi-three-dots custom-fontSize-icon"></i>
-              <div class="d-flex gap-3 align-items-center">
-                <i class="bi bi-house-door custom-fontSize-icon"></i>
-                <!-- <i class="bi bi-house-door-fill custom-fontSize-icon"></i> -->
+              <div type="button" id="homePage" class="d-flex gap-3 align-items-center">
+                <!-- <i class="bi bi-house-door custom-fontSize-icon"></i> -->
+                <i class="bi bi-house-door-fill custom-fontSize-icon"></i>
                 <p class="m-0 custom-fontSize-nav">Home</p>
               </div>
-              <div class="d-flex gap-3 align-items-center">
+              <div type="button" id="cerca" class="d-flex gap-3 align-items-center">
                 <i class="bi bi-search custom-fontSize-icon"></i>
                 <p class="m-0 custom-fontSize-nav">Search</p>
               </div>
@@ -36,7 +36,7 @@
                 <p class="m-0 custom-fontSize-nav">La tua libreria</p>
               </div>
             </nav>
-            <section class="d-flex flex-column gap-2 mt-4">
+            <section class="d-flex flex-column gap-1 mt-4">
               <div class="d-flex gap-3 align-items-center">
                 <i class="bi bi-plus-square-fill custom-fontSize-icon"></i>
                 <p class="m-0 custom-fontSize-nav">Crea playlist</p>
@@ -50,7 +50,7 @@
                 <p class="m-0 custom-fontSize-nav">I tuoi episodi</p>
               </div>
             </section>
-            <section id="playlist" class="mt-4">
+            <section id="playlist" class="mt-4 ps-2">
               <ul class="d-flex flex-column text-secondary custom-fontSize-header">
                 <li>An item</li>
                 <li>A second item</li>
@@ -139,7 +139,11 @@
             </div>
           </div>
           <div id="custom-big-card" class="d-flex mt-4 gap-4">
-            <img src="./asset/imgs/main/image-11.jpg" alt="imagine dragons" class="big-img" />
+            <!-- <img
+              src="./asset/imgs/main/image-11.jpg"
+              alt="imagine dragons"
+              class="big-img"
+            />
             <div class="d-flex flex-column flex-grow-1 justify-content-between">
               <div class="d-flex justify-content-between align-items-center">
                 <p class="custom-fontSize-main-small m-0">ALBUM</p>
@@ -161,23 +165,30 @@
                   </button>
                 </div>
               </div>
+            </div> -->
+          </div>
+          <div id="h3-hide">
+            <h3 class="h3-hide custom-paddingTop-lg custom-paddingBottom-md custom-margin-none">Artisti del momento</h3>
+          </div>
+          <div id="saluto-hide" class="d-none">
+            <div class="d-flex align-items-center justify-content-between pt-4">
+              <h3 class="m-0">Buonasera</h3>
+              <div id="tre-icone" class="gap-3">
+                <i class="bi bi-bell custom-fontSize-lg"></i>
+                <i class="bi bi-clock-history custom-fontSize-lg"></i>
+                <i class="bi bi-gear custom-fontSize-lg"></i>
+              </div>
             </div>
-          </div>
-          <h3 class="h3-hide custom-paddingTop-lg custom-paddingBottom-md custom-margin-none">Buonasera</h3>
-          <div id="hi-custom" class="d-none align-items-center justify-content-between pt-4">
-            <h3 class="m-0">Buonasera</h3>
-            <div class="d-flex gap-3">
-              <i class="bi bi-bell custom-fontSize-lg"></i>
-              <i class="bi bi-clock-history custom-fontSize-lg"></i>
-              <i class="bi bi-gear custom-fontSize-lg"></i>
+            <div class="d-flex gap-4 custom-marginBottom-sm custom-marginTop-sm">
+              <p class="m-0 px-3 py-2 custom-fontSize-sm bg-darkgray-color">Musica</p>
+              <p class="m-0 px-3 py-2 custom-fontSize-sm bg-darkgray-color">Podcast e show</p>
             </div>
+            <h3 class="custom-marginBottom-sm">Artisti del momento</h3>
           </div>
-          <div id="suggestion" class="d-none gap-4 custom-marginBottom-sm custom-marginTop-sm">
-            <p class="m-0 px-3 py-2 custom-fontSize-sm bg-darkgray-color">Musica</p>
-            <p class="m-0 px-3 py-2 custom-fontSize-sm bg-darkgray-color">Podcast e show</p>
-          </div>
-          <div class="container-fuild custom-margin-none">
-            <div class="row row-cols-2 row-cols-lg-3 row-cols-xl-2 row-cols-xxl-3 gy-3">
+          <div id="cards-artists" class="container-fuild custom-margin-none">
+            <!-- <div
+              class="row row-cols-2 row-cols-lg-3 row-cols-xl-2 row-cols-xxl-3 gy-3"
+            >
               <div class="col card-col">
                 <div class="d-flex">
                   <img src="./asset/imgs/main/image-2.jpg" alt="imagine dragons" class="small-img" />
@@ -226,11 +237,13 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
 
           <div id="wrapper-discover-more" class="container-fuild">
-            <h3 class="custom-paddingTop-lg custom-paddingBottom-lg m-0">Altro di ciò che ti piace</h3>
+            <!-- <h3 class="custom-paddingTop-lg custom-paddingBottom-lg m-0">
+              Altro di ciò che ti piace
+            </h3>
 
             <div id="discover-more" class="row row-cols-2 row-cols-sm-3 row-cols-md-4 gy-3">
               <div class="col">
@@ -341,10 +354,10 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
           <div id="discover-more-hide" class="d-none">
-            <div class="card-mobile p-4 pb-3 mt-4">
+            <!-- <div class="card-mobile p-4 pb-3 mt-4">
               <div class="d-flex flex-column gap-4">
                 <div class="d-flex gap-4">
                   <img
@@ -421,7 +434,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </main>
         <section id="friends">
@@ -496,11 +509,11 @@
         </section>
       </div>
       <div id="menu-xs" class="d-none">
-        <div class="d-flex flex-column align-items-center">
+        <div id="menu-home" type="button" class="d-flex flex-column align-items-center">
           <i class="bi bi-house-door-fill"></i>
           <p class="m-0">Home</p>
         </div>
-        <div class="d-flex flex-column align-items-center">
+        <div id="menu-cerca" type="button" class="d-flex flex-column align-items-center">
           <i class="bi bi-search"></i>
           <p class="m-0">Search</p>
         </div>
@@ -515,5 +528,6 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+    <script src="./asset/javascritpt/homePage.js"></script>
   </body>
 </html>

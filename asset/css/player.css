@@ -1,0 +1,197 @@
+footer span {
+  font-size: 10px;
+}
+
+footer p {
+  font-size: 8px;
+}
+
+#footer-xs {
+  display: none;
+}
+
+footer img {
+  width: 50px;
+  height: 50px;
+}
+
+footer > div > div:nth-child(2) {
+  margin-inline: auto;
+}
+
+.mdIcon {
+  font-size: 15px;
+}
+
+.lgIcon {
+  width: 25px;
+  height: 25px;
+}
+
+.lgIcon i {
+  font-size: 20px;
+  margin-left: 1.5px;
+}
+
+.soundbar-rules {
+  background-color: #181818;
+  width: 100vw;
+}
+
+.progress-bar-base {
+  width: 300%;
+  height: 5px;
+  background-color: lightslategray;
+  left: -100%;
+}
+
+.progress-bar-fill {
+  width: 100%;
+  height: 5px;
+  background-color: white;
+}
+
+.currenttime-position {
+  left: -120%;
+}
+
+.fulltime-position {
+  right: -120%;
+}
+
+.green-button {
+  color: darkgreen;
+}
+
+.slider {
+  overflow: hidden;
+  width: 50px;
+  -webkit-appearance: none;
+  background-color: lightslategray;
+}
+
+.slider::-webkit-slider-runnable-track {
+  height: 5px;
+  -webkit-appearance: none;
+  color: white;
+}
+
+.slider::-webkit-slider-thumb {
+  width: 5px;
+  -webkit-appearance: none;
+  height: 5px;
+  cursor: pointer;
+  background: white;
+  box-shadow: -80px 0 0 80px white;
+}
+
+#volIcon {
+  margin-bottom: 2.5px;
+}
+
+.dropdown-menu {
+  min-width: 100px;
+  position: absolute;
+  inset: auto auto 0px 0px;
+  margin: 0px;
+  transform: translate3d(-33px, -21px, 0px);
+}
+
+.dropdown-menu > div:first-of-type {
+  justify-content: space-around;
+}
+
+#collapseBtn {
+  display: none;
+}
+#collapseBtn > button {
+  border: 0;
+  background-color: transparent;
+  color: white;
+  margin-top: 19px;
+}
+
+@media screen and (max-width: 1060px) {
+  footer > div > div:nth-child(2) {
+    margin-inline: auto;
+  }
+  .progress-bar-base {
+    width: 200%;
+    height: 5px;
+    background-color: lightslategray;
+    left: -45%;
+  }
+  .currenttime-position {
+    left: -60%;
+  }
+  .fulltime-position {
+    left: 158%;
+  }
+  #volIcon {
+    margin-bottom: 2.5px;
+  }
+  #playbar-img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 825px) {
+  .tool {
+    display: none;
+  }
+  #collapseBtn {
+    display: inline-flex;
+  }
+}
+
+@media screen and (max-width: 712px) {
+  .progress-bar-base {
+    width: 160%;
+    height: 5px;
+    background-color: lightslategray;
+    left: -31%;
+  }
+  .currenttime-position {
+    left: -47%;
+  }
+  .fulltime-position {
+    left: 133%;
+  }
+}
+
+@media screen and (max-width: 664px) {
+  #playbar-title {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  footer {
+    display: none;
+  }
+
+  #footer-xs {
+    display: flex;
+    justify-content: space-between;
+    bottom: 80px;
+    right: 10px;
+    left: 10px;
+    border-radius: 5px;
+    align-items: center;
+  }
+
+  #footer-xs p {
+    margin: 0;
+    margin-left: 30px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #footer-xs button {
+    --bs-btn-padding-x: 0.25rem;
+  }
+  #footer-xs p {
+    font-size: 9px;
+  }
+}

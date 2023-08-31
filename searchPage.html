@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title></title>
-    <link rel="stylesheet" href="./asset/css/reset.css" />
-    <link rel="stylesheet" href="./asset/css/font-awesome.css" />
+    <!-- <link rel="stylesheet" href="./asset/css/reset.css" /> -->
+    <!-- <link rel="stylesheet" href="./asset/css/font-awesome.css" /> -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -23,14 +23,22 @@
       <div class="d-flex">
         <header class="custom-paddingBottom-sm">
           <div class="d-flex flex-column">
-            <nav class="d-flex flex-column gap-2">
+            <nav class="d-flex flex-column gap-1">
               <i class="bi bi-three-dots custom-fontSize-icon"></i>
-              <div class="d-flex gap-3 align-items-center">
+              <div
+                type="button"
+                id="homePage"
+                class="d-flex gap-3 align-items-center"
+              >
                 <i class="bi bi-house-door custom-fontSize-icon"></i>
                 <!-- <i class="bi bi-house-door-fill custom-fontSize-icon"></i> -->
                 <p class="m-0 custom-fontSize-nav">Home</p>
               </div>
-              <div class="d-flex gap-3 align-items-center">
+              <div
+                type="button"
+                id="cerca"
+                class="d-flex gap-3 align-items-center"
+              >
                 <i class="bi bi-search custom-fontSize-icon"></i>
                 <p class="m-0 custom-fontSize-nav">Search</p>
               </div>
@@ -39,7 +47,7 @@
                 <p class="m-0 custom-fontSize-nav">La tua libreria</p>
               </div>
             </nav>
-            <section class="d-flex flex-column gap-2 mt-4">
+            <section class="d-flex flex-column gap-1 mt-4">
               <div class="d-flex gap-3 align-items-center">
                 <i class="bi bi-plus-square-fill custom-fontSize-icon"></i>
                 <p class="m-0 custom-fontSize-nav">Crea playlist</p>
@@ -53,7 +61,7 @@
                 <p class="m-0 custom-fontSize-nav">I tuoi episodi</p>
               </div>
             </section>
-            <section id="playlist" class="mt-4">
+            <section id="playlist" class="mt-4 ps-2">
               <ul
                 class="d-flex flex-column text-secondary custom-fontSize-header"
               >
@@ -125,16 +133,18 @@
             </div>
 
             <form
+              id="form-input-hide"
               class="d-flex align-items-center flex-grow-1 gap-4"
               role="search"
               style="width: 100%"
+              onsubmit="getData(event)"
             >
               <div
                 class="d-flex align-items-center custom-border-search flex-grow-1"
               >
                 <i class="bi bi-search ps-3 text-dark custom-fontSize-md"></i>
                 <input
-                  id="search"
+                  id="search-hide"
                   class="form-control me-2 bg-transparent text-dark border-0 sm-bold"
                   type="search"
                   placeholder="Cosa vuoi ascoltare?"
@@ -159,8 +169,10 @@
               <i class="bi bi-chevron-left custom-fontSize-icon"></i>
               <i class="bi bi-chevron-right custom-fontSize-icon"></i>
               <form
+                id="form-input"
                 class="d-flex align-items-center flex-grow-1 gap-4"
                 role="search"
+                onsubmit="getData(event)"
               >
                 <div
                   class="d-flex align-items-center custom-border-search flex-grow-1"
@@ -214,7 +226,7 @@
             </div>
           </div>
 
-          <div class="d-flex flex-column gap-2">
+          <div id="cards-48" class="flex-column gap-2">
             <h3 class="m-0">Sfoglia tutto</h3>
             <div class="container-fuild custom-margin-none">
               <div
@@ -222,7 +234,7 @@
               >
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -245,7 +257,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -268,7 +280,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -291,7 +303,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -314,7 +326,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -337,7 +349,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -360,7 +372,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -383,7 +395,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -406,7 +418,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -429,7 +441,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -452,7 +464,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -475,7 +487,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -498,7 +510,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -521,7 +533,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -544,7 +556,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -567,7 +579,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -590,7 +602,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -614,7 +626,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -637,7 +649,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -660,7 +672,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -683,7 +695,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -706,7 +718,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -729,7 +741,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -752,7 +764,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -775,7 +787,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -798,7 +810,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -821,7 +833,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -844,7 +856,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -867,7 +879,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -890,7 +902,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -913,7 +925,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -936,7 +948,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -959,7 +971,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -982,7 +994,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -1005,7 +1017,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -1028,7 +1040,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -1051,7 +1063,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -1074,7 +1086,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -1097,7 +1109,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -1120,7 +1132,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -1143,7 +1155,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -1166,7 +1178,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -1189,7 +1201,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -1212,7 +1224,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -1235,7 +1247,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -1258,7 +1270,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -1281,7 +1293,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -1304,7 +1316,7 @@
                 </div>
                 <div class="col custom-height">
                   <div
-                    class="custom-grid-card"
+                    class="custom-grid-card pointer"
                     style="
                       background-image: linear-gradient(
                         to top left,
@@ -1328,14 +1340,143 @@
               </div>
             </div>
           </div>
+
+          <div id="fromJS">
+            <!-- <div
+              class="row row-cols-xl-2 row-cols-lg-1 row-cols-md-2 row-cols-1 flex-grow-1"
+            >
+              <div class="col pt-4 pb-3">
+                <div class="d-flex flex-column gap-4 ps-4 fit-content">
+                  <h4 class="m-0">Risultato più rilevante</h4>
+                  <div class="div-img-artist-grande">
+                    <img class="img-artist" src="" alt="" />
+                  </div>
+                  <div class="d-flex flex-column gap-4">
+                    <h3 class="m-0">
+                      <a href="#" target="_blank">Nome della canzone / album</a>
+                    </h3>
+                    <div
+                      class="d-flex gap-3 align-items-center justify-content-between"
+                    >
+                      <p class="m-0 text-secondary">
+                        <a href="#" target="_blank">Nome artista</a>
+                      </p>
+                      <p class="m-0 kinda-btn bold">Tipo</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col pt-4 pb-3">
+                <h4 class="mb-4">Brani</h4>
+                <div class="d-flex flex-column gap-3 pe-5">
+                  <div class="d-flex flex-column brano">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div class="d-flex gap-3">
+                        <div class="div-img-artist-piccola">
+                          <img class="img-artist" src="" alt="" />
+                        </div>
+                        <div class="d-flex flex-column justify-content-between">
+                          <h6 class="m-0">
+                            <a href="#" target="_blank">Nome Brano</a>
+                          </h6>
+                          <p class="m-0 custom-fontSize-xs text-secondary">
+                            <a href="#" target="_blank">Artista</a>
+                          </p>
+                        </div>
+                      </div>
+                      <p class="m-0 text-secondary custom-fontSize-xs">
+                        Durata
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-column brano">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div class="d-flex gap-3">
+                        <div class="div-img-artist-piccola">
+                          <img class="img-artist" src="" alt="" />
+                        </div>
+                        <div class="d-flex flex-column justify-content-between">
+                          <h6 class="m-0">
+                            <a href="#" target="_blank">Nome Brano</a>
+                          </h6>
+                          <p class="m-0 custom-fontSize-xs text-secondary">
+                            <a href="#" target="_blank">Artista</a>
+                          </p>
+                        </div>
+                      </div>
+                      <p class="m-0 text-secondary custom-fontSize-xs">
+                        Durata
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-column brano">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div class="d-flex gap-3">
+                        <div class="div-img-artist-piccola">
+                          <img class="img-artist" src="" alt="" />
+                        </div>
+                        <div class="d-flex flex-column justify-content-between">
+                          <h6 class="m-0">
+                            <a href="#" target="_blank">Nome Brano</a>
+                          </h6>
+                          <p class="m-0 custom-fontSize-xs text-secondary">
+                            <a href="#" target="_blank">Artista</a>
+                          </p>
+                        </div>
+                      </div>
+                      <p class="m-0 text-secondary custom-fontSize-xs">
+                        Durata
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-column brano">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div class="d-flex gap-3">
+                        <div class="div-img-artist-piccola">
+                          <img class="img-artist" src="" alt="" />
+                        </div>
+                        <div class="d-flex flex-column justify-content-between">
+                          <h6 class="m-0">
+                            <a href="#" target="_blank">Nome Brano</a>
+                          </h6>
+                          <p class="m-0 custom-fontSize-xs text-secondary">
+                            <a href="#" target="_blank">Artista</a>
+                          </p>
+                        </div>
+                      </div>
+                      <p class="m-0 text-secondary custom-fontSize-xs">
+                        Durata
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
         </main>
       </div>
       <div id="menu-xs" class="d-none">
-        <div class="d-flex flex-column align-items-center">
-          <i class="bi bi-house-door-fill"></i>
+        <div
+          id="menu-home"
+          type="button"
+          class="d-flex flex-column align-items-center"
+        >
+          <i class="bi bi-house-door"></i>
           <p class="m-0">Home</p>
         </div>
-        <div class="d-flex flex-column align-items-center">
+        <div
+          id="menu-cerca"
+          type="button"
+          class="d-flex flex-column align-items-center"
+        >
           <i class="bi bi-search"></i>
           <p class="m-0">Search</p>
         </div>
@@ -1350,5 +1491,6 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+    <script src="./asset/javascritpt/search.js"></script>
   </body>
 </html>

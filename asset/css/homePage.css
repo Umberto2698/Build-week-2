@@ -237,7 +237,7 @@ main {
 
 header {
   width: var(--fullWidth);
-  padding-left: var(--mdPadd);
+  padding-left: var(--xsPadd);
   padding-top: var(--xsPadd);
 }
 
@@ -253,10 +253,6 @@ header > div {
 main {
   width: calc(100% - var(--fullWidth) - var(--fullWidthFriends));
   padding-top: var(--xsPadd);
-}
-
-#hi-custom {
-  display: none;
 }
 
 #friends {
@@ -312,6 +308,7 @@ main {
 
 .custom-fontSize-icon {
   font-size: var(--lgFontSize);
+  padding: 5px 0 5px 10px;
 }
 
 .custom-fontSize-nav {
@@ -370,6 +367,37 @@ main::-webkit-scrollbar-thumb {
 }
 /* End Custom Scroll*/
 
+header nav div:hover {
+  width: 90%;
+  background-color: var(--lightgrayColor);
+  border-radius: 20px;
+}
+
+header section:first-of-type div:hover {
+  width: 90%;
+  background-color: var(--lightgrayColor);
+  border-radius: 20px;
+}
+
+#custom-big-card a,
+#cards-artists a,
+#wrapper-discover-more a {
+  color: white;
+  text-decoration: none;
+}
+
+#custom-big-card a {
+  font-weight: 500;
+}
+
+#tre-icone {
+  display: none;
+}
+
+.fit-content {
+  width: fit-content;
+}
+
 @media screen and (max-width: 426px) {
   .custom-paddingBottom-md {
     padding-bottom: 50px;
@@ -424,10 +452,6 @@ main::-webkit-scrollbar-thumb {
     display: none !important;
   }
 
-  h3.h3-hide {
-    display: none;
-  }
-
   #wrapper-discover-more {
     display: none;
   }
@@ -436,9 +460,6 @@ main::-webkit-scrollbar-thumb {
     margin-top: 10px;
   }
 
-  #hi-custom {
-    display: flex !important;
-  }
   #discover-more-hide {
     display: block !important;
   }
@@ -462,6 +483,9 @@ main::-webkit-scrollbar-thumb {
 
   .custom-fontSize-cards-normal {
     font-size: calc(var(--xsFontSize) - 3px);
+  }
+  #tre-icone {
+    display: flex;
   }
 }
 
@@ -496,9 +520,12 @@ main::-webkit-scrollbar-thumb {
   #btn-hide-ad {
     font-size: var(--xsFontSize);
   }
+  #h3-hide {
+    display: none;
+  }
 
-  #suggestion {
-    display: flex !important;
+  #saluto-hide {
+    display: block !important;
   }
   #menu-xs {
     background: linear-gradient(to top, black, transparent);
