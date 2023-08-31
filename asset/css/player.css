@@ -6,6 +6,10 @@ footer p {
   font-size: 8px;
 }
 
+footer > div {
+  margin: 0 5px;
+}
+
 #footer-xs {
   display: none;
 }
@@ -110,6 +114,11 @@ footer > div > div:nth-child(2) {
   color: white;
   margin-top: 19px;
 }
+.bi-volume-off {
+  --bs-btn-padding-x: 5px;
+  --bs-btn-padding-y: 0px;
+  padding-bottom: 3px;
+}
 
 @media screen and (max-width: 1060px) {
   footer > div > div:nth-child(2) {
@@ -173,7 +182,7 @@ footer > div > div:nth-child(2) {
   #footer-xs {
     display: flex;
     justify-content: space-between;
-    bottom: 80px;
+    bottom: 40px;
     right: 10px;
     left: 10px;
     border-radius: 5px;

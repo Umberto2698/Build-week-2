@@ -582,6 +582,10 @@ h5 + div {
     margin-bottom: 30px;
   }
 
+  #lovedSongs i:first-of-type {
+    color: black;
+  }
+
   #lovedSongs h4,
   #lovedSongs-xs h4 {
     display: none;
@@ -616,7 +620,7 @@ h5 + div {
   }
 
   #menu-xs {
-    background: linear-gradient(to top, black, transparent);
+    background: linear-gradient(to top, black 30%, transparent);
     display: flex;
     justify-content: space-evenly;
     left: 0;
