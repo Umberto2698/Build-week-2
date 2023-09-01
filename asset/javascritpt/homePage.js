@@ -33,13 +33,39 @@ window.addEventListener("DOMContentLoaded", async () => {
     `;
   try {
     const varValue = "rain";
-    const URL =
-      "https://striveschool-api.herokuapp.com/api/deezer/search?q=" + varValue;
+    const URL = "https://striveschool-api.herokuapp.com/api/deezer/search?q=" + varValue;
     // console.log(URL);
     const response = await fetch(URL);
 
     if (response.ok) {
       const parseBody = await response.json();
+
+      if (localStorage.getItem("trackId")) {
+        const songId = localStorage.getItem("trackId");
+        try {
+          const localStorageSong = await fetch("https://striveschool-api.herokuapp.com/api/deezer/track/" + songId);
+          if (!localStorageSong.ok) {
+            throw new Error(`Error ${localStorageSong.status}: ${localStorageSong.statusText}.`);
+          } else {
+            const localStorageSongsObj = await localStorageSong.json();
+            playButton(localStorageSongsObj);
+            playButtonMobile(localStorageSongsObj);
+          }
+        } catch (err) {
+          (err) => {
+            const body = document.body;
+            body.innerHTML = `<div class="container">
+              <div>
+                <h1 class="text-center" style="margin-top: 45vh"> ${err.message}</h1>
+              </div>
+             </div>
+            `;
+          };
+        }
+      } else {
+        playButton(parseBody.data[0]);
+        playButtonMobile(parseBody.data[0]);
+      }
       console.log(parseBody);
 
       const duration0 = parseBody.data[0].duration;
@@ -301,7 +327,7 @@ window.addEventListener("DOMContentLoaded", async () => {
             Ascolta l'album <a href="./albumpage.html?albumId=${idAlbum0}">${titleAlbum0}</a> by <a href="./artist-page.html?artistId=${idArtist0}">${nameArtist0}!</a>
           </p>
           <div class="d-flex gap-3">
-            <button type="button" class="btn btn-success custom-btn">
+            <button type="button" class="btn btn-success custom-btn" onclick="playSong()">
               Play
             </button>
             <button type="button" class="btn btn-outline-dark custom-btn">

@@ -49,11 +49,11 @@ const albumIdArray = [
 
 let arrayIdCounter = 5;
 let counter = 1;
-let songlength = 0;
-let timeCounter = 0;
-let songInterval = null;
-let isPlaying = false;
-let trackIndex = 0;
+// let songlength = 0;
+// let timeCounter = 0;
+// let songInterval = null;
+// let isPlaying = false;
+// let trackIndex = 0;
 
 //funzione di reset della tracklist
 
@@ -132,16 +132,42 @@ const goToArtistPage = (event, id) => {
 
 // fetch al caricamento della pagina - da modificare con l ID di ogni album in fondo all url per renderlo dinamico
 
-const createAlbumPage = async albumUrl => {
+const createAlbumPage = async (albumUrl) => {
   try {
     const resp = await fetch(albumUrl);
     const data = await resp.json();
+    if (localStorage.getItem("trackId")) {
+      const songId = localStorage.getItem("trackId");
+      try {
+        const localStorageSong = await fetch("https://striveschool-api.herokuapp.com/api/deezer/track/" + songId);
+        if (!localStorageSong.ok) {
+          throw new Error(`Error ${localStorageSong.status}: ${localStorageSong.statusText}.`);
+        } else {
+          const localStorageSongsObj = await localStorageSong.json();
+          playButton(localStorageSongsObj);
+          playButtonMobile(localStorageSongsObj);
+        }
+      } catch (err) {
+        (err) => {
+          const body = document.body;
+          body.innerHTML = `<div class="container">
+            <div>
+              <h1 class="text-center" style="margin-top: 45vh"> ${err.message}</h1>
+            </div>
+           </div>
+          `;
+        };
+      }
+    } else {
+      playButton(data.tracks.data[0]);
+      playButtonMobile(data.traks.data[0]);
+    }
     console.log(data);
     localStorage.setItem("currentAlbum", JSON.stringify(data));
     localStorage.setItem("savedData", JSON.stringify(data.tracks.data));
     resetTrackList();
     counter = 1;
-    data.tracks.data.forEach(element => {
+    data.tracks.data.forEach((element) => {
       createTrackList(element);
     });
     albumTitle.innerText = data.title;

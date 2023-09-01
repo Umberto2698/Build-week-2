@@ -12,10 +12,7 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="./asset/css/comune.css" />
     <link rel="stylesheet" href="./asset/css/searchPage.css" />
     <link rel="stylesheet" href="./asset/css/player.css" />
@@ -26,27 +23,15 @@
         <header class="height-header">
           <div class="d-flex flex-column">
             <nav class="d-flex flex-column">
-              <button
-                id="three-dots"
-                class="btn p-0 header-div-icon text-light mb-2"
-                type="button"
-              >
+              <button id="three-dots" class="btn p-0 header-div-icon text-light mb-2" type="button">
                 <i class="bi bi-three-dots custom-fontSize-icon"></i>
               </button>
-              <div
-                type="button"
-                id="homePage"
-                class="d-flex align-items-center gap-1 header-div-icon"
-              >
+              <div type="button" id="homePage" class="d-flex align-items-center gap-1 header-div-icon">
                 <!-- <i class="bi bi-house-door custom-fontSize-icon"></i> -->
                 <i class="bi bi-house-door-fill custom-fontSize-icon"></i>
                 <p class="m-0 custom-fontSize-nav">Home</p>
               </div>
-              <div
-                type="button"
-                id="cerca"
-                class="d-flex align-items-center gap-1 header-div-icon"
-              >
+              <div type="button" id="cerca" class="d-flex align-items-center gap-1 header-div-icon">
                 <i class="bi bi-search custom-fontSize-icon"></i>
                 <p class="m-0 custom-fontSize-nav">Search</p>
               </div>
@@ -70,9 +55,7 @@
               </div>
             </section>
             <section id="playlist" class="mt-4 ps-2">
-              <ul
-                class="d-flex flex-column text-secondary custom-fontSize-header"
-              >
+              <ul class="d-flex flex-column text-secondary custom-fontSize-header">
                 <li>An item</li>
                 <li>A second item</li>
                 <li>A third item</li>
@@ -129,14 +112,8 @@
         </header>
         <main>
           <div class="d-flex flex-column px-4 gap-4">
-            <div
-              id="upbar-hide"
-              class="d-flex flex-column justify-content-between align-items-center gap-4"
-            >
-              <div
-                class="d-flex gap-4 align-items-center justify-content-between"
-                style="width: 100%"
-              >
+            <div id="upbar-hide" class="d-flex flex-column justify-content-between align-items-center gap-4">
+              <div class="d-flex gap-4 align-items-center justify-content-between" style="width: 100%">
                 <h4 class="m-0">Cerca</h4>
                 <!-- <i class="bi bi-camera"></i> -->
                 <div class="btn-group">
@@ -149,27 +126,18 @@
                   >
                     <i class="bi bi-gear custom-fontSize-icon"></i>
                   </button>
-                  <ul
-                    class="dropdown-menu dropdown-menu-end dropdown-menu-dark"
-                  >
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
                     <li>
-                      <button
-                        class="dropdown-item d-flex justify-content-between gap-4"
-                        type="button"
-                      >
+                      <button class="dropdown-item d-flex justify-content-between gap-4" type="button">
                         Account
                         <i class="bi bi-box-arrow-in-up-right"></i>
                       </button>
                     </li>
                     <li>
-                      <button class="dropdown-item" type="button">
-                        Profile
-                      </button>
+                      <button class="dropdown-item" type="button">Profile</button>
                     </li>
                     <li>
-                      <button class="dropdown-item" type="button">
-                        Settings
-                      </button>
+                      <button class="dropdown-item" type="button">Settings</button>
                     </li>
                   </ul>
                 </div>
@@ -182,9 +150,7 @@
                 style="width: 100%"
                 onsubmit="getData(event)"
               >
-                <div
-                  class="d-flex align-items-center custom-border-search flex-grow-1"
-                >
+                <div class="d-flex align-items-center custom-border-search flex-grow-1">
                   <i class="bi bi-search ps-3 text-dark custom-fontSize-md"></i>
                   <input
                     id="search-hide"
@@ -204,10 +170,7 @@
               </button> -->
               </form>
             </div>
-            <div
-              id="upbar"
-              class="d-flex justify-content-between align-items-center gap-4"
-            >
+            <div id="upbar" class="d-flex justify-content-between align-items-center gap-4">
               <div class="d-flex gap-4 align-items-center flex-grow-1">
                 <i class="bi bi-chevron-left custom-fontSize-icon"></i>
                 <i class="bi bi-chevron-right custom-fontSize-icon"></i>
@@ -217,9 +180,7 @@
                   role="search"
                   onsubmit="getData(event)"
                 >
-                  <div
-                    class="d-flex align-items-center custom-border-search flex-grow-1"
-                  >
+                  <div class="d-flex align-items-center custom-border-search flex-grow-1">
                     <i class="bi bi-search ps-3 custom-fontSize-md"></i>
                     <input
                       id="search"
@@ -251,10 +212,7 @@
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
                   <li>
-                    <button
-                      class="dropdown-item d-flex justify-content-between gap-4"
-                      type="button"
-                    >
+                    <button class="dropdown-item d-flex justify-content-between gap-4" type="button">
                       Account
                       <i class="bi bi-box-arrow-in-up-right"></i>
                     </button>
@@ -263,9 +221,7 @@
                     <button class="dropdown-item" type="button">Profile</button>
                   </li>
                   <li>
-                    <button class="dropdown-item" type="button">
-                      Settings
-                    </button>
+                    <button class="dropdown-item" type="button">Settings</button>
                   </li>
                 </ul>
               </div>
@@ -274,1112 +230,437 @@
             <div id="cards-48" class="flex-column gap-2">
               <h3 class="m-0">Sfoglia tutto</h3>
               <div class="container-fuild custom-margin-none">
-                <div
-                  class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6"
-                >
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6">
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #94bbcc,
-                          #1e3466 77%
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #94bbcc, #1e3466 77%)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Discover
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-1.jpeg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Discover</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-1.jpeg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #f7fe24,
-                          #ff4b00
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #f7fe24, #ff4b00)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Podcast
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-2.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Podcast</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-2.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #beb0d1,
-                          #a0ab7e
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #beb0d1, #a0ab7e)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Pollen
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-3.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Pollen</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-3.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #dfdfdf,
-                          #fae62d
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #dfdfdf, #fae62d)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Mint
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-4.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Mint</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-4.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #ef39a6,
-                          #75134e
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #ef39a6, #75134e)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Latino
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-5.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Latino</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-5.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #8862c5,
-                          #3b1e52
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #8862c5, #3b1e52)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        R&B
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-6.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">R&B</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-6.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #ec1e32,
-                          #3d0d12
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #ec1e32, #3d0d12)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Rock
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-7.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Rock</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-7.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #1b1f2f,
-                          #101117
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #1b1f2f, #101117)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Best Mode
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-8.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Best Mode</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-8.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #9fc3d1,
-                          #5f7a9b
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #9fc3d1, #5f7a9b)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Lo-Fi Beats
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-10.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Lo-Fi Beats</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-10.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #8ab6c8,
-                          #0085a2
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #8ab6c8, #0085a2)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Car Music
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-11.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Car Music</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-11.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #f0b991,
-                          #905d3c
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #f0b991, #905d3c)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        All Outt
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-12.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">All Outt</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-12.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #f49436,
-                          #ef3fa3
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #f49436, #ef3fa3)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Your Summer
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-13.jpeg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Your Summer</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-13.jpeg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #a67dba,
-                          #773795
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #a67dba, #773795)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Top Songs
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-14.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Top Songs</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-14.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #d0b8a2,
-                          #5694a2
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #d0b8a2, #5694a2)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Unlocking Us
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-15.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Unlocking Us</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-15.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #22396f,
-                          #1b1c2e
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #22396f, #1b1c2e)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Soul Lounge
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-16.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Soul Lounge</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-16.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #96b9c1,
-                          #2b6173
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #96b9c1, #2b6173)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Stress Relief
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-17.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Stress Relief</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-17.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #cfca9f,
-                          #5f7489,
-                          #132a4c
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #cfca9f, #5f7489, #132a4c)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Sleep
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-18.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Sleep</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-18.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #63f1f3,
-                          #1aacaf
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #63f1f3, #1aacaf)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Island Pop
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-19.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Island Pop</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-19.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #2b2e39,
-                          #211612
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #2b2e39, #211612)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Changes
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-20.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Changes</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-20.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #436bd9,
-                          #2943b2
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #436bd9, #2943b2)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Indigo
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-22.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Indigo</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-22.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #9b6d5a,
-                          #3b2f3b
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #9b6d5a, #3b2f3b)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Deep Focus
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-23.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Deep Focus</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-23.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #92989a,
-                          #5a6366
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #92989a, #5a6366)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Guitar
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-24.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Guitar</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-24.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #6fb1cc,
-                          #9cd297
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #6fb1cc, #9cd297)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Out Now
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-25.jpeg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Out Now</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-25.jpeg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #fcf9bb,
-                          #fff874
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #fcf9bb, #fff874)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Friday
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-26.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Friday</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-26.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #555fa9 30%,
-                          #d5d617
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #555fa9 30%, #d5d617)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Party Hits
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-27.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Party Hits</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-27.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #cf3e45,
-                          #b52141
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #cf3e45, #b52141)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Afro Hits
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-28.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Afro Hits</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-28.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #2a2938,
-                          #1f1e29
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #2a2938, #1f1e29)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Classic
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-29.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Classic</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-29.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #e2c0aa,
-                          #b994c8
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #e2c0aa, #b994c8)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        LoL
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-30.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">LoL</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-30.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #ec1e32,
-                          #0c1715
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #ec1e32, #0c1715)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        KickAss
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-31.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">KickAss</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-31.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #7fa79a,
-                          #f50800
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #7fa79a, #f50800)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Nu-Funk
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-32.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Nu-Funk</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-32.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #ed4959,
-                          #dd0738
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #ed4959, #dd0738)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        New Punk
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-33.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">New Punk</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-33.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #4c917e,
-                          #635c57
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #4c917e, #635c57)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Ambiental
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-34.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Ambiental</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-34.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #cdf465,
-                          #009bd3
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #cdf465, #009bd3)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        K-Pop
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-35.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">K-Pop</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-35.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #6e3e25,
-                          #272526
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #6e3e25, #272526)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Blues
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-36.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Blues</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-36.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #ff4632,
-                          #1e3264
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #ff4632, #1e3264)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Hot Country
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-39.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Hot Country</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-39.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #3a5451,
-                          #273f56
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #3a5451, #273f56)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Frequency
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-40.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Frequency</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-40.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #ffcdd2,
-                          #65a8f2
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #ffcdd2, #65a8f2)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Arab Pop
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-41.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Arab Pop</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-41.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #bad2df,
-                          #5cb1de
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #bad2df, #5cb1de)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Pop Mix
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-42.png"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Pop Mix</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-42.png" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #433732,
-                          #292427
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #433732, #292427)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Radar
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-43.png"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Radar</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-43.png" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #f5cfd3,
-                          #cbb3cb
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #f5cfd3, #cbb3cb)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Pop 4 Kids
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-44.png"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Pop 4 Kids</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-44.png" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #8dae87,
-                          #2d46ba
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #8dae87, #2d46ba)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Daily Drive
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-45.png"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Daily Drive</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-45.png" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #fbe82b,
-                          #7045ad 70%
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #fbe82b, #7045ad 70%)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Today's Top
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-47.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Today's Top</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-47.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #fefefe,
-                          #559df3
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #fefefe, #559df3)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Top Christian
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-48.jpeg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Top Christian</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-48.jpeg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #a2988b,
-                          #242223
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #a2988b, #242223)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Rap Caviar
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-49.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Rap Caviar</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-49.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #c87a3f,
-                          #381d14
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #c87a3f, #381d14)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Rockeras
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-50.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Rockeras</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-50.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #b9a0bf,
-                          #815076
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #b9a0bf, #815076)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Mood Booster
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-51.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Mood Booster</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-51.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #00f6e5,
-                          #000201
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #00f6e5, #000201)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Gaming
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-52.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Gaming</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-52.jpg" alt="..." />
                     </div>
                   </div>
                   <div class="col custom-height">
                     <div
                       class="custom-grid-card pointer"
-                      style="
-                        background-image: linear-gradient(
-                          to top left,
-                          #16537a,
-                          #02141c
-                        );
-                      "
+                      style="background-image: linear-gradient(to top left, #16537a, #02141c)"
                     >
-                      <h3
-                        class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs"
-                      >
-                        Sing
-                      </h3>
-                      <img
-                        class="img-grid-card"
-                        src="./asset/imgs/search/image-38.jpg"
-                        alt="..."
-                      />
+                      <h3 class="custom-fontSize-textCard m-0 bold custom-paddingTop-xs">Sing</h3>
+                      <img class="img-grid-card" src="./asset/imgs/search/image-38.jpg" alt="..." />
                     </div>
                   </div>
                 </div>
@@ -1514,16 +795,69 @@
         <p></p>
         <div>
           <button class="btn">
-            <i
-              class="btn-toggle-custom bi bi-music-player text-white xsIcon"
-            ></i>
+            <i class="btn-toggle-custom bi bi-music-player text-white xsIcon"></i>
           </button>
           <button class="btn">
             <i class="btn-toggle-custom bi bi-suit-heart text-white xsIcon"></i>
           </button>
-          <button class="btn">
+          <button id="play-button-mobile" class="btn">
             <i class="btn-toggle-custom bi bi-play-fill text-white xsIcon"></i>
           </button>
+        </div>
+      </div>
+      <!-- modale -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="playerModal" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header align-items-center">
+              <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="bi bi-x-lg text-whited"></i>
+              </button>
+              <h1 class="modal-title" id="playerModal">Modal title</h1>
+            </div>
+            <div class="modal-body d-flex flex-column align-items-center justify-content-around">
+              <div class="mx-auto">
+                <div id="imgContainer">
+                  <img src="" alt="" />
+                </div>
+              </div>
+              <div class="d-flex justify-content-center align-items-center w-100 mb-3" style="padding-left: 10px">
+                <div class="d-flex flex-column justify-content-center">
+                  <h3>Titolo canzone</h3>
+                  <p>Nome artista</p>
+                </div>
+              </div>
+              <div class="modal-footer w-100 flex-column align-items-center justify-content-between">
+                <div class="d-flex justify-content-around align-items-center w-100">
+                  <button id="random-song-button" class="btn p-0 mx-2 my-2">
+                    <i class="btn-toggle-custom bi bi-suit-heart text-white mdIcon"></i>
+                  </button>
+                  <button id="previous-song-button-xs" class="btn p-0 mx-2 my-2">
+                    <i class="bi bi-skip-start-fill text-white mdIcon"></i>
+                  </button>
+                  <button
+                    id="playbar-play-button-xs"
+                    class="d-flex align-items-center btn-sm btn-light rounded-circle p-0 lgIcon"
+                  >
+                    <i class="bi bi-play-fill text-black"></i>
+                  </button>
+                  <button id="next-song-button-xs" class="btn p-0 mx-2 my-2">
+                    <i class="bi bi-skip-end-fill text-white mdIcon"></i>
+                  </button>
+                  <button id="repeat-album-button-xs" class="btn p-0 mx-2 my-2">
+                    <i class="btn-toggle-custom bi bi-repeat text-white mdIcon"></i>
+                  </button>
+                </div>
+                <div class="d-flex align-items-center mt-1">
+                  <span id="song-current-time-xs" class="position-absolute text-white currenttime-position">0:00</span>
+                  <div id="fill-container-xs" class="progress-bar-base-xs position-absolute">
+                    <div class="progress-bar-fill-xs position-absolute"></div>
+                  </div>
+                  <span id="song-length-xs" class="position-absolute text-white fulltime-position">0:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- sound-player -->
@@ -1536,54 +870,36 @@
               <p id="playbar-artist" class="m-0"></p>
             </div>
             <button class="btn">
-              <i
-                class="btn-toggle-custom bi bi-suit-heart text-white xsIcon"
-              ></i>
+              <i class="btn-toggle-custom bi bi-suit-heart text-white xsIcon"></i>
             </button>
           </div>
           <div class="d-flex flex-column position-relative pt-1 pb-4">
             <div class="d-flex align-items-center">
-              <button class="btn p-0 mx-2 my-2">
-                <i
-                  class="btn-toggle-custom bi bi-shuffle text-white mdIcon"
-                ></i>
+              <button id="random-song-button" class="btn p-0 mx-2 my-2">
+                <i class="btn-toggle-custom bi bi-shuffle text-white mdIcon"></i>
               </button>
-              <button class="btn p-0 mx-2 my-2">
-                <i
-                  class="btn-toggle-custom bi bi-skip-start-fill text-white mdIcon"
-                ></i>
+              <button id="previous-song-button" class="btn p-0 mx-2 my-2">
+                <i class="btn-toggle-custom bi bi-skip-start-fill text-white mdIcon"></i>
               </button>
               <button
+                id="playbar-play-button"
                 class="d-flex align-items-center btn-sm btn-light rounded-circle p-0 lgIcon"
               >
                 <i class="btn-toggle-custom bi bi-play-fill text-black"></i>
               </button>
-              <button class="btn p-0 mx-2 my-2">
-                <i
-                  class="btn-toggle-custom bi bi-skip-end-fill text-white mdIcon"
-                ></i>
+              <button id="next-song-button" class="btn p-0 mx-2 my-2">
+                <i class="btn-toggle-custom bi bi-skip-end-fill text-white mdIcon"></i>
               </button>
-              <button class="btn p-0 mx-2 my-2">
+              <button id="repeat-album-button" class="btn p-0 mx-2 my-2">
                 <i class="btn-toggle-custom bi bi-repeat text-white mdIcon"></i>
               </button>
             </div>
             <div class="d-flex align-items-center mt-1">
-              <span
-                id="song-current-time"
-                class="position-absolute text-white currenttime-position"
-                >0:00</span
-              >
-              <div
-                id="fill-container"
-                class="progress-bar-base position-absolute"
-              >
+              <span id="song-current-time" class="position-absolute text-white currenttime-position">0:00</span>
+              <div id="fill-container" class="progress-bar-base position-absolute">
                 <div class="progress-bar-fill position-absolute"></div>
               </div>
-              <span
-                id="song-length"
-                class="position-absolute text-white fulltime-position"
-                >0:00</span
-              >
+              <span id="song-length" class="position-absolute text-white fulltime-position">0:00</span>
             </div>
           </div>
           <div class="d-flex align-items-center p-1 pe-2">
@@ -1599,33 +915,20 @@
               <div class="dropdown-menu bg-dark">
                 <div class="d-flex align-items-center">
                   <button class="btn p-0">
-                    <i
-                      class="btn-toggle-custom bi bi-mic text-white xsIcon"
-                    ></i>
+                    <i class="btn-toggle-custom bi bi-mic text-white xsIcon"></i>
                   </button>
                   <button class="btn p-0">
-                    <i
-                      class="btn-toggle-custom bi bi-menu-button-wide text-white xsIcon"
-                    ></i>
+                    <i class="btn-toggle-custom bi bi-menu-button-wide text-white xsIcon"></i>
                   </button>
                   <button class="btn p-0">
-                    <i
-                      class="btn-toggle-custom bi bi-speaker text-white xsIcon"
-                    ></i>
+                    <i class="btn-toggle-custom bi bi-speaker text-white xsIcon"></i>
                   </button>
                 </div>
                 <div class="d-flex align-items-center justify-content-center">
                   <button class="btn p-0">
                     <i class="bi bi-volume-off text-white xsIcon"></i>
                   </button>
-                  <input
-                    type="range"
-                    min="1"
-                    max="100"
-                    value="1"
-                    class="slider"
-                    id="audio-slider"
-                  />
+                  <input type="range" min="1" max="100" value="1" class="slider" id="audio-slider" />
                 </div>
               </div>
             </div>
@@ -1634,9 +937,7 @@
             <i class="btn-toggle-custom bi bi-mic text-white xsIcon"></i>
           </button>
           <button class="btn p-0 mx-1 tool">
-            <i
-              class="btn-toggle-custom bi bi-menu-button-wide text-white xsIcon"
-            ></i>
+            <i class="btn-toggle-custom bi bi-menu-button-wide text-white xsIcon"></i>
           </button>
           <button class="btn p-0 mx-1 tool">
             <i class="btn-toggle-custom bi bi-speaker text-white xsIcon"></i>
@@ -1644,33 +945,18 @@
           <button id="volIcon" class="btn p-0 mx-1 tool">
             <i class="bi bi-volume-off text-white xsIcon"></i>
           </button>
-          <input
-            type="range"
-            min="1"
-            max="100"
-            value="1"
-            class="slider tool"
-            id="audio-slider"
-          />
+          <input type="range" min="1" max="100" value="1" class="slider tool" id="audio-slider" />
           <button class="btn p-0 mx-2">
             <i class="bi bi-arrows-angle-expand text-white xsIcon"></i>
           </button>
         </div>
       </footer>
       <div id="menu-xs" class="d-none">
-        <div
-          id="menu-home"
-          type="button"
-          class="d-flex flex-column align-items-center"
-        >
-          <i class="bi bi-house-door"></i>
+        <div id="menu-home" type="button" class="d-flex flex-column align-items-center">
+          <i class="bi bi-house-door-fill"></i>
           <p class="m-0">Home</p>
         </div>
-        <div
-          id="menu-cerca"
-          type="button"
-          class="d-flex flex-column align-items-center"
-        >
+        <div id="menu-cerca" type="button" class="d-flex flex-column align-items-center">
           <i class="bi bi-search"></i>
           <p class="m-0">Search</p>
         </div>
@@ -1685,6 +971,7 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+    <script src="./asset/script/player.js"></script>
     <script src="./asset/javascritpt/comune.js"></script>
     <script src="./asset/javascritpt/search.js"></script>
   </body>

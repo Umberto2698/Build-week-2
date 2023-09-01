@@ -1,4 +1,33 @@
 const div48Cards = document.getElementById("cards-48");
+window.addEventListener("DOMContentLoaded", async () => {
+  if (localStorage.getItem("trackId")) {
+    const songId = localStorage.getItem("trackId");
+    try {
+      const localStorageSong = await fetch("https://striveschool-api.herokuapp.com/api/deezer/track/" + songId);
+      if (!localStorageSong.ok) {
+        throw new Error(`Error ${localStorageSong.status}: ${localStorageSong.statusText}.`);
+      } else {
+        const localStorageSongsObj = await localStorageSong.json();
+        console.log(localStorageSongsObj);
+        playButton(localStorageSongsObj);
+        playButtonMobile(localStorageSongsObj);
+      }
+    } catch (err) {
+      (err) => {
+        const body = document.body;
+        body.innerHTML = `<div class="container">
+              <div>
+                <h1 class="text-center" style="margin-top: 45vh"> ${err.message}</h1>
+              </div>
+             </div>
+            `;
+      };
+    }
+  } else {
+    playButton(parseBody.data[0]);
+    playButtonMobile(parseBody.data[0]);
+  }
+});
 
 const getData = async (event) => {
   event.preventDefault();
@@ -17,14 +46,13 @@ const getData = async (event) => {
     let inputSearchHide = document.querySelector("#search-hide");
 
     if (inputSearch.value !== "" && inputSearchHide.value === "") {
-      const URL =
-        "https://striveschool-api.herokuapp.com/api/deezer/search?q=" +
-        inputSearch.value;
+      const URL = "https://striveschool-api.herokuapp.com/api/deezer/search?q=" + inputSearch.value;
 
       // console.log(URL);
       const response = await fetch(URL);
       if (response.ok) {
         const parseBody = await response.json();
+        console.log(parseBody);
         //___________________________________________________________
         const type0 = parseBody.data[0].type;
         const typeAlbum0 = parseBody.data[0].album.type;
@@ -232,9 +260,7 @@ const getData = async (event) => {
                     </div>
                 </div>
                 `;
-        } else if (
-          titleAlbum0.toLowerCase() === inputSearch.value.toLowerCase()
-        ) {
+        } else if (titleAlbum0.toLowerCase() === inputSearch.value.toLowerCase()) {
           fromJS.innerHTML = `
                 <div class="row row-cols-xl-2 row-cols-lg-1 row-cols-md-2 row-cols-1 flex-grow-1">
                     <div class="col pt-4 pb-3">
@@ -497,9 +523,7 @@ const getData = async (event) => {
         inputSearch.value = "";
       }
     } else if (inputSearchHide.value !== "" && inputSearch.value === "") {
-      const URL =
-        "https://striveschool-api.herokuapp.com/api/deezer/search?q=" +
-        inputSearchHide.value;
+      const URL = "https://striveschool-api.herokuapp.com/api/deezer/search?q=" + inputSearchHide.value;
 
       // console.log(URL);
       const response = await fetch(URL);
@@ -712,9 +736,7 @@ const getData = async (event) => {
                     </div>
                 </div>
                 `;
-        } else if (
-          titleAlbum0.toLowerCase() === inputSearch.value.toLowerCase()
-        ) {
+        } else if (titleAlbum0.toLowerCase() === inputSearch.value.toLowerCase()) {
           fromJS.innerHTML = `
                 <div class="row row-cols-xl-2 row-cols-lg-1 row-cols-md-2 row-cols-1 flex-grow-1">
                     <div class="col pt-4 pb-3">

@@ -225,7 +225,7 @@ footer > div > div:nth-child(2) {
 }
 
 @media screen and (min-width: 930px) {
-  .dropdown-menu {
+  footer .dropdown-menu {
     display: none !important;
   }
 }

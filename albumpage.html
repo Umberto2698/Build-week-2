@@ -20,34 +20,36 @@
   <body class="bg-black">
     <div id="all-container" class="d-flex flex-column justify-content-between">
       <div class="d-flex">
-        <header class="custom-paddingBottom-md">
+        <header class="height-header">
           <div class="d-flex flex-column">
-            <nav class="d-flex flex-column gap-1">
-              <i class="bi bi-three-dots custom-fontSize-icon"></i>
-              <div type="button" id="homePage" class="d-flex gap-3 align-items-center">
+            <nav class="d-flex flex-column">
+              <button id="three-dots" class="btn p-0 header-div-icon text-light mb-2" type="button">
+                <i class="bi bi-three-dots custom-fontSize-icon"></i>
+              </button>
+              <div type="button" id="homePage" class="d-flex align-items-center gap-1 header-div-icon">
                 <!-- <i class="bi bi-house-door custom-fontSize-icon"></i> -->
                 <i class="bi bi-house-door-fill custom-fontSize-icon"></i>
                 <p class="m-0 custom-fontSize-nav">Home</p>
               </div>
-              <div type="button" id="cerca" class="d-flex gap-3 align-items-center">
+              <div type="button" id="cerca" class="d-flex align-items-center gap-1 header-div-icon">
                 <i class="bi bi-search custom-fontSize-icon"></i>
                 <p class="m-0 custom-fontSize-nav">Search</p>
               </div>
-              <div class="d-flex gap-3 align-items-center">
+              <div class="d-flex align-items-center gap-1 header-div-icon">
                 <i class="bi bi-collection custom-fontSize-icon"></i>
                 <p class="m-0 custom-fontSize-nav">La tua libreria</p>
               </div>
             </nav>
-            <section class="d-flex flex-column gap-1 mt-4">
-              <div class="d-flex gap-3 align-items-center">
+            <section class="d-flex flex-column mt-4">
+              <div class="d-flex align-items-center gap-1 header-div-icon">
                 <i class="bi bi-plus-square-fill custom-fontSize-icon"></i>
                 <p class="m-0 custom-fontSize-nav">Crea playlist</p>
               </div>
-              <div class="d-flex gap-3 align-items-center">
+              <div class="d-flex align-items-center gap-1 header-div-icon">
                 <i class="bi bi-heart-fill custom-fontSize-icon"></i>
                 <p class="m-0 custom-fontSize-nav">Brani che ti piacciono</p>
               </div>
-              <div class="d-flex gap-3 align-items-center">
+              <div class="d-flex align-items-center gap-1 header-div-icon">
                 <i class="bi bi-bookmark-fill custom-fontSize-icon"></i>
                 <p class="m-0 custom-fontSize-nav">I tuoi episodi</p>
               </div>
@@ -120,7 +122,7 @@
                 <i class="bi bi-chevron-right fs-5"></i>
               </button>
             </div>
-            <div class="btn-group mt-4 me-4 bg-dark rounded-pill">
+            <!-- <div class="btn-group mt-4 me-4 bg-dark rounded-pill">
               <button
                 type="button"
                 class="btn dropdown-toggle text-light"
@@ -142,6 +144,40 @@
                 </li>
                 <li>
                   <button class="dropdown-item" type="button">Settings</button>
+                </li>
+              </ul>
+            </div> -->
+            <div class="btn-group mt-4 me-4 bg-dark rounded-pill">
+              <button
+                type="button"
+                class="btn dropdown-toggle text-light"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-person-circle"></i>
+                <span>User Name</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
+                <li>
+                  <button class="dropdown-item d-flex justify-content-between gap-4" type="button">
+                    Account
+                    <i class="bi bi-box-arrow-in-up-right"></i>
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button">Profile</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button">Settings</button>
+                </li>
+                <li>
+                  <button
+                    id="show-friends-activity"
+                    class="btn width-fit-content text-light dropdown-item"
+                    type="button"
+                  >
+                    Nascondi attività amici
+                  </button>
                 </li>
               </ul>
             </div>
@@ -203,12 +239,14 @@
           </div>
         </main>
         <section id="friends">
-          <div class="d-flex flex-column px-3 custom-paddingTop-xs">
-            <div class="d-flex justify-content-between custom-paddingBottom-xs">
-              <h5>Attività amici</h5>
-              <div class="d-flex gap-3">
+          <div class="d-flex flex-column px-3 custom-marginTop-md">
+            <div class="d-flex justify-content-between custom-marginBottom-sm">
+              <h5 class="m-0 mt-1">Attività amici</h5>
+              <div class="d-flex gap-3 align-items-center">
                 <i class="bi bi-person-plus"></i>
-                <i class="bi bi-x-lg"></i>
+                <button id="X-friends-activity" class="btn width-fit-content p-0 text-light" type="button">
+                  <i class="bi bi-x-lg"></i>
+                </button>
               </div>
             </div>
             <div class="d-flex flex-column gap-4">
@@ -286,6 +324,61 @@
         <button id="play-button-mobile" class="btn">
           <i class="btn-toggle-custom bi bi-play-fill text-white xsIcon"></i>
         </button>
+      </div>
+    </div>
+    <!-- Modale -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="playerModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header align-items-center">
+            <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+              <i class="bi bi-x-lg text-whited"></i>
+            </button>
+            <h1 class="modal-title" id="playerModal">Modal title</h1>
+          </div>
+          <div class="modal-body d-flex flex-column align-items-center justify-content-around">
+            <div class="mx-auto">
+              <div id="imgContainer">
+                <img src="" alt="" />
+              </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center w-100 mb-3" style="padding-left: 10px">
+              <div class="d-flex flex-column justify-content-center">
+                <h3>Titolo canzone</h3>
+                <p>Nome artista</p>
+              </div>
+            </div>
+            <div class="modal-footer w-100 flex-column align-items-center justify-content-between">
+              <div class="d-flex justify-content-around align-items-center w-100">
+                <button id="random-song-button" class="btn p-0 mx-2 my-2">
+                  <i class="btn-toggle-custom bi bi-suit-heart text-white mdIcon"></i>
+                </button>
+                <button id="previous-song-button-xs" class="btn p-0 mx-2 my-2">
+                  <i class="bi bi-skip-start-fill text-white mdIcon"></i>
+                </button>
+                <button
+                  id="playbar-play-button-xs"
+                  class="d-flex align-items-center btn-sm btn-light rounded-circle p-0 lgIcon"
+                >
+                  <i class="bi bi-play-fill text-black"></i>
+                </button>
+                <button id="next-song-button-xs" class="btn p-0 mx-2 my-2">
+                  <i class="bi bi-skip-end-fill text-white mdIcon"></i>
+                </button>
+                <button id="repeat-album-button-xs" class="btn p-0 mx-2 my-2">
+                  <i class="btn-toggle-custom bi bi-repeat text-white mdIcon"></i>
+                </button>
+              </div>
+              <div class="d-flex align-items-center mt-1">
+                <span id="song-current-time-xs" class="position-absolute text-white currenttime-position">0:00</span>
+                <div id="fill-container-xs" class="progress-bar-base-xs position-absolute">
+                  <div class="progress-bar-fill-xs position-absolute"></div>
+                </div>
+                <span id="song-length-xs" class="position-absolute text-white fulltime-position">0:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- sound-player -->
@@ -380,12 +473,12 @@
       </div>
     </footer>
     <!-- Menù mobile -->
-    <div id="menu-xs" class="position-fixed bottom-0">
-      <div class="d-flex flex-column align-items-center">
+    <div id="menu-xs" class="d-none">
+      <div id="menu-home" type="button" class="d-flex flex-column align-items-center">
         <i class="bi bi-house-door-fill"></i>
         <p class="m-0">Home</p>
       </div>
-      <div class="d-flex flex-column align-items-center">
+      <div id="menu-cerca" type="button" class="d-flex flex-column align-items-center">
         <i class="bi bi-search"></i>
         <p class="m-0">Search</p>
       </div>
@@ -400,6 +493,8 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+    <script src="./asset/javascritpt/showFriends.js"></script>
+    <script src="./asset/javascritpt/comune.js"></script>
     <script src="./asset/script/albumpage.js"></script>
     <script src="./asset/script/player.js"></script>
   </body>
