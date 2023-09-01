@@ -1,5 +1,5 @@
 :root {
-  --fullWidth: 270px;
+  --fullWidth: 290px;
   --fullWidthFriends: 285px;
 
   --none: 0;
@@ -209,12 +209,37 @@
   padding-right: var(--xlPadd);
 }
 /* --------------------------------------- */
+
+/* Per javascript */
+
+.display-none {
+  display: none;
+}
+.width-header-commonjs {
+  min-width: 60px;
+}
+.width-main-commomjs {
+  width: calc(100% - 60px - var(--fullWidthFriends));
+}
+.width-main-commomjs-btnFull {
+  width: calc(100% - 60px);
+}
+.width-main-commomjs-btn {
+  width: calc(100% - 60px - var(--fullWidthFriends));
+}
+/* Fine per javascript */
+
+#show-friends-activity {
+  background-color: #146732;
+}
+
 .custom-fontSize-icon {
   font-size: var(--lgFontSize);
-  padding: 5px 0 5px 10px;
+  padding: 10px;
 }
 .custom-fontSize-nav {
-  font-size: var(--FonstSize);
+  font-size: var(--mdFontSize);
+  padding-right: var(--smPadd);
 }
 #all-container {
   height: 100vh;
@@ -231,14 +256,14 @@ main {
   overflow-y: scroll;
 }
 header {
-  width: var(--fullWidth);
-  padding-left: var(--xsPadd);
-  padding-top: var(--xsPadd);
+  min-width: var(--fullWidth);
+  padding-top: var(--mdPadd);
 }
 .height-header {
   height: calc(100% - 90px);
 }
 header > div {
+  padding-inline: var(--xsPadd);
   height: 100%;
 }
 #playlist ul {
@@ -246,8 +271,8 @@ header > div {
   padding: 0;
 }
 main {
-  width: calc(100% - var(--fullWidth) - var(--fullWidthFriends));
   height: 100%;
+  width: 100%;
   padding-top: var(--xsPadd);
 }
 #friends {
@@ -300,19 +325,23 @@ main::-webkit-scrollbar-thumb {
 #settings::after {
   display: none;
 }
+.header-div-icon {
+  width: fit-content;
+  /* padding-right: 20px; */
+}
 footer {
   bottom: 0;
 }
 
 header nav div:hover {
-  width: 90%;
+  /* padding: 0 23px 0 20px; */
   background-color: var(--lightgrayColor);
-  border-radius: 20px;
+  border-radius: 30px;
 }
 header section:first-of-type div:hover {
-  width: 90%;
+  /* padding: 0 23px 0 20px; */
   background-color: var(--lightgrayColor);
-  border-radius: 20px;
+  border-radius: 30px;
 }
 @media screen and (min-width: 0px) {
   main {
@@ -354,12 +383,12 @@ header section:first-of-type div:hover {
     font-size: var(--xlFontSize);
   }
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 650px) {
   main {
     height: calc(100% - 97px - 73.7px);
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 650px) {
   .custom-paddingBottom-header {
     padding-bottom: 110px;
   }
@@ -407,12 +436,12 @@ header section:first-of-type div:hover {
     padding-left: calc(var(--xsPadd) - 5px);
   }
 }
-@media screen and (min-width: 576px) and (max-width: 930px) {
+@media screen and (min-width: 576px) and (max-width: 1030px) {
   footer {
     bottom: 97px !important;
   }
 }
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 1030px) {
   header {
     display: none;
   }
@@ -452,7 +481,7 @@ header section:first-of-type div:hover {
     display: block !important;
   }
 }
-@media screen and (min-width: 577px) and (max-width: 930px) {
+@media screen and (min-width: 577px) and (max-width: 1030px) {
   #menu-xs {
     padding-block: var(--smPadd);
     font-size: var(--xlFontSize);
@@ -463,15 +492,12 @@ header section:first-of-type div:hover {
 }
 @media screen and (min-width: 930px) {
   main {
-    height: calc(100% - 73.7px);
+    height: calc(100% - 74.13px - 97px);
   }
 }
-@media screen and (min-width: 826px) and (max-width: 960px) {
-  .custom-fontSize-main-normal {
-    font-size: var(--FonstSize);
-  }
-  .custom-fontSize-main-small {
-    font-size: var(--xsFontSize);
+@media screen and (min-width: 1030px) {
+  main {
+    height: calc(100% - 74.13px);
   }
 }
 @media screen and (min-width: 1500px) {
@@ -479,11 +505,8 @@ header section:first-of-type div:hover {
     min-width: calc(var(--fullWidthFriends) + 50px);
   }
 }
-@media screen and (max-width: 1235px) {
+@media screen and (max-width: 1315px) {
   #friends {
     display: none;
-  }
-  main {
-    width: calc(100% - var(--fullWidth));
   }
 }

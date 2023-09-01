@@ -433,7 +433,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
             <div
               id="discover-more"
-              class="row row-cols-2 row-cols-sm-3 row-cols-md-4 gy-3"
+              class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 gy-3"
             >
               <div class="col">
                 <div class="card bg-darkgray-color text-light">

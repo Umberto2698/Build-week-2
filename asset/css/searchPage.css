@@ -1,6 +1,6 @@
 /* --------------------------------------- */
 main {
-  width: calc(100% - var(--fullWidth));
+  width: 100%;
 }
 #search::placeholder {
   color: rgb(108, 117, 125);

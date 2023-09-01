@@ -25,12 +25,18 @@
       <div class="d-flex">
         <header class="height-header">
           <div class="d-flex flex-column">
-            <nav class="d-flex flex-column gap-1">
-              <i class="bi bi-three-dots custom-fontSize-icon"></i>
+            <nav class="d-flex flex-column">
+              <button
+                id="three-dots"
+                class="btn p-0 header-div-icon text-light mb-2"
+                type="button"
+              >
+                <i class="bi bi-three-dots custom-fontSize-icon"></i>
+              </button>
               <div
                 type="button"
                 id="homePage"
-                class="d-flex gap-3 align-items-center"
+                class="d-flex align-items-center gap-1 header-div-icon"
               >
                 <!-- <i class="bi bi-house-door custom-fontSize-icon"></i> -->
                 <i class="bi bi-house-door-fill custom-fontSize-icon"></i>
@@ -39,26 +45,26 @@
               <div
                 type="button"
                 id="cerca"
-                class="d-flex gap-3 align-items-center"
+                class="d-flex align-items-center gap-1 header-div-icon"
               >
                 <i class="bi bi-search custom-fontSize-icon"></i>
                 <p class="m-0 custom-fontSize-nav">Search</p>
               </div>
-              <div class="d-flex gap-3 align-items-center">
+              <div class="d-flex align-items-center gap-1 header-div-icon">
                 <i class="bi bi-collection custom-fontSize-icon"></i>
                 <p class="m-0 custom-fontSize-nav">La tua libreria</p>
               </div>
             </nav>
-            <section class="d-flex flex-column gap-1 mt-4">
-              <div class="d-flex gap-3 align-items-center">
+            <section class="d-flex flex-column mt-4">
+              <div class="d-flex align-items-center gap-1 header-div-icon">
                 <i class="bi bi-plus-square-fill custom-fontSize-icon"></i>
                 <p class="m-0 custom-fontSize-nav">Crea playlist</p>
               </div>
-              <div class="d-flex gap-3 align-items-center">
+              <div class="d-flex align-items-center gap-1 header-div-icon">
                 <i class="bi bi-heart-fill custom-fontSize-icon"></i>
                 <p class="m-0 custom-fontSize-nav">Brani che ti piacciono</p>
               </div>
-              <div class="d-flex gap-3 align-items-center">
+              <div class="d-flex align-items-center gap-1 header-div-icon">
                 <i class="bi bi-bookmark-fill custom-fontSize-icon"></i>
                 <p class="m-0 custom-fontSize-nav">I tuoi episodi</p>
               </div>
@@ -131,7 +137,14 @@
                 <i class="bi bi-chevron-left custom-fontSize-icon"></i>
                 <i class="bi bi-chevron-right custom-fontSize-icon"></i>
               </div>
-              <div class="btn-group">
+              <button
+                id="show-friends-activity"
+                class="btn width-fit-content text-light"
+                type="button"
+              >
+                Nascondi attività amici
+              </button>
+              <!-- <div class="btn-group">
                 <button
                   type="button"
                   class="btn dropdown-toggle text-light"
@@ -139,7 +152,7 @@
                   aria-expanded="false"
                 >
                   <i class="bi bi-person-circle"></i>
-                  <span>Nome User</span>
+                  <span>User Name</span>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
                   <li>
@@ -160,7 +173,7 @@
                     </button>
                   </li>
                 </ul>
-              </div>
+              </div> -->
             </div>
             <div id="custom-big-card" class="d-flex mt-4 gap-4">
               <!-- <img
@@ -475,12 +488,18 @@
           </div>
         </main>
         <section id="friends">
-          <div class="d-flex flex-column px-3 custom-paddingTop-xs">
-            <div class="d-flex justify-content-between custom-paddingBottom-xs">
-              <h5>Attività amici</h5>
-              <div class="d-flex gap-3">
+          <div class="d-flex flex-column px-3 custom-marginTop-md">
+            <div class="d-flex justify-content-between custom-marginBottom-sm">
+              <h5 class="m-0 mt-1">Attività amici</h5>
+              <div class="d-flex gap-3 align-items-center">
                 <i class="bi bi-person-plus"></i>
-                <i class="bi bi-x-lg"></i>
+                <button
+                  id="X-friends-activity"
+                  class="btn width-fit-content p-0 text-light"
+                  type="button"
+                >
+                  <i class="bi bi-x-lg"></i>
+                </button>
               </div>
             </div>
             <div class="d-flex flex-column gap-4">
@@ -732,5 +751,6 @@
     ></script>
     <script src="./asset/javascritpt/comune.js"></script>
     <script src="./asset/javascritpt/homePage.js"></script>
+    <script src="./asset/javascritpt/showFriends.js"></script>
   </body>
 </html>
