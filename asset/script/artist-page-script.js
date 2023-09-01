@@ -22,9 +22,8 @@ const playerImage = document.querySelector("footer img");
 
 // Mobiles
 const popularListSongXs = document.getElementById("popularSongs-xs");
-const playerTitleXs = document.querySelector("#footer-xs p");
 
-window.addEventListener("DOMContentLoaded", event => {
+window.addEventListener("DOMContentLoaded", (event) => {
   getElement();
 });
 
@@ -60,7 +59,7 @@ const getElement = async () => {
             playButtonMobile(previussìSongsObj);
           }
         } catch (err) {
-          err => {
+          (err) => {
             const body = document.body;
             body.innerHTML = `<div class="container">
               <div>
@@ -142,7 +141,7 @@ const getElement = async () => {
       }
     }
   } catch (err) {
-    err => {
+    (err) => {
       const body = document.body;
       body.innerHTML = `<div class="container">
         <div>
