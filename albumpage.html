@@ -150,7 +150,7 @@
           <div class="d-flex flex-column">
             <!-- contenuto e struttura centrale della pagina-->
             <div class="d-flex flex-column flex-xxl-row align-items-center ps-2 ps-md-4 pt-5 pb-md-4 position-relative">
-              <button class="btn d-lg-none d-xl-none d-xxl-none position-absolute top-10 start-0">
+              <button id="back-to-home" class="btn d-lg-none d-xl-none d-xxl-none position-absolute top-10 start-0">
                 <i class="bi bi-arrow-left text-white fs-1"></i>
               </button>
               <img id="album-cover" class="custom-shadow" alt="#" height="300" width="300" />
@@ -181,12 +181,12 @@
                   <button class="btn d-md-none">
                     <i class="btn-toggle-custom bi bi-shuffle text-white mdIcon fs-2"></i>
                   </button>
-                  <button class="btn btn-success rounded-circle text-dark">
+                  <button id="album-play-button" class="btn btn-success rounded-circle text-dark">
                     <i class="bi bi-play-fill text-white fs-2"></i>
                   </button>
                 </div>
                 <div>
-                  <button class="btn ms-3"><i class="bi bi-suit-heart fs-2 text-white"></i></button>
+                  <button class="btn ms-3"><i class="btn-toggle-custom bi bi-suit-heart fs-2 text-white"></i></button>
                   <button class="btn"><i class="bi bi-arrow-down-circle fs-2 text-white"></i></button>
                   <button class="btn"><i class="bi bi-three-dots fs-2 text-white"></i></button>
                 </div>

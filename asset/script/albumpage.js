@@ -22,6 +22,8 @@ const albumFullTime = document.getElementById("album-fulltime");
 const trackListRep = document.getElementById("track-list-rep");
 const previousButton = document.getElementById("previous-album");
 const nextButton = document.getElementById("next-album");
+const backHomeButton = document.getElementById("back-to-home");
+const albumPlayButton = document.getElementById("album-play-button");
 
 // target footer del main con dettagli
 
@@ -130,6 +132,10 @@ const goToArtistPage = (event, id) => {
   location.href = `/artist-page.html?artistId=${id}`;
 };
 
+const goToHomePage = (event, id) => {
+  location.href = `./homePage.html`;
+};
+
 // fetch al caricamento della pagina - da modificare con l ID di ogni album in fondo all url per renderlo dinamico
 
 const createAlbumPage = async albumUrl => {
@@ -153,6 +159,8 @@ const createAlbumPage = async albumUrl => {
     albumFullTime.innerText = handletime(data.duration);
     artistLogo.src = data.artist.picture;
     albumDetails.addEventListener("click", () => goToArtistPage(Event, data.artist.id));
+    backHomeButton.addEventListener("click", () => goToHomePage(Event, data.title));
+    albumPlayButton.addEventListener("click", () => playButton(data.tracks.data[0]));
   } catch (error) {
     console.log(error);
   }
