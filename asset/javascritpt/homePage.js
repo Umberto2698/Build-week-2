@@ -272,11 +272,13 @@ window.addEventListener("DOMContentLoaded", async () => {
       console.log(numTrackArtist9);
 
       customBigCard.innerHTML = `
-        <img
-        src="${imgAlbum0}"
-        alt="${titleAlbum0}"
-        class="big-img"
-      />
+        <a href="./albumpage.html?albumId=${idAlbum0}">
+          <img
+          src="${imgAlbum0}"
+          alt="${titleAlbum0}"
+          class="big-img"
+        />
+        </a>
         <div class="d-flex flex-column flex-grow-1 justify-content-between">
         <div class="d-flex justify-content-between align-items-center">
           <p class="custom-fontSize-main-small m-0">${typeAlbum0.toUpperCase()}</p>
@@ -289,14 +291,14 @@ window.addEventListener("DOMContentLoaded", async () => {
           </button>
         </div>
         <div class="d-flex flex-column">
-          <h1>${titleAlbum0}</h1>
-          <p class="custom-fontSize-main-small m-0">${nameArtist0}</p>
+          <h1><a href="./albumpage.html?albumId=${idAlbum0}">${titleAlbum0}</a></h1>
+          <p class="custom-fontSize-main-small m-0"><a href="./artist-page.html?artistId=${idArtist0}">${nameArtist0}</a></p>
         </div>
         <div class="d-flex flex-column pt-3">
           <p
             class="p-hide custom-fontSize-main-normal custom-marginBottom-xs"
           >
-            Ascolta l'album <a href="#" target="_blank">${titleAlbum0}</a> by <a href="#" target="_blank">${nameArtist0}!</a>
+            Ascolta l'album <a href="./albumpage.html?albumId=${idAlbum0}">${titleAlbum0}</a> by <a href="./artist-page.html?artistId=${idArtist0}">${nameArtist0}!</a>
           </p>
           <div class="d-flex gap-3">
             <button type="button" class="btn btn-success custom-btn">
@@ -318,7 +320,7 @@ window.addEventListener("DOMContentLoaded", async () => {
             >
               <div class="col card-col">
                 <div class="d-flex">
-                  <a href="#" target="_blank">
+                  <a href="./artist-page.html?artistId=${idArtist1}">
                       <img
                         src="${imgArtist1}"
                         alt="${nameArtist1}"
@@ -329,14 +331,14 @@ window.addEventListener("DOMContentLoaded", async () => {
                     class="d-flex align-items-center custom-paddingLeft-cards flex-grow-1 bg-darkgray-color"
                   >
                     <p class="custom-fontSize-cards-normal m-0 flex-grow-1">
-                        <a href="#" target="_blank">${nameArtist1}</a>
+                        <a href="./artist-page.html?artistId=${idArtist1}">${nameArtist1}</a>
                     </p>
                     </div>
                 </div>
               </div>
               <div class="col card-col">
                 <div class="d-flex">
-                  <a href="#" target="_blank">
+                  <a href="./artist-page.html?artistId=${idArtist2}">
                       <img
                         src="${imgArtist2}"
                         alt="${nameArtist2}"
@@ -347,14 +349,14 @@ window.addEventListener("DOMContentLoaded", async () => {
                     class="d-flex align-items-center custom-paddingLeft-cards flex-grow-1 bg-darkgray-color"
                   >
                     <p class="custom-fontSize-cards-normal m-0 flex-grow-1">
-                        <a href="#" target="_blank">${nameArtist2}</a>
+                        <a href="./artist-page.html?artistId=${idArtist2}">${nameArtist2}</a>
                     </p>
                     </div>
                 </div>
               </div>
               <div class="col card-col">
                 <div class="d-flex">
-                  <a href="#" target="_blank">
+                  <a href="./artist-page.html?artistId=${idArtist3}">
                       <img
                         src="${imgArtist3}"
                         alt="${nameArtist3}"
@@ -365,14 +367,14 @@ window.addEventListener("DOMContentLoaded", async () => {
                     class="d-flex align-items-center custom-paddingLeft-cards flex-grow-1 bg-darkgray-color"
                   >
                     <p class="custom-fontSize-cards-normal m-0 flex-grow-1">
-                        <a href="#" target="_blank">${nameArtist3}</a>
+                        <a href="./artist-page.html?artistId=${idArtist3}">${nameArtist3}</a>
                     </p>
                     </div>
                 </div>
               </div>
               <div class="col card-col">
                 <div class="d-flex">
-                  <a href="#" target="_blank">
+                  <a href="./artist-page.html?artistId=${idArtist4}">
                       <img
                         src="${imgArtist4}"
                         alt="${nameArtist4}"
@@ -383,14 +385,14 @@ window.addEventListener("DOMContentLoaded", async () => {
                     class="d-flex align-items-center custom-paddingLeft-cards flex-grow-1 bg-darkgray-color"
                   >
                     <p class="custom-fontSize-cards-normal m-0 flex-grow-1">
-                        <a href="#" target="_blank">${nameArtist4}</a>
+                        <a href="./artist-page.html?artistId=${idArtist4}">${nameArtist4}</a>
                     </p>
                     </div>
                 </div>
               </div>
               <div class="col card-col">
                 <div class="d-flex">
-                  <a href="#" target="_blank">
+                  <a href="./artist-page.html?artistId=${idArtist5}">
                       <img
                         src="${imgArtist5}"
                         alt="${nameArtist5}"
@@ -401,14 +403,14 @@ window.addEventListener("DOMContentLoaded", async () => {
                     class="d-flex align-items-center custom-paddingLeft-cards flex-grow-1 bg-darkgray-color"
                   >
                     <p class="custom-fontSize-cards-normal m-0 flex-grow-1">
-                        <a href="#" target="_blank">${nameArtist5}</a>
+                        <a href="./artist-page.html?artistId=${idArtist5}">${nameArtist5}</a>
                     </p>
                     </div>
                 </div>
               </div>
               <div class="col card-col">
                 <div class="d-flex">
-                  <a href="#" target="_blank">
+                  <a href="./artist-page.html?artistId=${idArtist6}">
                       <img
                         src="${imgArtist6}"
                         alt="${nameArtist6}"
@@ -419,7 +421,7 @@ window.addEventListener("DOMContentLoaded", async () => {
                     class="d-flex align-items-center custom-paddingLeft-cards flex-grow-1 bg-darkgray-color"
                   >
                     <p class="custom-fontSize-cards-normal m-0 flex-grow-1">
-                        <a href="#" target="_blank">${nameArtist6}</a>
+                        <a href="./artist-page.html?artistId=${idArtist6}">${nameArtist6}</a>
                     </p>
                     </div>
                 </div>
@@ -437,7 +439,7 @@ window.addEventListener("DOMContentLoaded", async () => {
             >
               <div class="col">
                 <div class="card bg-darkgray-color text-light">
-                  <a href="#" target="_blank">
+                  <a href="./albumpage.html?albumId=${idAlbum7}">
                       <img
                         src="${imgAlbum7}"
                         class="card-img-top"
@@ -446,15 +448,15 @@ window.addEventListener("DOMContentLoaded", async () => {
                   </a>
                   <div class="card-body">
                     <h5>  
-                        <a href="#" target="_blank">${titleAlbum7}</a>
+                        <a href="#">${titleAlbum7}</a>
                     </h5>
-                    <p class="card-text">${typeAlbum7} di <a href="#" target="_blank">${nameArtist7}</a></p>
+                    <p class="card-text">${typeAlbum7} di <a href="#">${nameArtist7}</a></p>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card bg-darkgray-color text-light">
-                  <a href="#" target="_blank">
+                  <a href="./albumpage.html?albumId=${idAlbum8}">
                       <img
                         src="${imgAlbum8}"
                         class="card-img-top"
@@ -463,15 +465,15 @@ window.addEventListener("DOMContentLoaded", async () => {
                   </a>
                   <div class="card-body">
                     <h5>  
-                        <a href="#" target="_blank">${titleAlbum8}</a>
+                        <a href="#">${titleAlbum8}</a>
                     </h5>
-                    <p class="card-text">${typeAlbum8} di <a href="#" target="_blank">${nameArtist8}</a></p>
+                    <p class="card-text">${typeAlbum8} di <a href="#">${nameArtist8}</a></p>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card bg-darkgray-color text-light">
-                  <a href="#" target="_blank">
+                  <a href="./albumpage.html?albumId=${idAlbum9}">
                       <img
                         src="${imgAlbum9}"
                         class="card-img-top"
@@ -480,15 +482,15 @@ window.addEventListener("DOMContentLoaded", async () => {
                   </a>
                   <div class="card-body">
                     <h5>  
-                        <a href="#" target="_blank">${titleAlbum9}</a>
+                        <a href="#">${titleAlbum9}</a>
                     </h5>
-                    <p class="card-text">${typeAlbum9} di <a href="#" target="_blank">${nameArtist9}</a></p>
+                    <p class="card-text">${typeAlbum9} di <a href="#">${nameArtist9}</a></p>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card bg-darkgray-color text-light">
-                  <a href="#" target="_blank">
+                  <a href="./albumpage.html?albumId=${idAlbum10}">
                       <img
                         src="${imgAlbum10}"
                         class="card-img-top"
@@ -497,15 +499,15 @@ window.addEventListener("DOMContentLoaded", async () => {
                   </a>
                   <div class="card-body">
                     <h5>  
-                        <a href="#" target="_blank">${titleAlbum10}</a>
+                        <a href="#">${titleAlbum10}</a>
                     </h5>
-                    <p class="card-text">${typeAlbum10} di <a href="#" target="_blank">${nameArtist10}</a></p>
+                    <p class="card-text">${typeAlbum10} di <a href="#">${nameArtist10}</a></p>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card bg-darkgray-color text-light">
-                  <a href="#" target="_blank">
+                  <a href="./albumpage.html?albumId=${idAlbum11}">
                       <img
                         src="${imgAlbum11}"
                         class="card-img-top"
@@ -514,15 +516,15 @@ window.addEventListener("DOMContentLoaded", async () => {
                   </a>
                   <div class="card-body">
                     <h5>  
-                        <a href="#" target="_blank">${titleAlbum11}</a>
+                        <a href="#">${titleAlbum11}</a>
                     </h5>
-                    <p class="card-text">${typeAlbum11} di <a href="#" target="_blank">${nameArtist11}</a></p>
+                    <p class="card-text">${typeAlbum11} di <a href="#">${nameArtist11}</a></p>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card bg-darkgray-color text-light">
-                  <a href="#" target="_blank">
+                  <a href="./albumpage.html?albumId=${idAlbum12}">
                       <img
                         src="${imgAlbum12}"
                         class="card-img-top"
@@ -531,15 +533,15 @@ window.addEventListener("DOMContentLoaded", async () => {
                   </a>
                   <div class="card-body">
                     <h5>  
-                        <a href="#" target="_blank">${titleAlbum12}</a>
+                        <a href="#">${titleAlbum12}</a>
                     </h5>
-                    <p class="card-text">${typeAlbum12} di <a href="#" target="_blank">${nameArtist12}</a></p>
+                    <p class="card-text">${typeAlbum12} di <a href="#">${nameArtist12}</a></p>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card bg-darkgray-color text-light">
-                  <a href="#" target="_blank">
+                  <a href="./albumpage.html?albumId=${idAlbum13}">
                       <img
                         src="${imgAlbum13}"
                         class="card-img-top"
@@ -548,15 +550,15 @@ window.addEventListener("DOMContentLoaded", async () => {
                   </a>
                   <div class="card-body">
                     <h5>  
-                        <a href="#" target="_blank">${titleAlbum13}</a>
+                        <a href="#">${titleAlbum13}</a>
                     </h5>
-                    <p class="card-text">${typeAlbum13} di <a href="#" target="_blank">${nameArtist13}</a></p>
+                    <p class="card-text">${typeAlbum13} di <a href="#">${nameArtist13}</a></p>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card bg-darkgray-color text-light">
-                  <a href="#" target="_blank">
+                  <a href="./albumpage.html?albumId=${idAlbum14}">
                       <img
                         src="${imgAlbum14}"
                         class="card-img-top"
@@ -565,15 +567,15 @@ window.addEventListener("DOMContentLoaded", async () => {
                   </a>
                   <div class="card-body">
                     <h5>  
-                        <a href="#" target="_blank">${titleAlbum14}</a>
+                        <a href="#">${titleAlbum14}</a>
                     </h5>
-                    <p class="card-text">${typeAlbum14} di <a href="#" target="_blank">${nameArtist14}</a></p>
+                    <p class="card-text">${typeAlbum14} di <a href="#">${nameArtist14}</a></p>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card bg-darkgray-color text-light">
-                  <a href="#" target="_blank">
+                  <a href="./albumpage.html?albumId=${idAlbum15}">
                       <img
                         src="${imgAlbum15}"
                         class="card-img-top"
@@ -582,15 +584,15 @@ window.addEventListener("DOMContentLoaded", async () => {
                   </a>
                   <div class="card-body">
                     <h5>  
-                        <a href="#" target="_blank">${titleAlbum15}</a>
+                        <a href="#">${titleAlbum15}</a>
                     </h5>
-                    <p class="card-text">${typeAlbum15} di <a href="#" target="_blank">${nameArtist15}</a></p>
+                    <p class="card-text">${typeAlbum15} di <a href="#">${nameArtist15}</a></p>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card bg-darkgray-color text-light">
-                  <a href="#" target="_blank">
+                  <a href="./albumpage.html?albumId=${idAlbum16}">
                       <img
                         src="${imgAlbum16}"
                         class="card-img-top"
@@ -599,15 +601,15 @@ window.addEventListener("DOMContentLoaded", async () => {
                   </a>
                   <div class="card-body">
                     <h5>  
-                        <a href="#" target="_blank">${titleAlbum16}</a>
+                        <a href="#">${titleAlbum16}</a>
                     </h5>
-                    <p class="card-text">${typeAlbum16} di <a href="#" target="_blank">${nameArtist16}</a></p>
+                    <p class="card-text">${typeAlbum16} di <a href="#">${nameArtist16}</a></p>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card bg-darkgray-color text-light">
-                  <a href="#" target="_blank">
+                  <a href="./albumpage.html?albumId=${idAlbum17}">
                       <img
                         src="${imgAlbum17}"
                         class="card-img-top"
@@ -616,15 +618,15 @@ window.addEventListener("DOMContentLoaded", async () => {
                   </a>
                   <div class="card-body">
                     <h5>  
-                        <a href="#" target="_blank">${titleAlbum17}</a>
+                        <a href="#">${titleAlbum17}</a>
                     </h5>
-                    <p class="card-text">${typeAlbum17} di <a href="#" target="_blank">${nameArtist17}</a></p>
+                    <p class="card-text">${typeAlbum17} di <a href="#">${nameArtist17}</a></p>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card bg-darkgray-color text-light">
-                  <a href="#" target="_blank">
+                  <a href="./albumpage.html?albumId=${idAlbum18}">
                       <img
                         src="${imgAlbum18}"
                         class="card-img-top"
@@ -633,9 +635,9 @@ window.addEventListener("DOMContentLoaded", async () => {
                   </a>
                   <div class="card-body">
                     <h5>  
-                        <a href="#" target="_blank">${titleAlbum18}</a>
+                        <a href="#">${titleAlbum18}</a>
                     </h5>
-                    <p class="card-text">${typeAlbum18} di <a href="#" target="_blank">${nameArtist18}</a></p>
+                    <p class="card-text">${typeAlbum18} di <a href="#">${nameArtist18}</a></p>
                   </div>
                 </div>
               </div>
@@ -645,15 +647,17 @@ window.addEventListener("DOMContentLoaded", async () => {
         <div class="card-mobile p-4 pb-3 mt-4">
         <div class="d-flex flex-column gap-4">
           <div class="d-flex gap-4">
-            <img
-              src="${imgAlbum7}"
-              alt="${titleAlbum7}"
-              class="xs-img"
-              style="box-shadow: 0px 0px 15px 0px white"
-            />
+            <a href="./albumpage.html?albumId=${idAlbum7}">
+              <img
+                src="${imgAlbum7}"
+                alt="${titleAlbum7}"
+                class="xs-img"
+                style="box-shadow: 0px 0px 15px 0px white"
+              />
+            </a>
             <div class="d-flex flex-column gap-2">
               <p class="m-0 text-secondary">${typeAlbum7.toUpperCase()}</p>
-              <h3 class="m-0">${titleAlbum7}</h3>
+              <h3 class="m-0"><a href="./albumpage.html?albumId=${idAlbum7}">${titleAlbum7}</a></h3>
             </div>
           </div>
           <div class="d-flex justify-content-between align-items-center">
@@ -675,15 +679,17 @@ window.addEventListener("DOMContentLoaded", async () => {
       <div class="card-mobile p-4 pb-3 mt-4">
         <div class="d-flex flex-column gap-4">
           <div class="d-flex gap-4">
-            <img
-              src="${imgAlbum8}"
-              alt="${titleAlbum8}"
-              class="xs-img"
-              style="box-shadow: 0px 0px 15px 0px white"
-            />
+            <a href="./albumpage.html?albumId=${idAlbum8}">
+              <img
+                src="${imgAlbum8}"
+                alt="${titleAlbum8}"
+                class="xs-img"
+                style="box-shadow: 0px 0px 15px 0px white"
+              />
+            </a>
             <div class="d-flex flex-column gap-2">
               <p class="m-0 text-secondary">${typeAlbum8.toUpperCase()}</p>
-              <h3 class="m-0">${titleAlbum8}</h3>
+              <h3 class="m-0"><a href="./albumpage.html?albumId=${idAlbum8}">${titleAlbum8}</a></h3>
             </div>
           </div>
           <div class="d-flex justify-content-between align-items-center">
@@ -705,15 +711,17 @@ window.addEventListener("DOMContentLoaded", async () => {
       <div class="card-mobile p-4 pb-3 mt-4">
         <div class="d-flex flex-column gap-4">
           <div class="d-flex gap-4">
-            <img
-              src="${imgAlbum9}"
-              alt="${titleAlbum9}"
-              class="xs-img"
-              style="box-shadow: 0px 0px 15px 0px white"
-            />
+            <a href="./albumpage.html?albumId=${idAlbum9}">
+              <img
+                src="${imgAlbum9}"
+                alt="${titleAlbum9}"
+                class="xs-img"
+                style="box-shadow: 0px 0px 15px 0px white"
+              />
+            </a>
             <div class="d-flex flex-column gap-2">
               <p class="m-0 text-secondary">${typeAlbum9.toUpperCase()}</p>
-              <h3 class="m-0">${titleAlbum9}</h3>
+              <h3 class="m-0"><a href="./albumpage.html?albumId=${idAlbum9}">${titleAlbum9}</a></h3>
             </div>
           </div>
           <div class="d-flex justify-content-between align-items-center">
