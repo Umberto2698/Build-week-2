@@ -211,11 +211,6 @@
 /* --------------------------------------- */
 
 /* Per javascript */
-a {
-  color: white;
-  text-decoration: none;
-}
-
 .display-none {
   display: none;
 }
@@ -300,6 +295,10 @@ main {
 }
 .dropdown-item:active {
   background-color: var(--primaryColor);
+}
+a {
+  color: white;
+  text-decoration: none;
 }
 
 /* Custom Scroll */

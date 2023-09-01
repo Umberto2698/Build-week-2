@@ -1,38 +1,9 @@
-:root {
-  --fullWidth: 270px;
-  --fullWidthFriends: 285px;
-
-  --none: 0;
-
-  --xsPadd: 15px;
-  --mdPadd: 25px;
-  --lgPadd: 40px;
-  --xlPadd: 50px;
-
-  --primaryColor: #1ed760;
-
-  --xsFontSize: 13px;
-  --smFontSize: 14px;
-  --FonstSize: 16px;
-  --mdFontSize: 18px;
-  --lgFontSize: 20px;
-  --xlFontSize: 24px;
-
-  --bold: bold;
-
-  --xsImg: 50px;
-  --smallImg: 80px;
-  --bigImg: 220px;
-  --playbar-start: 0s;
-  --playbar-time: 1s;
-}
-
 .left-column-rules {
   width: 25vw;
 }
 
 .album-detail-rules {
-  height: 100%;
+  max-height: 100vh;
 }
 
 .right-column-rules {
@@ -64,6 +35,10 @@
 .soundbar-rules {
   background-color: #181818;
   width: 100vw;
+}
+
+#track-list-rep {
+  max-height: 100vh;
 }
 
 .track-title-rules {
