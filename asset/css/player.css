@@ -84,10 +84,20 @@ footer > div > div:nth-child(2) {
   left: -100%;
 }
 
+@keyframes progress-bar-filling {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 .progress-bar-fill {
-  width: 100%;
+  width: 0%;
   height: 5px;
   background-color: white;
+  animation: progress-bar-filling var(--playbar-time) linear;
 }
 
 .currenttime-position {

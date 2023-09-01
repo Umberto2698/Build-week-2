@@ -17,6 +17,13 @@ const currentSong = document.createElement("audio");
 const playButtonXs = document.getElementById("play-button-mobile");
 const playerTitleXs = document.querySelector("#footer-xs p");
 
+// Variabili
+let songlength = 0;
+let timeCounter = 0;
+let songInterval = null;
+let isPlaying = false;
+let trackIndex = 0;
+
 const iconchange1 = function () {
   if (volumeIcon.classList.contains("bi-volume-off") || volumeIcon.classList.contains("bi-volume-up")) {
     console.log("test");
@@ -131,7 +138,7 @@ const playButton = function (data) {
 //  playButton(currentData.tracks.data);
 //}
 
-const fetchTrackList = async albumUrl => {
+const fetchTrackList = async (albumUrl) => {
   try {
     const resp = await fetch(albumUrl);
     const data = await resp.json();
@@ -179,9 +186,12 @@ const nextSong = function () {
   const currentTrackList = JSON.parse(localStorage.getItem("savedData"));
   for (i = 0; i < currentTrackList.length; i++) {
     if (currentTrackId === currentTrackList[i].id) {
-      i++;
-      playButton(currentTrackList[i]);
-      console.log("success");
+      if (i === currentTrackList.length - 1) {
+        playButton(currentTrackList[0]);
+      } else {
+        i++;
+        playButton(currentTrackList[i]);
+      }
     }
   }
 };
@@ -193,10 +203,13 @@ const previousSong = function () {
   const currentTrackList = JSON.parse(localStorage.getItem("savedData"));
   for (i = 0; i < currentTrackList.length; i++) {
     if (currentTrackId === currentTrackList[i].id) {
-      i = i - 2;
-      playButton(currentTrackList[i]);
-      console.log("success");
-      i = currentTrackList.length;
+      if (i === 0) {
+        playButton(currentTrackList[currentTrackList.length - 1]);
+      } else {
+        i = i - 1;
+        playButton(currentTrackList[i]);
+        i = currentTrackList.length;
+      }
     }
   }
 };

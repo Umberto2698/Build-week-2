@@ -47,16 +47,16 @@ const getElement = async () => {
       const songs = await fetch(URL + "/top?limit=10");
       const songsObj = await songs.json();
       // Qui vedo se il player aveva una canzone prima di arrivare in questa pagina
-      if (localStorage.getItem("songId")) {
-        const songId = localStorage.getItem("songId");
+      if (localStorage.getItem("trackId")) {
+        const songId = localStorage.getItem("trackId");
         try {
-          const previusSong = await fetch("https://striveschool-api.herokuapp.com/api/deezer/track/" + songId);
-          if (!previusSong.ok) {
-            throw new Error(`Error ${previusSong.status}: ${previusSong.statusText}.`);
+          const localStorageSong = await fetch("https://striveschool-api.herokuapp.com/api/deezer/track/" + songId);
+          if (!localStorageSong.ok) {
+            throw new Error(`Error ${localStorageSong.status}: ${localStorageSong.statusText}.`);
           } else {
-            const previusSongsObj = await previusSong.json();
-            playButton(previusSongsObj);
-            playButtonMobile(previusSongsObj);
+            const localStorageSongsObj = await localStorageSong.json();
+            playButton(localStorageSongsObj);
+            playButtonMobile(localStorageSongsObj);
           }
         } catch (err) {
           (err) => {
@@ -73,6 +73,7 @@ const getElement = async () => {
         playButton(songsObj.data[0]);
         playButtonMobile(songsObj.data[0]);
       }
+      localStorage.setItem("savedData", JSON.stringify(songsObj.data));
       artistBackground.setAttribute("style", `background-image: url(${artistObj.picture_big})`);
       artistNameTitle.innerText = artistObj.name;
       artistNameLiked.innerText = artistObj.name;
