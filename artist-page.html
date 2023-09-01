@@ -14,165 +14,163 @@
     <link rel="stylesheet" href="./asset/css/artist-page-style.css" />
     <link rel="stylesheet" href="./asset/css/circular-font.css" />
     <link rel="stylesheet" href="./asset/css/player.css" />
+    <link rel="stylesheet" href="./asset/css/comune.css" />
   </head>
   <body>
-    <div id="blackScreen" class="d-none">
-      <div class="spinner-border text-success d-none" role="status">
-        <span class="visually-hidden">Loading...</span>
-      </div>
-    </div>
-    <div class="d-flex">
-      <header class="custom-paddingBottom-md">
-        <div class="d-flex flex-column">
-          <nav class="d-flex flex-column gap-2">
-            <i class="bi bi-three-dots custom-fontSize-icon"></i>
-            <div class="d-flex gap-3 align-items-center" onclick="goToHomePage(event)">
-              <i class="bi bi-house-door custom-fontSize-icon"></i>
-              <!-- <i class="bi bi-house-door-fill custom-fontSize-icon"></i> -->
-              <p class="m-0 custom-fontSize-nav">Home</p>
-            </div>
-            <div class="d-flex gap-3 align-items-center" onclick="goToSearchPage(event)">
-              <i class="bi bi-search custom-fontSize-icon"></i>
-              <p class="m-0 custom-fontSize-nav">Search</p>
-            </div>
-            <div class="d-flex gap-3 align-items-center">
-              <i class="bi bi-collection custom-fontSize-icon"></i>
-              <p class="m-0 custom-fontSize-nav">La tua libreria</p>
-            </div>
-          </nav>
-          <section class="d-flex flex-column gap-2 mt-4">
-            <div class="d-flex gap-3 align-items-center">
-              <i class="bi bi-plus-square-fill custom-fontSize-icon"></i>
-              <p class="m-0 custom-fontSize-nav">Crea playlist</p>
-            </div>
-            <div class="d-flex gap-3 align-items-center">
-              <i class="bi bi-heart-fill custom-fontSize-icon"></i>
-              <p class="m-0 custom-fontSize-nav">Brani che ti piacciono</p>
-            </div>
-            <div class="d-flex gap-3 align-items-center">
-              <i class="bi bi-bookmark-fill custom-fontSize-icon"></i>
-              <p class="m-0 custom-fontSize-nav">I tuoi episodi</p>
-            </div>
-          </section>
-          <section id="playlist" class="mt-4">
-            <ul class="d-flex flex-column text-secondary custom-fontSize-header">
-              <li>An item</li>
-              <li>A second item</li>
-              <li>A third item</li>
-              <li>A fourth item</li>
-              <li>And a fifth one</li>
-              <li>An item</li>
-              <li>A second item</li>
-              <li>A third item</li>
-              <li>A fourth item</li>
-              <li>And a fifth one</li>
-              <li>An item</li>
-              <li>A second item</li>
-              <li>A third item</li>
-              <li>A fourth item</li>
-              <li>And a fifth one</li>
-              <li>An item</li>
-              <li>A second item</li>
-              <li>A third item</li>
-              <li>A fourth item</li>
-              <li>And a fifth one</li>
-              <li>An item</li>
-              <li>A second item</li>
-              <li>A third item</li>
-              <li>A fourth item</li>
-              <li>And a fifth one</li>
-              <li>An item</li>
-              <li>A second item</li>
-              <li>A third item</li>
-              <li>A fourth item</li>
-              <li>And a fifth one</li>
-              <li>An item</li>
-              <li>A second item</li>
-              <li>A third item</li>
-              <li>A fourth item</li>
-              <li>And a fifth one</li>
-              <li>An item</li>
-              <li>A second item</li>
-              <li>A third item</li>
-              <li>A fourth item</li>
-              <li>And a fifth one</li>
-              <li>An item</li>
-              <li>A second item</li>
-              <li>A third item</li>
-              <li>A fourth item</li>
-              <li>And a fifth one</li>
-              <li>An item</li>
-              <li>A second item</li>
-              <li>A third item</li>
-              <li>A fourth item</li>
-              <li>And a fifth one</li>
-            </ul>
-          </section>
-        </div>
-      </header>
-      <main class="d-flex flex-column">
-        <div id="background-big-card" class="px-4 d-flex flex-column justify-content-between">
-          <div id="upbar" class="d-flex justify-content-between align-items-center mb-5 mt-2">
-            <div class="d-flex gap-3">
-              <i class="bi bi-arrow-left-circle custom-fontSize-lg"></i>
-              <i class="bi bi-arrow-right-circle custom-fontSize-lg"></i>
-            </div>
-            <div class="btn-group">
-              <button
-                type="button"
-                class="btn dropdown-toggle text-light"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <i class="bi bi-person-circle"></i>
-                <span>Nome User</span>
-              </button>
-              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
-                <li>
-                  <button class="dropdown-item" type="button">Action</button>
-                </li>
-                <li>
-                  <button class="dropdown-item" type="button">Another action</button>
-                </li>
-                <li>
-                  <button class="dropdown-item" type="button">Something else here</button>
-                </li>
+    <div id="all-container" class="d-flex flex-column justify-content-between">
+      <div class="d-flex">
+        <header class="height-header">
+          <div class="d-flex flex-column">
+            <nav class="d-flex flex-column gap-1">
+              <i class="bi bi-three-dots custom-fontSize-icon"></i>
+              <div type="button" id="homePage" class="d-flex gap-3 align-items-center">
+                <!-- <i class="bi bi-house-door custom-fontSize-icon"></i> -->
+                <i class="bi bi-house-door-fill custom-fontSize-icon"></i>
+                <p class="m-0 custom-fontSize-nav">Home</p>
+              </div>
+              <div type="button" id="cerca" class="d-flex gap-3 align-items-center">
+                <i class="bi bi-search custom-fontSize-icon"></i>
+                <p class="m-0 custom-fontSize-nav">Search</p>
+              </div>
+              <div class="d-flex gap-3 align-items-center">
+                <i class="bi bi-collection custom-fontSize-icon"></i>
+                <p class="m-0 custom-fontSize-nav">La tua libreria</p>
+              </div>
+            </nav>
+            <section class="d-flex flex-column gap-1 mt-4">
+              <div class="d-flex gap-3 align-items-center">
+                <i class="bi bi-plus-square-fill custom-fontSize-icon"></i>
+                <p class="m-0 custom-fontSize-nav">Crea playlist</p>
+              </div>
+              <div class="d-flex gap-3 align-items-center">
+                <i class="bi bi-heart-fill custom-fontSize-icon"></i>
+                <p class="m-0 custom-fontSize-nav">Brani che ti piacciono</p>
+              </div>
+              <div class="d-flex gap-3 align-items-center">
+                <i class="bi bi-bookmark-fill custom-fontSize-icon"></i>
+                <p class="m-0 custom-fontSize-nav">I tuoi episodi</p>
+              </div>
+            </section>
+            <section id="playlist" class="mt-4 ps-2">
+              <ul class="d-flex flex-column text-secondary custom-fontSize-header">
+                <li>An item</li>
+                <li>A second item</li>
+                <li>A third item</li>
+                <li>A fourth item</li>
+                <li>And a fifth one</li>
+                <li>An item</li>
+                <li>A second item</li>
+                <li>A third item</li>
+                <li>A fourth item</li>
+                <li>And a fifth one</li>
+                <li>An item</li>
+                <li>A second item</li>
+                <li>A third item</li>
+                <li>A fourth item</li>
+                <li>And a fifth one</li>
+                <li>An item</li>
+                <li>A second item</li>
+                <li>A third item</li>
+                <li>A fourth item</li>
+                <li>And a fifth one</li>
+                <li>An item</li>
+                <li>A second item</li>
+                <li>A third item</li>
+                <li>A fourth item</li>
+                <li>And a fifth one</li>
+                <li>An item</li>
+                <li>A second item</li>
+                <li>A third item</li>
+                <li>A fourth item</li>
+                <li>And a fifth one</li>
+                <li>An item</li>
+                <li>A second item</li>
+                <li>A third item</li>
+                <li>A fourth item</li>
+                <li>And a fifth one</li>
+                <li>An item</li>
+                <li>A second item</li>
+                <li>A third item</li>
+                <li>A fourth item</li>
+                <li>And a fifth one</li>
+                <li>An item</li>
+                <li>A second item</li>
+                <li>A third item</li>
+                <li>A fourth item</li>
+                <li>And a fifth one</li>
+                <li>An item</li>
+                <li>A second item</li>
+                <li>A third item</li>
+                <li>A fourth item</li>
+                <li>And a fifth one</li>
               </ul>
-            </div>
+            </section>
           </div>
-          <div id="custom-big-card" class="d-flex pt-5 gap-4">
-            <div class="d-flex flex-column flex-grow-1">
-              <div class="d-flex flex-column">
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-patch-check-fill text-primary me-1"></i>
-                  <p class="custom-fontSize-xs m-0">Artista verificato</p>
+        </header>
+        <main>
+          <div class="d-flex flex-column">
+            <div id="background-big-card" class="px-4 d-flex flex-column justify-content-between">
+              <div id="upbar" class="d-flex justify-content-between align-items-center mb-5 mt-2">
+                <div class="d-flex gap-3">
+                  <i class="bi bi-arrow-left-circle custom-fontSize-lg"></i>
+                  <i class="bi bi-arrow-right-circle custom-fontSize-lg"></i>
                 </div>
-                <h1></h1>
+                <div class="btn-group">
+                  <button
+                    type="button"
+                    class="btn dropdown-toggle text-light"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="bi bi-person-circle"></i>
+                    <span>Nome User</span>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
+                    <li>
+                      <button class="dropdown-item" type="button">Action</button>
+                    </li>
+                    <li>
+                      <button class="dropdown-item" type="button">Another action</button>
+                    </li>
+                    <li>
+                      <button class="dropdown-item" type="button">Something else here</button>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="pt-3">
-                <p id="listener"></p>
+              <div id="custom-big-card" class="d-flex pt-5 gap-4">
+                <div class="d-flex flex-column flex-grow-1">
+                  <div class="d-flex flex-column">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-patch-check-fill text-primary me-1"></i>
+                      <p class="custom-fontSize-xs m-0">Artista verificato</p>
+                    </div>
+                    <h1></h1>
+                  </div>
+                  <div class="pt-3">
+                    <p id="listener"></p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="px-4 py-3">
-          <p id="listener-xs"></p>
-          <div class="d-flex align-items-center gap-4">
-            <button id="play" class="d-flex align-items-center btn btn-success rounded-circle">
-              <i class="bi bi-play-fill fs-4"></i>
-            </button>
-            <i class="bi bi-shuffle icon-xs ms-auto"></i>
-            <i class="bi bi-three-dots-vertical icon-xs"></i>
-            <button id="following" class="btn border border-white bg-transparent text-white">FOLLOWING</button>
-            <i class="bi bi-three-dots"></i>
-          </div>
-        </div>
-        <!-- artist-page-mobile -->
-        <div id="artistSongs-xs" class="d-flex">
-          <div class="px-4">
-            <h4 class="mb-4">Popolari</h4>
-            <ul id="popularSongs-xs" class="list-unstyled">
-              <!-- <li class="d-flex align-items-center mb-3">
+            <div class="px-4 py-3">
+              <p id="listener-xs"></p>
+              <div class="d-flex align-items-center gap-4">
+                <button id="play" class="d-flex align-items-center btn btn-success rounded-circle">
+                  <i class="bi bi-play-fill fs-4"></i>
+                </button>
+                <i class="bi bi-shuffle icon-xs ms-auto"></i>
+                <i class="bi bi-three-dots-vertical icon-xs"></i>
+                <button id="following" class="btn border border-white bg-transparent text-white">FOLLOWING</button>
+                <i class="bi bi-three-dots"></i>
+              </div>
+            </div>
+            <!-- artist-page-mobile -->
+            <div id="artistSongs-xs" class="d-flex">
+              <div class="px-4">
+                <h4 class="mb-4">Popolari</h4>
+                <ul id="popularSongs-xs" class="list-unstyled">
+                  <!-- <li class="d-flex align-items-center mb-3">
                 <div class="d-flex align-items-center">
                   <span>1</span>
                   <img src="./asset/imgs/main/image-1.jpg" alt="" />
@@ -185,13 +183,13 @@
                   <i class="bi bi-three-dots-vertical xsIcon"></i>
                 </div>
                </li> -->
-            </ul>
-          </div>
-          <!-- artist-page -->
-          <div class="px-4 w-50">
-            <h4 class="mb-4">Popolari</h4>
-            <ul id="popularSongs" class="list-unstyled">
-              <!-- <li class="row d-flex align-items-center ps-3 mb-3">
+                </ul>
+              </div>
+              <!-- artist-page -->
+              <div class="px-4 w-50">
+                <h4 class="mb-4">Popolari</h4>
+                <ul id="popularSongs" class="list-unstyled">
+                  <!-- <li class="row d-flex align-items-center ps-3 mb-3">
                 <div class="col-6 d-flex align-items-center">
                   <span>1</span>
                   <img src="./asset/imgs/main/image-1.jpg" alt="" />
@@ -204,128 +202,92 @@
                   <span id="songDuration">3:18</span>
                 </div>
               </li> -->
-            </ul>
-            <p class="m-0">VISUALIZZA ALTRO</p>
-          </div>
-          <div id="lovedSongs">
-            <h4 class="mb-4">Brani che ti piacciono</h4>
-            <div class="d-flex align-items-center">
-              <div class="position-relative">
-                <div class="rounded-circle d-inline-block"></div>
-                <span class="border border-light rounded-circle bg-success z-1"
-                  ><i class="bi bi-suit-heart-fill"></i><span class="visually-hidden">unread messages</span></span
-                >
+                </ul>
+                <p class="m-0 pb-3">VISUALIZZA ALTRO</p>
               </div>
-              <div class="ps-2">
-                <h6>Hai messo mi piace a 11 brani</h6>
-                <p class="m-0"></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      <!-- Sezione amici -->
-      <aside class="bg-black text-white">
-        <div class="d-flex flex-column">
-          <div class="d-flex justify-content-between align-items-center mb-4 mt-3">
-            <h5 class="d-inline-block m-0">Attività amici</h5>
-            <div><i class="bi bi-person-add me-2"></i> <i class="bi bi-x-lg"></i></div>
-          </div>
-          <div class="mb-4 d-flex justify-content-between align-items-start friendStatus">
-            <div class="d-flex">
-              <div>
-                <div class="rounded-circle text-center friendImg">
-                  <img
-                    src="https://images.unsplash.com/photo-1619895862022-09114b41f16f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div class="d-flex flex-column ms-2">
-                <div class="d-flex flex-column friendInfo">
-                  <h6 class="m-0">Charlie Hookman</h6>
-                  <div class="d-flex align-items-center">
-                    <span>In camera</span><i class="bi bi-dot"></i><span>Youmi Zouma</span>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <div
-                      id="circle"
-                      class="rounded-circle border d-flex justify-content-center align-items-center me-1"
+              <div id="lovedSongs">
+                <h4 class="mb-4">Brani che ti piacciono</h4>
+                <div class="d-flex align-items-center">
+                  <div class="position-relative">
+                    <div class="rounded-circle d-inline-block"></div>
+                    <span class="border border-light rounded-circle bg-success z-1"
+                      ><i class="bi bi-suit-heart-fill"></i><span class="visually-hidden">unread messages</span></span
                     >
-                      <div class="rounded-circle border"></div>
-                    </div>
-                    <span>EP III</span>
+                  </div>
+                  <div class="ps-2">
+                    <h6>Hai messo mi piace a 11 brani</h6>
+                    <p class="m-0"></p>
                   </div>
                 </div>
               </div>
             </div>
-            <span>4 ore</span>
           </div>
-          <div class="mb-4 d-flex justify-content-between align-items-start friendStatus">
-            <div class="d-flex">
-              <div>
-                <div class="rounded-circle text-center friendImg">
-                  <img
-                    src="https://images.unsplash.com/photo-1619895862022-09114b41f16f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
-                    alt=""
-                  />
+        </main>
+        <!-- Sezione amici -->
+        <section id="friends">
+          <div class="d-flex flex-column px-3 custom-paddingTop-xs">
+            <div class="d-flex justify-content-between custom-paddingBottom-xs">
+              <h5>Attività amici</h5>
+              <div class="d-flex gap-3">
+                <i class="bi bi-person-plus"></i>
+                <i class="bi bi-x-lg"></i>
+              </div>
+            </div>
+            <div class="d-flex flex-column gap-4">
+              <div class="d-flex flex-grow-1">
+                <img src="./asset/imgs/main/image-6.jpg" alt="imagine dragons" class="xs-img border-radius-50" />
+                <div class="d-flex flex-column custom-paddingLeft-cards flex-grow-1">
+                  <div class="d-flex justify-content-between">
+                    <h6 class="custom-fontSize-normal m-0">Charlie Hookham</h6>
+                    <p class="m-0 custom-fontSize-xs">4 ore</p>
+                  </div>
+                  <p class="m-0 custom-fontSize-xs">In Camera <strong>·</strong> Yumi Zouma</p>
+                  <div class="d-flex gap-2">
+                    <i class="bi bi-disc"></i>
+                    <p class="m-0 custom-fontSize-xs">EP III</p>
+                  </div>
                 </div>
               </div>
-              <div class="d-flex flex-column ms-2">
-                <div class="d-flex flex-column friendInfo">
-                  <h6 class="m-0">Charlie Hookman</h6>
-                  <div class="d-flex align-items-center">
-                    <span>In camera</span><i class="bi bi-dot"></i><span>Youmi Zouma</span>
+              <div class="d-flex flex-grow-1">
+                <img src="./asset/imgs/main/image-6.jpg" alt="imagine dragons" class="xs-img border-radius-50" />
+                <div class="d-flex flex-column custom-paddingLeft-cards flex-grow-1">
+                  <div class="d-flex justify-content-between">
+                    <h6 class="custom-fontSize-normal m-0">Charlie Hookham</h6>
+                    <p class="m-0 custom-fontSize-xs">4 ore</p>
                   </div>
-                  <div class="d-flex align-items-center">
-                    <div
-                      id="circle"
-                      class="rounded-circle border d-flex justify-content-center align-items-center me-1"
-                    >
-                      <div class="rounded-circle border"></div>
-                    </div>
-                    <span>EP III</span>
+                  <p class="m-0 custom-fontSize-xs">In Camera <strong>·</strong> Yumi Zouma</p>
+                  <div class="d-flex gap-2">
+                    <i class="bi bi-disc"></i>
+                    <p class="m-0 custom-fontSize-xs">EP III</p>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex flex-grow-1">
+                <img src="./asset/imgs/main/image-6.jpg" alt="imagine dragons" class="xs-img border-radius-50" />
+                <div class="d-flex flex-column custom-paddingLeft-cards flex-grow-1">
+                  <div class="d-flex justify-content-between">
+                    <h6 class="custom-fontSize-normal m-0">Charlie Hookham</h6>
+                    <p class="m-0 custom-fontSize-xs">4 ore</p>
+                  </div>
+                  <p class="m-0 custom-fontSize-xs">In Camera <strong>·</strong> Yumi Zouma</p>
+                  <div class="d-flex gap-2">
+                    <i class="bi bi-disc"></i>
+                    <p class="m-0 custom-fontSize-xs">EP III</p>
                   </div>
                 </div>
               </div>
             </div>
-            <span>4 ore</span>
           </div>
-          <div class="mb-4 d-flex justify-content-between align-items-start friendStatus">
-            <div class="d-flex">
-              <div>
-                <div class="rounded-circle text-center friendImg">
-                  <img
-                    src="https://images.unsplash.com/photo-1619895862022-09114b41f16f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div class="d-flex flex-column ms-2">
-                <div class="d-flex flex-column friendInfo">
-                  <h6 class="m-0">Charlie Hookman</h6>
-                  <div class="d-flex align-items-center">
-                    <span>In camera</span><i class="bi bi-dot"></i><span>Youmi Zouma</span>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <div
-                      id="circle"
-                      class="rounded-circle border d-flex justify-content-center align-items-center me-1"
-                    >
-                      <div class="rounded-circle border"></div>
-                    </div>
-                    <span>EP III</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <span>4 ore</span>
-          </div>
-        </div>
-      </aside>
+        </section>
+      </div>
     </div>
     <!-- sound-player-mobile -->
-    <div id="footer-xs" class="bg-dark text-white px-2 py-1 position-fixed">
+    <div
+      id="footer-xs"
+      class="bg-dark text-white px-2 py-1 position-fixed"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
       <p></p>
       <div>
         <button class="btn">
@@ -339,8 +301,37 @@
         </button>
       </div>
     </div>
+    <!-- Modale per mobile -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="playerModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+              <i class="bi bi-x-lg text-whited"></i>
+            </button>
+            <h1 class="modal-title" id="playerModal">Modal title</h1>
+          </div>
+          <div class="modal-body d-flex flex-column align-items-center justify-content-around">
+            <div class="mx-auto">
+              <div id="imgContainer">
+                <img src="" alt="" />
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center w-100 mb-3 ps-2">
+              <div class="d-flex flex-column justify-content-center">
+                <h3>Titolo canzone</h3>
+                <p>Nome artista</p>
+              </div>
+              <button class="btn">
+                <i class="btn-toggle-custom bi bi-suit-heart text-white lgIcon"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- sound-player -->
-    <footer class="position-fixed bottom-0 soundbar-rules z-2">
+    <footer class="position-fixed soundbar-rules z-2">
       <div class="d-flex justify-content-center align-items-center">
         <div class="d-flex align-items-center p-1">
           <img id="playbar-img" class="rounded" alt="#" />
@@ -442,6 +433,7 @@
         <p class="m-0">La tua libreria</p>
       </div>
     </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
