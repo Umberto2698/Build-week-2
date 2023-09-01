@@ -211,6 +211,10 @@
 /* --------------------------------------- */
 
 /* Per javascript */
+a {
+  color: white;
+  text-decoration: none;
+}
 
 .display-none {
   display: none;

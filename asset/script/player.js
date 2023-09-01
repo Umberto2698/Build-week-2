@@ -207,7 +207,7 @@ const pauseSong = function () {
 const nextSong = function () {
   playButtonXs.innerHTML = `<i class="btn-toggle-custom bi bi-play-fill text-black xsIcon"></i>`;
   modalPlayButton.innerHTML = `<i class="btn-toggle-custom bi bi-play-fill text-black xsIcon"></i>`;
-  playBarPlayButton.innerHTML = `<i class="btn-toggle-custom bi bi-play-fill text-white xsIcon"></i>`;
+  playBarPlayButton.innerHTML = `<i class="btn-toggle-custom bi bi-play-fill text-black xsIcon"></i>`;
   const currentTrackId = JSON.parse(localStorage.getItem("trackId"));
   const currentTrackList = JSON.parse(localStorage.getItem("savedData"));
   for (i = 0; i < currentTrackList.length; i++) {
@@ -228,7 +228,7 @@ modalNextButton.addEventListener("click", nextSong);
 const previousSong = function () {
   playButtonXs.innerHTML = `<i class="btn-toggle-custom bi bi-play-fill text-black xsIcon"></i>`;
   modalPlayButton.innerHTML = `<i class="btn-toggle-custom bi bi-play-fill text-black xsIcon"></i>`;
-  playBarPlayButton.innerHTML = `<i class="btn-toggle-custom bi bi-play-fill text-white xsIcon"></i>`;
+  playBarPlayButton.innerHTML = `<i class="btn-toggle-custom bi bi-play-fill text-black xsIcon"></i>`;
   const currentTrackId = JSON.parse(localStorage.getItem("trackId"));
   const currentTrackList = JSON.parse(localStorage.getItem("savedData"));
   for (i = 0; i < currentTrackList.length; i++) {
