@@ -137,6 +137,8 @@ const createAlbumPage = async albumUrl => {
     const resp = await fetch(albumUrl);
     const data = await resp.json();
     console.log(data);
+    localStorage.setItem("currentAlbum", JSON.stringify(data));
+    localStorage.setItem("savedData", JSON.stringify(data.tracks.data));
     resetTrackList();
     counter = 1;
     data.tracks.data.forEach(element => {

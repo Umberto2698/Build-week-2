@@ -8,7 +8,14 @@ const volumeIcon = document.getElementById("volIcon");
 const audioSlider = document.getElementById("audio-slider");
 const buttonsToToggle = document.getElementsByClassName("btn-toggle-custom");
 const playPauseButton = document.getElementsByClassName("play-pause-button");
+const randomSongButton = document.getElementById("random-song-button");
+const previousSongButton = document.getElementById("previous-song-button");
+const playBarPlayButton = document.getElementById("playbar-play-button");
+const nextSongButton = document.getElementById("next-song-button");
+const RepeatAlbumButton = document.getElementById("repeat-album-button");
 const currentSong = document.createElement("audio");
+const playButtonXs = document.getElementById("play-button-mobile");
+const playerTitleXs = document.querySelector("#footer-xs p");
 
 const iconchange1 = function () {
   if (volumeIcon.classList.contains("bi-volume-off") || volumeIcon.classList.contains("bi-volume-up")) {
@@ -88,12 +95,13 @@ const setTime = function () {
 };
 
 const playButton = function (data) {
-  localStorage.setItem("savedData", JSON.stringify(data));
+  localStorage.setItem("trackId", JSON.stringify(data.id));
   while (fillContainer.firstChild) {
     fillContainer.removeChild(fillContainer.lastChild);
   }
   playbarImg.src = data.album.cover;
   playbarTitle.innerText = data.title;
+  playerTitleXs.innerText = data.title + " by " + data.artist.name;
   playbarArtist.innerText = data.artist.name;
   songFullTime.innerText = handletime(data.duration);
   songlength = data.duration;
@@ -105,6 +113,8 @@ const playButton = function (data) {
   fillContainer.appendChild(fillingBar);
   currentSong.src = data.preview;
   currentSong.load();
+  currentSong.pause();
+  isPlaying = false;
   if (songInterval === null) {
     songInterval = setInterval(setTime, 1000);
   } else {
@@ -116,15 +126,16 @@ const playButton = function (data) {
   }
 };
 
-if (localStorage.getItem("savedData")) {
-  playButton(JSON.parse(localStorage.getItem("savedData")));
-}
+//if (localStorage.getItem("savedData")) {
+//  const currentData = JSON.parse(localStorage.getItem("savedData"));
+//  playButton(currentData.tracks.data);
+//}
 
 const fetchTrackList = async albumUrl => {
   try {
     const resp = await fetch(albumUrl);
     const data = await resp.json();
-    localStorage.setItem("currentAlbum", JSON.stringify(data.tracks.data));
+    localStorage.setItem("currentTrackList", JSON.stringify(data.tracks.data));
   } catch (error) {
     console.log(error);
   }
@@ -138,42 +149,62 @@ const playPauseSong = function () {
   }
 };
 
+playBarPlayButton.addEventListener("click", playPauseSong);
+playButtonXs.addEventListener("click", playPauseSong);
+
 const playSong = function () {
   currentSong.play();
   isPlaying = true;
   for (i = 0; i < playPauseButton.length; i++) {
-    playPauseButton[i].innerHTML = `<i class="btn-toggle-custom bi bi-pause-fill text-black"></i>`;
+    playPauseButton[i].innerHTML = `<i class="btn-toggle-custom bi bi-play-fill text-black"></i>`;
   }
+  playBarPlayButton.innerHTML = `<i class="btn-toggle-custom bi bi-play-fill text-black"></i>`;
+  playBarPlayButton.classList.remove("btn-light");
+  playBarPlayButton.classList.add("btn-success");
 };
 
 const pauseSong = function () {
   currentSong.pause();
   isPlaying = false;
   for (i = 0; i < playPauseButton.length; i++) {
-    playPauseButton[i].innerHTML = `<i class="btn-toggle-custom bi bi-play-fill text-black"></i>`;
+    playPauseButton[i].innerHTML = `<i class="btn-toggle-custom bi bi-pause-fill text-black"></i>`;
   }
+  playBarPlayButton.innerHTML = `<i class="btn-toggle-custom bi bi-pause-fill text-black"></i>`;
+  playBarPlayButton.classList.remove("btn-success");
+  playBarPlayButton.classList.add("btn-light");
 };
 
 const nextSong = function () {
-  const data = JSON.parse(localStorage.getItem("savedData"));
-  console.log(data);
-  let dynamicUrl = `https://striveschool-api.herokuapp.com/api/deezer/album/${data.album.id}`;
-  fetchTrackList(dynamicUrl);
-  const trackList = JSON.parse(localStorage.getItem("currentAlbum"));
-  console.log(trackList);
-  console.log(data.id);
-  for (i = 0; i < trackList.length; i++) {
-    if (data.id === trackList[i].id) {
-      playButton(trackList[i++]);
-      console.log("skip successful");
+  const currentTrackId = JSON.parse(localStorage.getItem("trackId"));
+  const currentTrackList = JSON.parse(localStorage.getItem("savedData"));
+  for (i = 0; i < currentTrackList.length; i++) {
+    if (currentTrackId === currentTrackList[i].id) {
+      i++;
+      playButton(currentTrackList[i]);
+      console.log("success");
     }
   }
 };
 
-nextSong();
+nextSongButton.addEventListener("click", nextSong);
+
+const previousSong = function () {
+  const currentTrackId = JSON.parse(localStorage.getItem("trackId"));
+  const currentTrackList = JSON.parse(localStorage.getItem("savedData"));
+  for (i = 0; i < currentTrackList.length; i++) {
+    if (currentTrackId === currentTrackList[i].id) {
+      i = i - 2;
+      playButton(currentTrackList[i]);
+      console.log("success");
+      i = currentTrackList.length;
+    }
+  }
+};
+
+previousSongButton.addEventListener("click", previousSong);
 
 const playButtonMobile = function (song) {
-  localStorage.setItem("songId", `${song.id}`);
+  localStorage.setItem("trackId", JSON.stringify(data.id));
   playerTitleXs.innerText = song.title + " by " + song.artist.name;
   // playbarImg.src = song.album.cover;
   // playbarTitle.innerText = song.title;

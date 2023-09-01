@@ -283,7 +283,7 @@
         <button class="btn">
           <i class="btn-toggle-custom bi bi-suit-heart text-white xsIcon"></i>
         </button>
-        <button class="btn">
+        <button id="play-button-mobile" class="btn">
           <i class="btn-toggle-custom bi bi-play-fill text-white xsIcon"></i>
         </button>
       </div>
@@ -303,19 +303,22 @@
         </div>
         <div class="d-flex flex-column position-relative pt-1 pb-4">
           <div class="d-flex align-items-center">
-            <button class="btn p-0 mx-2 my-2">
+            <button id="random-song-button" class="btn p-0 mx-2 my-2">
               <i class="btn-toggle-custom bi bi-shuffle text-white mdIcon"></i>
             </button>
-            <button class="btn p-0 mx-2 my-2">
-              <i class="btn-toggle-custom bi bi-skip-start-fill text-white mdIcon"></i>
+            <button id="previous-song-button" class="btn p-0 mx-2 my-2">
+              <i class="bi bi-skip-start-fill text-white mdIcon"></i>
             </button>
-            <button class="d-flex align-items-center btn-sm btn-light rounded-circle p-0 lgIcon play-pause-button">
+            <button
+              id="playbar-play-button"
+              class="d-flex align-items-center btn-sm btn-light rounded-circle p-0 lgIcon"
+            >
               <i class="btn-toggle-custom bi bi-play-fill text-black"></i>
             </button>
-            <button class="btn p-0 mx-2 my-2">
-              <i class="btn-toggle-custom bi bi-skip-end-fill text-white mdIcon"></i>
+            <button id="next-song-button" class="btn p-0 mx-2 my-2">
+              <i class="bi bi-skip-end-fill text-white mdIcon"></i>
             </button>
-            <button class="btn p-0 mx-2 my-2">
+            <button id="repeat-album-button" class="btn p-0 mx-2 my-2">
               <i class="btn-toggle-custom bi bi-repeat text-white mdIcon"></i>
             </button>
           </div>
