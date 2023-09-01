@@ -16,6 +16,13 @@ const RepeatAlbumButton = document.getElementById("repeat-album-button");
 const currentSong = document.createElement("audio");
 const playButtonXs = document.getElementById("play-button-mobile");
 const playerTitleXs = document.querySelector("#footer-xs p");
+const modalAlbum = document.querySelector(".modal-title");
+const modalImg = document.querySelector("#imgContainer img");
+const modalTitle = document.querySelector(".modal-body h3");
+const modalArtist = document.querySelector(".modal-body p");
+const modalPlayButton = document.getElementById("playbar-play-button-xs");
+const modalNextButton = document.getElementById("next-song-button-xs");
+const modalPreviousButton = document.getElementById("previous-song-button-xs");
 
 // Variabili
 let songlength = 0;
@@ -102,10 +109,15 @@ const setTime = function () {
 };
 
 const playButton = function (data) {
+  console.log(data);
   localStorage.setItem("trackId", JSON.stringify(data.id));
   while (fillContainer.firstChild) {
     fillContainer.removeChild(fillContainer.lastChild);
   }
+  modalAlbum.innerText = data.album.title;
+  modalImg.src = data.album.cover_xl;
+  modalArtist.innerText = data.artist.name;
+  modalTitle.innerText = data.title;
   playbarImg.src = data.album.cover;
   playbarTitle.innerText = data.title;
   playerTitleXs.innerText = data.title + " by " + data.artist.name;
@@ -138,15 +150,15 @@ const playButton = function (data) {
 //  playButton(currentData.tracks.data);
 //}
 
-const fetchTrackList = async (albumUrl) => {
-  try {
-    const resp = await fetch(albumUrl);
-    const data = await resp.json();
-    localStorage.setItem("currentTrackList", JSON.stringify(data.tracks.data));
-  } catch (error) {
-    console.log(error);
-  }
-};
+// const fetchTrackList = async (albumUrl) => {
+//   try {
+//     const resp = await fetch(albumUrl);
+//     const data = await resp.json();
+//     localStorage.setItem("currentTrackList", JSON.stringify(data.tracks.data));
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
 
 const playPauseSong = function () {
   if (isPlaying === false) {
@@ -158,14 +170,20 @@ const playPauseSong = function () {
 
 playBarPlayButton.addEventListener("click", playPauseSong);
 playButtonXs.addEventListener("click", playPauseSong);
+modalPlayButton.addEventListener("click", playPauseSong);
 
 const playSong = function () {
   currentSong.play();
   isPlaying = true;
-  for (i = 0; i < playPauseButton.length; i++) {
-    playPauseButton[i].innerHTML = `<i class="btn-toggle-custom bi bi-play-fill text-black"></i>`;
-  }
-  playBarPlayButton.innerHTML = `<i class="btn-toggle-custom bi bi-play-fill text-black"></i>`;
+  // for (i = 0; i < playPauseButton.length; i++) {
+  //   playPauseButton[i].innerHTML = `<i class="btn-toggle-custom bi bi-play-fill text-black"></i>`;
+  // }
+  playButtonXs.innerHTML = `<i class="btn-toggle-custom bi bi-pause-fill text-white xsIcon"></i>`;
+  playButtonXs.classList.remove("btn-success");
+  modalPlayButton.innerHTML = `<i class="btn-toggle-custom bi bi-pause-fill text-black"></i>`;
+  modalPlayButton.classList.remove("btn-success");
+  modalPlayButton.classList.add("btn-light");
+  playBarPlayButton.innerHTML = `<i class="btn-toggle-custom bi bi-pause-fill text-black"></i>`;
   playBarPlayButton.classList.remove("btn-light");
   playBarPlayButton.classList.add("btn-success");
 };
@@ -173,15 +191,23 @@ const playSong = function () {
 const pauseSong = function () {
   currentSong.pause();
   isPlaying = false;
-  for (i = 0; i < playPauseButton.length; i++) {
-    playPauseButton[i].innerHTML = `<i class="btn-toggle-custom bi bi-pause-fill text-black"></i>`;
-  }
-  playBarPlayButton.innerHTML = `<i class="btn-toggle-custom bi bi-pause-fill text-black"></i>`;
+  // for (i = 0; i < playPauseButton.length; i++) {
+  //   playPauseButton[i].innerHTML = `<i class="btn-toggle-custom bi bi-pause-fill text-black"></i>`;
+  // }
+  playButtonXs.innerHTML = `<i class="btn-toggle-custom bi bi-play-fill text-white xsIcon"></i>`;
+  playButtonXs.classList.remove("btn-success");
+  modalPlayButton.innerHTML = `<i class="btn-toggle-custom bi bi-play-fill text-black"></i>`;
+  modalPlayButton.classList.remove("btn-success");
+  modalPlayButton.classList.add("btn-light");
+  playBarPlayButton.innerHTML = `<i class="btn-toggle-custom bi bi-play-fill text-black"></i>`;
   playBarPlayButton.classList.remove("btn-success");
   playBarPlayButton.classList.add("btn-light");
 };
 
 const nextSong = function () {
+  playButtonXs.innerHTML = `<i class="btn-toggle-custom bi bi-play-fill text-black xsIcon"></i>`;
+  modalPlayButton.innerHTML = `<i class="btn-toggle-custom bi bi-play-fill text-black xsIcon"></i>`;
+  playBarPlayButton.innerHTML = `<i class="btn-toggle-custom bi bi-play-fill text-white xsIcon"></i>`;
   const currentTrackId = JSON.parse(localStorage.getItem("trackId"));
   const currentTrackList = JSON.parse(localStorage.getItem("savedData"));
   for (i = 0; i < currentTrackList.length; i++) {
@@ -197,8 +223,12 @@ const nextSong = function () {
 };
 
 nextSongButton.addEventListener("click", nextSong);
+modalNextButton.addEventListener("click", nextSong);
 
 const previousSong = function () {
+  playButtonXs.innerHTML = `<i class="btn-toggle-custom bi bi-play-fill text-black xsIcon"></i>`;
+  modalPlayButton.innerHTML = `<i class="btn-toggle-custom bi bi-play-fill text-black xsIcon"></i>`;
+  playBarPlayButton.innerHTML = `<i class="btn-toggle-custom bi bi-play-fill text-white xsIcon"></i>`;
   const currentTrackId = JSON.parse(localStorage.getItem("trackId"));
   const currentTrackList = JSON.parse(localStorage.getItem("savedData"));
   for (i = 0; i < currentTrackList.length; i++) {
@@ -215,10 +245,16 @@ const previousSong = function () {
 };
 
 previousSongButton.addEventListener("click", previousSong);
+modalPreviousButton.addEventListener("click", previousSong);
 
-const playButtonMobile = function (song) {
+const playButtonMobile = function (data) {
+  console.log(data);
   localStorage.setItem("trackId", JSON.stringify(data.id));
-  playerTitleXs.innerText = song.title + " by " + song.artist.name;
+  modalAlbum.innerText = data.album.title;
+  modalImg.src = data.album.cover_xl;
+  modalArtist.innerText = data.artist.name;
+  modalTitle.innerText = data.title;
+  playerTitleXs.innerText = data.title + " by " + data.artist.name;
   // playbarImg.src = song.album.cover;
   // playbarTitle.innerText = song.title;
   // playbarArtist.innerText = song.artist.name;
