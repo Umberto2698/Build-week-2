@@ -10,20 +10,35 @@
 
 .modal-header h1 {
   width: 100%;
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
+}
+
+.modal-header button {
+  --bs-btn-color: white;
+  --bs-btn-padding-x: 0;
+  --bs-btn-padding-y: 0;
+}
+.modal-header button i {
+  font-size: 25px;
 }
 
 .modal-body h3 {
   margin-bottom: 0;
+  font-size: 15px;
 }
 .modal-body p {
   margin-bottom: 0;
+  font-size: 15px;
 }
 
 #imgContainer {
   width: 200px;
   height: 200px;
+}
+
+#imgContainer img {
+  width: inherit;
 }
 
 .btn-close {
@@ -84,17 +99,46 @@ footer > div > div:nth-child(2) {
   left: -100%;
 }
 
+.progress-bar-base-xs {
+  width: 80%;
+  height: 5px;
+  background-color: lightslategray;
+  left: 10%;
+}
+
+@keyframes progress-bar-filling {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 .progress-bar-fill {
-  width: 100%;
+  width: 0%;
   height: 5px;
   background-color: white;
+  animation: progress-bar-filling var(--playbar-time) linear;
+}
+.progress-bar-fill-xs {
+  width: 0%;
+  height: 5px;
+  background-color: white;
+  animation: progress-bar-filling var(--playbar-time) linear;
 }
 
 .currenttime-position {
   left: -120%;
 }
+.currenttime-position-xs {
+  left: -120%;
+}
 
 .fulltime-position {
+  right: -120%;
+}
+.fulltime-position-xs {
   right: -120%;
 }
 
@@ -238,6 +282,18 @@ footer > div > div:nth-child(2) {
   }
 }
 
+@media screen and (max-width: 470px) {
+  .modal-header h1 {
+    font-size: 12px;
+  }
+  .modal-body h3 {
+    font-size: 12px;
+  }
+  .modal-body p {
+    font-size: 12px;
+  }
+}
+
 @media screen and (max-width: 450px) {
   #footer-xs button {
     --bs-btn-padding-x: 0.25rem;
@@ -246,6 +302,19 @@ footer > div > div:nth-child(2) {
     font-size: 9px;
   }
 }
+
+/* @media screen and (max-width: 375px) {
+  .modal-header h1 {
+    font-size: 12px;
+  }
+  .modal-body h3 {
+    font-size: 10px;
+  }
+  .modal-body p {
+    font-size: 10px;
+  }
+} */
+
 @media screen and (max-width: 340px) {
   #footer-xs p {
     margin-left: 5px;
