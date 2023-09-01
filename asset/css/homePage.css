@@ -48,6 +48,7 @@
 #discover-more {
   flex-wrap: nowrap;
   overflow: hidden;
+  padding-bottom: var(--smPadd);
 }
 
 #discover-more-hide > div {
@@ -81,4 +82,10 @@ p.bg-darkgray-color {
 
 #tre-icone {
   display: none;
+}
+
+@media screen and (max-width: 576px) {
+  .custom-paddingBottom-header {
+    padding-bottom: 150px;
+  }
 }

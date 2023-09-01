@@ -121,7 +121,7 @@ const getData = async (event) => {
           fromJS.innerHTML = `
                 <div class="row row-cols-xl-2 row-cols-lg-1 row-cols-md-2 row-cols-1 flex-grow-1">
                     <div class="col pt-4 pb-3">
-                        <div class="d-flex flex-column gap-4 ps-4 fit-content">
+                        <div class="d-flex flex-column gap-4 ps-4 width-fit-content">
                         <h4 class="m-0">Risultato più rilevante</h4>
                         <div class="div-img-artist-grande">
                             <a href="./artist-page.html?artistId=${idArtist0}">
@@ -252,7 +252,7 @@ const getData = async (event) => {
           fromJS.innerHTML = `
                 <div class="row row-cols-xl-2 row-cols-lg-1 row-cols-md-2 row-cols-1 flex-grow-1">
                     <div class="col pt-4 pb-3">
-                        <div class="d-flex flex-column gap-4 ps-4 fit-content">
+                        <div class="d-flex flex-column gap-4 ps-4 width-fit-content">
                         <h4 class="m-0">Risultato più rilevante</h4>
                         <div class="div-img-artist-grande">
                             <a href="./artist-page.html?albumId=${idAlbum0}">
@@ -381,7 +381,7 @@ const getData = async (event) => {
           fromJS.innerHTML = `
                 <div class="row row-cols-xl-2 row-cols-lg-1 row-cols-md-2 row-cols-1 flex-grow-1">
                     <div class="col pt-4 pb-3">
-                        <div class="d-flex flex-column gap-4 ps-4 fit-content">
+                        <div class="d-flex flex-column gap-4 ps-4 width-fit-content">
                         <h4 class="m-0">Risultato più rilevante</h4>
                         <div class="div-img-artist-grande">
                             <a href="./artist-page.html?artistId=${idArtist0}">
@@ -601,7 +601,7 @@ const getData = async (event) => {
           fromJS.innerHTML = `
                 <div class="row row-cols-xl-2 row-cols-lg-1 row-cols-md-2 row-cols-1 flex-grow-1">
                     <div class="col pt-4 pb-3">
-                        <div class="d-flex flex-column gap-4 ps-4 fit-content">
+                        <div class="d-flex flex-column gap-4 ps-4 width-fit-content">
                         <h4 class="m-0">Risultato più rilevante</h4>
                         <div class="div-img-artist-grande">
                             <a href="./artist-page.html?artistId=${idArtist0}">
@@ -732,7 +732,7 @@ const getData = async (event) => {
           fromJS.innerHTML = `
                 <div class="row row-cols-xl-2 row-cols-lg-1 row-cols-md-2 row-cols-1 flex-grow-1">
                     <div class="col pt-4 pb-3">
-                        <div class="d-flex flex-column gap-4 ps-4 fit-content">
+                        <div class="d-flex flex-column gap-4 ps-4 width-fit-content">
                         <h4 class="m-0">Risultato più rilevante</h4>
                         <div class="div-img-artist-grande">
                             <a href="./artist-page.html?albumId=${idAlbum0}">
@@ -861,7 +861,7 @@ const getData = async (event) => {
           fromJS.innerHTML = `
                 <div class="row row-cols-xl-2 row-cols-lg-1 row-cols-md-2 row-cols-1 flex-grow-1">
                     <div class="col pt-4 pb-3">
-                        <div class="d-flex flex-column gap-4 ps-4 fit-content">
+                        <div class="d-flex flex-column gap-4 ps-4 width-fit-content">
                         <h4 class="m-0">Risultato più rilevante</h4>
                         <div class="div-img-artist-grande">
                             <a href="./artist-page.html?artistId=${idArtist0}">
