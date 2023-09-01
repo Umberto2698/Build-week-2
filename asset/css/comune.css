@@ -213,6 +213,22 @@
   font-size: var(--lgFontSize);
   padding: 5px 0 5px 10px;
 }
+
+.xs-img {
+  width: var(--xsImg);
+  height: var(--xsImg);
+}
+
+.small-img {
+  width: var(--smallImg);
+  height: var(--smallImg);
+}
+
+.big-img {
+  width: var(--bigImg);
+  height: var(--bigImg);
+}
+
 .custom-fontSize-nav {
   font-size: var(--FonstSize);
 }

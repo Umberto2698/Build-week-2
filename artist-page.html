@@ -19,7 +19,7 @@
   <body>
     <div id="all-container" class="d-flex flex-column justify-content-between">
       <div class="d-flex">
-        <header class="custom-paddingBottom-md">
+        <header class="height-header">
           <div class="d-flex flex-column">
             <nav class="d-flex flex-column gap-1">
               <i class="bi bi-three-dots custom-fontSize-icon"></i>
@@ -107,69 +107,70 @@
             </section>
           </div>
         </header>
-        <main class="d-flex flex-column">
-          <div id="background-big-card" class="px-4 d-flex flex-column justify-content-between">
-            <div id="upbar" class="d-flex justify-content-between align-items-center mb-5 mt-2">
-              <div class="d-flex gap-3">
-                <i class="bi bi-arrow-left-circle custom-fontSize-lg"></i>
-                <i class="bi bi-arrow-right-circle custom-fontSize-lg"></i>
+        <main>
+          <div class="d-flex flex-column">
+            <div id="background-big-card" class="px-4 d-flex flex-column justify-content-between">
+              <div id="upbar" class="d-flex justify-content-between align-items-center mb-5 mt-2">
+                <div class="d-flex gap-3">
+                  <i class="bi bi-arrow-left-circle custom-fontSize-lg"></i>
+                  <i class="bi bi-arrow-right-circle custom-fontSize-lg"></i>
+                </div>
+                <div class="btn-group">
+                  <button
+                    type="button"
+                    class="btn dropdown-toggle text-light"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="bi bi-person-circle"></i>
+                    <span>Nome User</span>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
+                    <li>
+                      <button class="dropdown-item" type="button">Action</button>
+                    </li>
+                    <li>
+                      <button class="dropdown-item" type="button">Another action</button>
+                    </li>
+                    <li>
+                      <button class="dropdown-item" type="button">Something else here</button>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="btn-group">
-                <button
-                  type="button"
-                  class="btn dropdown-toggle text-light"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <i class="bi bi-person-circle"></i>
-                  <span>Nome User</span>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
-                  <li>
-                    <button class="dropdown-item" type="button">Action</button>
-                  </li>
-                  <li>
-                    <button class="dropdown-item" type="button">Another action</button>
-                  </li>
-                  <li>
-                    <button class="dropdown-item" type="button">Something else here</button>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div id="custom-big-card" class="d-flex pt-5 gap-4">
-              <div class="d-flex flex-column flex-grow-1">
-                <div class="d-flex flex-column">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-patch-check-fill text-primary me-1"></i>
-                    <p class="custom-fontSize-xs m-0">Artista verificato</p>
+              <div id="custom-big-card" class="d-flex pt-5 gap-4">
+                <div class="d-flex flex-column flex-grow-1">
+                  <div class="d-flex flex-column">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-patch-check-fill text-primary me-1"></i>
+                      <p class="custom-fontSize-xs m-0">Artista verificato</p>
+                    </div>
+                    <h1></h1>
                   </div>
-                  <h1></h1>
-                </div>
-                <div class="pt-3">
-                  <p id="listener"></p>
+                  <div class="pt-3">
+                    <p id="listener"></p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="px-4 py-3">
-            <p id="listener-xs"></p>
-            <div class="d-flex align-items-center gap-4">
-              <button id="play" class="d-flex align-items-center btn btn-success rounded-circle">
-                <i class="bi bi-play-fill fs-4"></i>
-              </button>
-              <i class="bi bi-shuffle icon-xs ms-auto"></i>
-              <i class="bi bi-three-dots-vertical icon-xs"></i>
-              <button id="following" class="btn border border-white bg-transparent text-white">FOLLOWING</button>
-              <i class="bi bi-three-dots"></i>
+            <div class="px-4 py-3">
+              <p id="listener-xs"></p>
+              <div class="d-flex align-items-center gap-4">
+                <button id="play" class="d-flex align-items-center btn btn-success rounded-circle">
+                  <i class="bi bi-play-fill fs-4"></i>
+                </button>
+                <i class="bi bi-shuffle icon-xs ms-auto"></i>
+                <i class="bi bi-three-dots-vertical icon-xs"></i>
+                <button id="following" class="btn border border-white bg-transparent text-white">FOLLOWING</button>
+                <i class="bi bi-three-dots"></i>
+              </div>
             </div>
-          </div>
-          <!-- artist-page-mobile -->
-          <div id="artistSongs-xs" class="d-flex">
-            <div class="px-4">
-              <h4 class="mb-4">Popolari</h4>
-              <ul id="popularSongs-xs" class="list-unstyled">
-                <!-- <li class="d-flex align-items-center mb-3">
+            <!-- artist-page-mobile -->
+            <div id="artistSongs-xs" class="d-flex">
+              <div class="px-4">
+                <h4 class="mb-4">Popolari</h4>
+                <ul id="popularSongs-xs" class="list-unstyled">
+                  <!-- <li class="d-flex align-items-center mb-3">
                 <div class="d-flex align-items-center">
                   <span>1</span>
                   <img src="./asset/imgs/main/image-1.jpg" alt="" />
@@ -182,13 +183,13 @@
                   <i class="bi bi-three-dots-vertical xsIcon"></i>
                 </div>
                </li> -->
-              </ul>
-            </div>
-            <!-- artist-page -->
-            <div class="px-4 w-50">
-              <h4 class="mb-4">Popolari</h4>
-              <ul id="popularSongs" class="list-unstyled">
-                <!-- <li class="row d-flex align-items-center ps-3 mb-3">
+                </ul>
+              </div>
+              <!-- artist-page -->
+              <div class="px-4 w-50">
+                <h4 class="mb-4">Popolari</h4>
+                <ul id="popularSongs" class="list-unstyled">
+                  <!-- <li class="row d-flex align-items-center ps-3 mb-3">
                 <div class="col-6 d-flex align-items-center">
                   <span>1</span>
                   <img src="./asset/imgs/main/image-1.jpg" alt="" />
@@ -201,21 +202,22 @@
                   <span id="songDuration">3:18</span>
                 </div>
               </li> -->
-              </ul>
-              <p class="m-0">VISUALIZZA ALTRO</p>
-            </div>
-            <div id="lovedSongs">
-              <h4 class="mb-4">Brani che ti piacciono</h4>
-              <div class="d-flex align-items-center">
-                <div class="position-relative">
-                  <div class="rounded-circle d-inline-block"></div>
-                  <span class="border border-light rounded-circle bg-success z-1"
-                    ><i class="bi bi-suit-heart-fill"></i><span class="visually-hidden">unread messages</span></span
-                  >
-                </div>
-                <div class="ps-2">
-                  <h6>Hai messo mi piace a 11 brani</h6>
-                  <p class="m-0"></p>
+                </ul>
+                <p class="m-0 pb-3">VISUALIZZA ALTRO</p>
+              </div>
+              <div id="lovedSongs">
+                <h4 class="mb-4">Brani che ti piacciono</h4>
+                <div class="d-flex align-items-center">
+                  <div class="position-relative">
+                    <div class="rounded-circle d-inline-block"></div>
+                    <span class="border border-light rounded-circle bg-success z-1"
+                      ><i class="bi bi-suit-heart-fill"></i><span class="visually-hidden">unread messages</span></span
+                    >
+                  </div>
+                  <div class="ps-2">
+                    <h6>Hai messo mi piace a 11 brani</h6>
+                    <p class="m-0"></p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -276,11 +278,16 @@
               </div>
             </div>
           </div>
-        </div>
-      </aside>
+        </section>
+      </div>
     </div>
     <!-- sound-player-mobile -->
-    <div id="footer-xs" class="bg-dark text-white px-2 py-1 position-fixed">
+    <div
+      id="footer-xs"
+      class="bg-dark text-white px-2 py-1 position-fixed"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
       <p></p>
       <div>
         <button class="btn">
@@ -294,8 +301,37 @@
         </button>
       </div>
     </div>
+    <!-- Modale per mobile -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="playerModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+              <i class="bi bi-x-lg text-whited"></i>
+            </button>
+            <h1 class="modal-title" id="playerModal">Modal title</h1>
+          </div>
+          <div class="modal-body d-flex flex-column align-items-center justify-content-around">
+            <div class="mx-auto">
+              <div id="imgContainer">
+                <img src="" alt="" />
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center w-100 mb-3 ps-2">
+              <div class="d-flex flex-column justify-content-center">
+                <h3>Titolo canzone</h3>
+                <p>Nome artista</p>
+              </div>
+              <button class="btn">
+                <i class="btn-toggle-custom bi bi-suit-heart text-white lgIcon"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- sound-player -->
-    <footer class="position-fixed bottom-0 soundbar-rules z-2">
+    <footer class="position-fixed soundbar-rules z-2">
       <div class="d-flex justify-content-center align-items-center">
         <div class="d-flex align-items-center p-1">
           <img id="playbar-img" class="rounded" alt="#" />
@@ -397,6 +433,7 @@
         <p class="m-0">La tua libreria</p>
       </div>
     </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"

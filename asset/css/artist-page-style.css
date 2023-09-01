@@ -9,7 +9,6 @@
 
 header,
 main {
-  padding-bottom: 74px;
   background-color: #0a0a0a;
   color: white;
 }
@@ -28,6 +27,7 @@ nav + section {
 
 main {
   width: calc(100% - var(--fullWidthHeader) - var(--fullWidthFriends));
+  padding-top: 0 !important;
 }
 
 #background-big-card {
@@ -231,11 +231,6 @@ h1 {
     justify-content: space-around;
   }
 
-  #lovedSongs,
-  #lovedSongs-xs {
-    padding-inline: 10px;
-  }
-
   #circle {
     width: 6px;
     height: 6px;
@@ -258,6 +253,13 @@ h1 {
   }
 }
 
+@media screen and (max-width: 712px) {
+  #lovedSongs,
+  #lovedSongs-xs {
+    padding-inline: 25px;
+  }
+}
+
 @media screen and (max-width: 664px) {
   .bi-arrow-right-circle,
   .btn-group {
@@ -270,8 +272,7 @@ h1 {
   .bi-arrow-right-circle,
   .btn-group,
   .bi-patch-check-fill,
-  #custom-big-card p,
-  div > :has(#listener) {
+  #custom-big-card p {
     display: none;
   }
 

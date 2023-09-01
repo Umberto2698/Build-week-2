@@ -55,9 +55,9 @@ const getElement = async () => {
           if (!previusSong.ok) {
             throw new Error(`Error ${previusSong.status}: ${previusSong.statusText}.`);
           } else {
-            const previussìSongsObj = await previusSong.json();
-            playButton(previussìSongsObj);
-            playButtonMobile(previussìSongsObj);
+            const previusSongsObj = await previusSong.json();
+            playButton(previusSongsObj);
+            playButtonMobile(previusSongsObj);
           }
         } catch (err) {
           (err) => {
@@ -70,9 +70,10 @@ const getElement = async () => {
             `;
           };
         }
+      } else {
+        playButton(songsObj.data[0]);
+        playButtonMobile(songsObj.data[0]);
       }
-      playButton(songsObj.data[0]);
-      playButtonMobile(songsObj.data[0]);
       artistBackground.setAttribute("style", `background-image: url(${artistObj.picture_big})`);
       artistNameTitle.innerText = artistObj.name;
       artistNameLiked.innerText = artistObj.name;

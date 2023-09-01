@@ -1,3 +1,38 @@
+.modal-content {
+  background-color: #181818;
+  color: white;
+  height: 97vh;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-header h1 {
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+}
+
+.modal-body h3 {
+  margin-bottom: 0;
+}
+.modal-body p {
+  margin-bottom: 0;
+}
+
+#imgContainer {
+  width: 200px;
+  height: 200px;
+}
+
+.btn-close {
+  margin-left: 0 !important;
+}
+.modal-footer {
+  border-top: none;
+}
+
 footer span {
   font-size: 10px;
 }
@@ -107,9 +142,10 @@ footer > div > div:nth-child(2) {
 
 #collapseBtn {
   display: none;
+  border: none !important;
 }
 #collapseBtn > button {
-  border: 0;
+  border: none;
   background-color: transparent;
   color: white;
   margin-top: 19px;
@@ -141,6 +177,12 @@ footer > div > div:nth-child(2) {
   }
   #playbar-img {
     display: none;
+  }
+}
+
+@media screen and (min-width: 930px) {
+  .dropdown-menu {
+    display: none !important;
   }
 }
 
@@ -182,7 +224,7 @@ footer > div > div:nth-child(2) {
   #footer-xs {
     display: flex;
     justify-content: space-between;
-    bottom: 40px;
+    bottom: 80px;
     right: 10px;
     left: 10px;
     border-radius: 5px;
@@ -202,5 +244,10 @@ footer > div > div:nth-child(2) {
   }
   #footer-xs p {
     font-size: 9px;
+  }
+}
+@media screen and (max-width: 340px) {
+  #footer-xs p {
+    margin-left: 5px;
   }
 }
