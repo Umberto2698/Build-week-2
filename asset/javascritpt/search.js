@@ -1,18 +1,4 @@
-const btnHome = document.getElementById("homePage");
-const btnMenuHome = document.getElementById("menu-home");
-
-btnHome.onclick = () => window.location.assign("./homePage.html");
-btnMenuHome.onclick = () => window.location.assign("./homePage.html");
-
-// const formInput = document.querySelector("#form-input");
-// const formInputHide = document.querySelector("#form-input-hide");
 const div48Cards = document.getElementById("cards-48");
-
-// formInput.addEventListener("onsubmit", async (event) => {
-//   event.preventDefault();
-//   console.log("funziona");
-//
-// });
 
 const getData = async (event) => {
   event.preventDefault();
@@ -996,8 +982,3 @@ const getData = async (event) => {
     console.log(error);
   }
 };
-
-/**
- *TODO: migliorare il responsive;
- *TODO: mettere un timer che passati 10sec e non ha trovato nulla mi mostra una scritta con errore
- */
