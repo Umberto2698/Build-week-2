@@ -290,7 +290,16 @@ main::-webkit-scrollbar-thumb {
 .border-radius-50 {
   border-radius: 50%;
 }
-
+#settings {
+  padding: 0;
+  border: none !important;
+}
+#settings .custom-fontSize-icon {
+  padding: 5px 10px;
+}
+#settings::after {
+  display: none;
+}
 footer {
   bottom: 0;
 }
